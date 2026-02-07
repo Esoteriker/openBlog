@@ -1,4 +1,5 @@
 import type { NavItem, ProfileData } from "@/data/profile";
+import { LanguageToggle } from "@/components/language-toggle";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 type NavbarProps = {
@@ -7,10 +8,19 @@ type NavbarProps = {
   navItems: NavItem[];
   githubUrl: string;
   githubLabel: string;
+  languageLabel: string;
   themeLabels: ProfileData["labels"]["theme"];
 };
 
-export function Navbar({ name, title, navItems, githubUrl, githubLabel, themeLabels }: NavbarProps) {
+export function Navbar({
+  name,
+  title,
+  navItems,
+  githubUrl,
+  githubLabel,
+  languageLabel,
+  themeLabels
+}: NavbarProps) {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-canvas/55 backdrop-blur-xl">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-4 py-3 sm:px-6 lg:px-8">
@@ -20,6 +30,7 @@ export function Navbar({ name, title, navItems, githubUrl, githubLabel, themeLab
             <p className="truncate text-xs text-ink/70">{title}</p>
           </div>
           <div className="flex items-center gap-2">
+            <LanguageToggle label={languageLabel} />
             <a
               href={githubUrl}
               target="_blank"

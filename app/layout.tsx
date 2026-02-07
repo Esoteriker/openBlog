@@ -1,7 +1,10 @@
 import type { Metadata, Viewport } from "next";
+import { LocaleProvider } from "@/components/locale-provider";
 import { ThemeProvider } from "@/components/theme-provider";
-import { profileData } from "@/data/profile";
+import { defaultLocale, profileDataByLocale } from "@/data/profile";
 import "./globals.css";
+
+const profileData = profileDataByLocale[defaultLocale];
 
 export const metadata: Metadata = {
   metadataBase: new URL(profileData.seo.url),
@@ -48,7 +51,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
-          {children}
+          <LocaleProvider>{children}</LocaleProvider>
         </ThemeProvider>
       </body>
     </html>
