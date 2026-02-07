@@ -140,7 +140,7 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
       headlineEmphasis: "AI Agent Platforms",
       headlineTrailing: "that stay reliable at scale",
       positioningStatement:
-        "I architect and implement AI agent systems with event-driven backends, secure service orchestration, and production-grade reliability.",
+        "I help product and platform teams move AI agents from demo to production with resilient architecture, secure orchestration, and reliable runtime operations.",
       highlightsTitle: "Why This Site",
       quickPoints: [
         "Microservice boundaries and API contracts for long-term maintainability",
@@ -161,7 +161,7 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
           "I design and deliver backend architecture for AI agent applications operating under real production constraints."
       },
       intro:
-        "As a Solution Architect and AI Agent Application Developer, I focus on dependable system behavior under load: clear architecture, explicit contracts, resilient event pipelines, and measurable operational outcomes.",
+        "As a senior Solution Architect and AI Agent Application Developer, I own architecture decisions that reduce delivery risk and improve system outcomes: predictable scaling, stable operations, and faster production rollout.",
       capabilitiesTitle: "Core Capability Modules",
       capabilities: [
         "Microservices architecture with bounded contexts and API contracts",
@@ -346,7 +346,7 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
       headlineEmphasis: "AI Agent 平台",
       headlineTrailing: "并在规模化场景保持稳定可靠",
       positioningStatement:
-        "我负责 AI Agent 系统从架构到落地，重点是事件驱动编排、安全服务协作与生产级可靠性。",
+        "我帮助产品与平台团队将 AI Agent 从 Demo 推向生产环境，重点解决架构韧性、安全编排与运行稳定性问题。",
       highlightsTitle: "价值摘要",
       quickPoints: [
         "以服务边界和 API 契约保障长期可维护性",
@@ -366,7 +366,7 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
         description: "专注 AI Agent 应用的后端架构设计与生产环境交付。"
       },
       intro:
-        "作为 Solution Architect 与 AI Agent Application Developer，我关注系统在真实业务压力下的稳定运行：清晰架构、明确契约、韧性事件流和可度量的运维结果。",
+        "作为资深 Solution Architect 与 AI Agent Application Developer，我主导关键架构决策，降低交付风险并提升系统结果：可预测扩展、稳定运行与更快上线。",
       capabilitiesTitle: "核心能力模块",
       capabilities: [
         "基于边界上下文与 API 契约的微服务架构设计",
@@ -544,7 +544,7 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
       headlineEmphasis: "AI Agent Platforms",
       headlineTrailing: "that stay reliable at scale",
       positioningStatement:
-        "Ich entwerfe und implementiere AI-Agent-Systeme mit eventgetriebenen Backends, sicherer Service-Orchestrierung und produktionsreifer Zuverlässigkeit.",
+        "Ich unterstütze Produkt- und Plattformteams dabei, AI-Agenten von der Demo in die Produktion zu bringen – mit resilienter Architektur, sicherer Orchestrierung und zuverlässigem Betrieb.",
       highlightsTitle: "Kernnutzen",
       quickPoints: [
         "Klare Service-Grenzen und API-Verträge für wartbare Systeme",
@@ -565,7 +565,7 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
           "Fokus auf Architektur und Delivery von Backend-Systemen für produktive AI-Agent-Anwendungen."
       },
       intro:
-        "Als Solution Architect und AI Agent Application Developer fokussiere ich mich auf stabile Systeme unter Last: klare Architektur, explizite Verträge, resiliente Event-Flows und messbare operative Ergebnisse.",
+        "Als Senior Solution Architect und AI Agent Application Developer verantworte ich Architekturentscheidungen, die Delivery-Risiken senken und messbare Ergebnisse liefern: planbare Skalierung, stabiler Betrieb und schnellere Produktivsetzung.",
       capabilitiesTitle: "Kernfähigkeiten",
       capabilities: [
         "Microservice-Architekturen mit Bounded Contexts und API-Verträgen",
