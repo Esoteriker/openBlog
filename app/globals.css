@@ -1,0 +1,237 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --canvas: 11 15 23;
+  --ink: 230 240 255;
+  --border: 43 66 97;
+  --accent: 0 240 255;
+}
+
+.light {
+  --canvas: 242 248 255;
+  --ink: 18 28 42;
+  --border: 155 180 214;
+  --accent: 0 124 199;
+}
+
+* {
+  border-color: rgb(var(--border) / 1);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  color: rgb(var(--ink) / 1);
+  background: rgb(var(--canvas) / 1);
+  font-family: Calibri, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  text-rendering: geometricPrecision;
+  overflow-x: hidden;
+}
+
+body::before,
+body::after {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
+body::before {
+  background:
+    linear-gradient(to right, rgb(var(--accent) / 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(var(--accent) / 0.08) 1px, transparent 1px),
+    radial-gradient(circle at 15% 10%, rgb(var(--accent) / 0.15), transparent 34%),
+    radial-gradient(circle at 85% 90%, rgb(139 92 246 / 0.16), transparent 32%);
+  background-size:
+    42px 42px,
+    42px 42px,
+    100% 100%,
+    100% 100%;
+  opacity: 0.42;
+}
+
+body::after {
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 3px,
+    rgb(255 255 255 / 0.015) 3px,
+    rgb(255 255 255 / 0.015) 4px
+  );
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 1px rgb(var(--border) / 0.85),
+      0 0 24px rgb(var(--accent) / 0.14);
+  }
+  50% {
+    box-shadow:
+      0 0 0 1px rgb(var(--border) / 0.9),
+      0 0 34px rgb(var(--accent) / 0.22);
+  }
+}
+
+@keyframes gradientDrift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.glass-panel {
+  border: 1px solid rgb(var(--border) / 0.82);
+  border-radius: 0.95rem;
+  background: linear-gradient(155deg, rgb(13 19 30 / 0.82), rgb(13 19 30 / 0.54));
+  backdrop-filter: blur(10px);
+}
+
+.light .glass-panel {
+  background: linear-gradient(155deg, rgb(248 252 255 / 0.9), rgb(241 247 255 / 0.7));
+}
+
+.neon-panel {
+  border: 1px solid rgb(var(--border) / 0.9);
+  border-radius: 0.95rem;
+  background: linear-gradient(155deg, rgb(12 18 28 / 0.9), rgb(12 18 28 / 0.6));
+  box-shadow:
+    inset 0 0 0 1px rgb(var(--accent) / 0.04),
+    0 0 22px rgb(var(--accent) / 0.08);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.light .neon-panel {
+  background: linear-gradient(155deg, rgb(247 252 255 / 0.95), rgb(241 247 255 / 0.78));
+}
+
+.neon-panel:hover {
+  transform: translateY(-2px);
+  border-color: rgb(var(--accent) / 0.75);
+  box-shadow:
+    inset 0 0 0 1px rgb(var(--accent) / 0.14),
+    0 0 28px rgb(var(--accent) / 0.2);
+}
+
+.neon-text-gradient {
+  background: linear-gradient(100deg, #00f0ff 0%, #8b5cf6 50%, #00f0ff 100%);
+  background-size: 220% 220%;
+  background-clip: text;
+  color: transparent;
+  animation: gradientDrift 6s linear infinite alternate;
+}
+
+.neon-chip {
+  border: 1px solid rgb(var(--border) / 0.88);
+  border-radius: 999px;
+  padding: 0.33rem 0.72rem;
+  font-size: 0.73rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: rgb(var(--ink) / 0.82);
+  background: rgb(10 16 25 / 0.55);
+}
+
+.light .neon-chip {
+  background: rgb(243 249 255 / 0.75);
+}
+
+.neon-badge {
+  border: 1px solid rgb(var(--border) / 0.84);
+  border-radius: 999px;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.76rem;
+  color: rgb(var(--ink) / 0.86);
+  background: rgb(var(--accent) / 0.06);
+}
+
+.neon-button-primary {
+  border-radius: 0.7rem;
+  padding: 0.6rem 1rem;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: #07131a;
+  background: linear-gradient(90deg, #00f0ff, #7dd3fc 55%, #8b5cf6);
+  box-shadow: 0 0 28px rgb(var(--accent) / 0.35);
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    opacity 160ms ease;
+}
+
+.neon-button-primary:hover {
+  transform: translateY(-1px);
+  opacity: 0.94;
+}
+
+.neon-button-secondary {
+  border-radius: 0.7rem;
+  padding: 0.6rem 1rem;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: rgb(var(--ink) / 0.92);
+  border: 1px solid rgb(var(--border) / 0.9);
+  background: rgb(9 15 24 / 0.66);
+  transition:
+    border-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.light .neon-button-secondary {
+  background: rgb(244 249 255 / 0.8);
+}
+
+.neon-button-secondary:hover {
+  border-color: rgb(var(--accent) / 0.9);
+  color: rgb(var(--accent) / 1);
+  transform: translateY(-1px);
+}
+
+.hero-shell {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-shell::before {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  background: radial-gradient(circle at 65% 30%, rgb(var(--accent) / 0.24), transparent 42%);
+  filter: blur(40px);
+  pointer-events: none;
+}
+
+.hero-shell::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgb(0 240 255 / 0.08), rgb(139 92 246 / 0.1), rgb(0 240 255 / 0.08));
+  background-size: 200% 200%;
+  animation: gradientDrift 8s linear infinite alternate;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.module-card {
+  animation: pulseGlow 5.5s ease-in-out infinite;
+}
