@@ -49,6 +49,7 @@ export type ProfileData = {
     headlineLeading: string;
     headlineEmphasis: string;
     headlineTrailing: string;
+    typingTitles: string[];
     positioningStatement: string;
     highlightsTitle: string;
     quickPoints: string[];
@@ -63,8 +64,13 @@ export type ProfileData = {
     intro: string;
     capabilitiesTitle: string;
     capabilities: string[];
-    currentFocusTitle: string;
-    currentFocus: string[];
+    workingStyleTitle: string;
+    workingStyle: string[];
+    timelineTitle: string;
+    timeline: {
+      label: string;
+      text: string;
+    }[];
   };
   principles: {
     header: SectionHeaderContent;
@@ -81,6 +87,8 @@ export type ProfileData = {
     header: SectionHeaderContent;
     labels: {
       oneLineValue: string;
+      myRole: string;
+      outcome: string;
       problemContext: string;
       architectureStrategy: string;
       architectureHighlights: string;
@@ -126,19 +134,25 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
   en: {
     name: "Haidong Xu",
     github: "https://github.com/Esoteriker",
-    title: "Senior Solution Architect | AI Agent Systems Engineer",
+    title: "Senior Solution Architect | AI Agent Engineer",
     tagline: "Building production-ready AI agent platforms that scale reliably",
     navigation: [
       { label: "About", href: "#about" },
+      { label: "Experience", href: "#experience" },
       { label: "Systems", href: "#systems" },
       { label: "Stack", href: "#stack" },
       { label: "Contact", href: "#contact" }
     ],
     hero: {
-      systemRole: "AI Infrastructure Command Center",
+      systemRole: "Personal Engineering Portfolio",
       headlineLeading: "Building",
       headlineEmphasis: "AI Agent Platforms",
       headlineTrailing: "that stay reliable at scale",
+      typingTitles: [
+        "Senior AI Agent Engineer",
+        "Senior Solution Architect",
+        "Senior Full Stack Developer"
+      ],
       positioningStatement:
         "I help product and platform teams move AI agents from demo to production with resilient architecture, secure orchestration, and reliable runtime operations.",
       highlightsTitle: "Why This Site",
@@ -156,7 +170,7 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
     about: {
       header: {
         eyebrow: "About",
-        title: "Senior AI Agent Systems Engineer",
+        title: "Senior AI Agent Engineer",
         description:
           "I design and deliver backend architecture for AI agent applications operating under real production constraints."
       },
@@ -168,11 +182,26 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
         "Distributed workflow design with asynchronous processing patterns",
         "Production hardening across performance, resilience, and maintainability"
       ],
-      currentFocusTitle: "Current Build Targets",
-      currentFocus: [
-        "openTree: AI knowledge graph platform with reasoning workflows",
-        "LLM integration for production decision support",
-        "Observability-first event-driven backend infrastructure"
+      workingStyleTitle: "How I Work",
+      workingStyle: [
+        "Translate ambiguous product goals into clear architecture decisions and execution plans",
+        "Own critical reliability paths: failure handling, service boundaries, and incident response clarity",
+        "Partner with product and engineering teams to ship safely, iterate fast, and scale predictably"
+      ],
+      timelineTitle: "Now / Recently / Next",
+      timeline: [
+        {
+          label: "Now",
+          text: "Building AI agent workflows with event-driven orchestration and production observability."
+        },
+        {
+          label: "Recently",
+          text: "Delivered microservice pipelines for knowledge graph indexing and retrieval-driven reasoning."
+        },
+        {
+          label: "Next",
+          text: "Expanding agent runtime guardrails with stronger governance, evaluation, and rollback paths."
+        }
       ]
     },
     principles: {
@@ -234,10 +263,6 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
         {
           category: "AI / Data",
           items: ["PostgreSQL", "Redis", "Neo4j", "Elasticsearch", "LLM Integration Pipelines"]
-        },
-        {
-          category: "DevOps",
-          items: ["GitHub Actions", "CI/CD", "Git Hooks", "Lint + Secret Scan", "Observability"]
         }
       ]
     },
@@ -250,6 +275,8 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
       },
       labels: {
         oneLineValue: "System Value",
+        myRole: "My Role",
+        outcome: "Outcome",
         problemContext: "Problem Context",
         architectureStrategy: "Architecture Strategy",
         architectureHighlights: "Architecture Highlights",
@@ -332,19 +359,25 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
   zh: {
     name: "徐海东",
     github: "https://github.com/Esoteriker",
-    title: "Senior Solution Architect | AI Agent Systems Engineer",
+    title: "Senior Solution Architect | AI Agent Engineer",
     tagline: "构建可在生产环境稳定扩展的 AI Agent 平台",
     navigation: [
       { label: "关于", href: "#about" },
+      { label: "经历", href: "#experience" },
       { label: "系统", href: "#systems" },
       { label: "技术栈", href: "#stack" },
       { label: "联系", href: "#contact" }
     ],
     hero: {
-      systemRole: "AI 基础设施指挥中心",
+      systemRole: "个人工程作品集",
       headlineLeading: "构建",
       headlineEmphasis: "AI Agent 平台",
       headlineTrailing: "并在规模化场景保持稳定可靠",
+      typingTitles: [
+        "Senior AI Agent Engineer",
+        "Senior Solution Architect",
+        "Senior Full Stack Developer"
+      ],
       positioningStatement:
         "我帮助产品与平台团队将 AI Agent 从 Demo 推向生产环境，重点解决架构韧性、安全编排与运行稳定性问题。",
       highlightsTitle: "价值摘要",
@@ -373,11 +406,26 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
         "面向异步处理模式的分布式流程设计",
         "围绕性能、韧性与可维护性的生产级工程落地"
       ],
-      currentFocusTitle: "当前重点方向",
-      currentFocus: [
-        "openTree：具备推理能力的 AI 知识图谱平台",
-        "面向生产系统的 LLM 集成",
-        "可观测性优先的事件驱动后端基础设施"
+      workingStyleTitle: "我的协作方式",
+      workingStyle: [
+        "将模糊的产品目标拆解为清晰的架构决策与执行路径",
+        "主导可靠性关键路径：故障处理、服务边界与响应流程",
+        "与产品和工程团队协同，在安全前提下快速迭代并稳定扩展"
+      ],
+      timelineTitle: "Now / Recently / Next",
+      timeline: [
+        {
+          label: "Now",
+          text: "构建具备事件驱动编排与可观测性的 AI Agent 工作流。"
+        },
+        {
+          label: "Recently",
+          text: "交付面向知识图谱索引与检索推理的微服务流水线。"
+        },
+        {
+          label: "Next",
+          text: "增强 Agent 运行时护栏，完善治理、评估与回滚机制。"
+        }
       ]
     },
     principles: {
@@ -437,10 +485,6 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
         {
           category: "AI / 数据",
           items: ["PostgreSQL", "Redis", "Neo4j", "Elasticsearch", "LLM 集成流水线"]
-        },
-        {
-          category: "DevOps",
-          items: ["GitHub Actions", "CI/CD", "Git Hooks", "Lint + 密钥扫描", "可观测性"]
         }
       ]
     },
@@ -452,6 +496,8 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
       },
       labels: {
         oneLineValue: "系统价值",
+        myRole: "我的角色",
+        outcome: "结果价值",
         problemContext: "问题背景",
         architectureStrategy: "架构策略",
         architectureHighlights: "架构亮点",
@@ -530,19 +576,25 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
   de: {
     name: "Haidong Xu",
     github: "https://github.com/Esoteriker",
-    title: "Senior Solution Architect | AI Agent Systems Engineer",
+    title: "Senior Solution Architect | AI Agent Engineer",
     tagline: "Produktionsreife AI-Agent-Plattformen, die zuverlässig skalieren",
     navigation: [
       { label: "Über mich", href: "#about" },
+      { label: "Erfahrung", href: "#experience" },
       { label: "Systeme", href: "#systems" },
       { label: "Stack", href: "#stack" },
       { label: "Kontakt", href: "#contact" }
     ],
     hero: {
-      systemRole: "KI-Infrastruktur Command Center",
+      systemRole: "Persönliches Engineering-Portfolio",
       headlineLeading: "Building",
       headlineEmphasis: "AI Agent Platforms",
       headlineTrailing: "that stay reliable at scale",
+      typingTitles: [
+        "Senior AI Agent Engineer",
+        "Senior Solution Architect",
+        "Senior Full Stack Developer"
+      ],
       positioningStatement:
         "Ich unterstütze Produkt- und Plattformteams dabei, AI-Agenten von der Demo in die Produktion zu bringen – mit resilienter Architektur, sicherer Orchestrierung und zuverlässigem Betrieb.",
       highlightsTitle: "Kernnutzen",
@@ -560,7 +612,7 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
     about: {
       header: {
         eyebrow: "Über mich",
-        title: "Senior AI Agent Systems Engineer",
+        title: "Senior AI Agent Engineer",
         description:
           "Fokus auf Architektur und Delivery von Backend-Systemen für produktive AI-Agent-Anwendungen."
       },
@@ -572,11 +624,26 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
         "Design verteilter Abläufe mit asynchronen Verarbeitungsmustern",
         "Produktionshärtung in Bezug auf Performance, Resilienz und Wartbarkeit"
       ],
-      currentFocusTitle: "Aktuelle Schwerpunkte",
-      currentFocus: [
-        "openTree: KI-Wissensgraph mit Reasoning-Workflows",
-        "LLM-Integration für produktive Entscheidungsprozesse",
-        "Observability-first Infrastruktur für eventgetriebene Backends"
+      workingStyleTitle: "Arbeitsweise",
+      workingStyle: [
+        "Übersetze unklare Produktziele in klare Architekturentscheidungen und umsetzbare Pläne",
+        "Verantworte kritische Reliability-Pfade: Failure-Handling, Service-Grenzen, Incident-Klarheit",
+        "Arbeite eng mit Produkt- und Engineering-Teams für sichere Releases und planbare Skalierung"
+      ],
+      timelineTitle: "Now / Recently / Next",
+      timeline: [
+        {
+          label: "Now",
+          text: "Baue AI-Agent-Workflows mit eventgetriebener Orchestrierung und produktiver Observability."
+        },
+        {
+          label: "Recently",
+          text: "Geliefert: Microservice-Pipelines für Wissensgraph-Indizierung und retrieval-basiertes Reasoning."
+        },
+        {
+          label: "Next",
+          text: "Ausbau von Runtime-Guardrails mit stärkerer Governance, Evaluation und Rollback-Strategien."
+        }
       ]
     },
     principles: {
@@ -638,10 +705,6 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
         {
           category: "AI / Data",
           items: ["PostgreSQL", "Redis", "Neo4j", "Elasticsearch", "LLM Integration Pipelines"]
-        },
-        {
-          category: "DevOps",
-          items: ["GitHub Actions", "CI/CD", "Git Hooks", "Lint + Secret Scan", "Observability"]
         }
       ]
     },
@@ -654,6 +717,8 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
       },
       labels: {
         oneLineValue: "Systemwert",
+        myRole: "Meine Rolle",
+        outcome: "Ergebnis",
         problemContext: "Problemkontext",
         architectureStrategy: "Architekturstrategie",
         architectureHighlights: "Architektur-Highlights",

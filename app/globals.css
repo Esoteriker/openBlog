@@ -110,6 +110,17 @@ a {
   }
 }
 
+@keyframes caretBlink {
+  0%,
+  48% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
 .glass-panel {
   border: 1px solid rgb(var(--border) / 0.75);
   border-radius: 0.9rem;
@@ -248,4 +259,14 @@ a {
 
 .module-card {
   animation: pulseGlow 5.5s ease-in-out infinite;
+}
+
+.typing-caret {
+  display: inline-block;
+  margin-left: 0.08em;
+  width: 0.08em;
+  height: 0.95em;
+  vertical-align: -0.08em;
+  background: rgb(var(--accent) / 0.95);
+  animation: caretBlink 1s steps(1, end) infinite;
 }

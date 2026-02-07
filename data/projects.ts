@@ -5,6 +5,8 @@ export type Project = {
   subtitle: string;
   oneLineValue: string;
   tags: string[];
+  myRole: string;
+  outcome: string;
   problemContext: string;
   architectureStrategy: string;
   architectureHighlights: string[];
@@ -23,6 +25,8 @@ export const projectsDataByLocale: Record<Locale, Project[]> = {
       subtitle: "AI Knowledge Graph Platform",
       oneLineValue: "Transforms unstructured knowledge into traceable graph intelligence for faster decisions.",
       tags: ["Microservices", "AI Pipeline", "Knowledge Graph", "Search"],
+      myRole: "Architecture owner and backend lead across service boundaries, workflow orchestration, and data layer design.",
+      outcome: "Improved retrieval quality and reduced analysis time by turning fragmented notes into queryable graph intelligence.",
       problemContext:
         "Unstructured knowledge from notes, meetings, and interviews lacked traceable structure and cross-source reasoning capability.",
       architectureStrategy:
@@ -48,6 +52,8 @@ export const projectsDataByLocale: Record<Locale, Project[]> = {
       subtitle: "Production Backend System",
       oneLineValue: "Delivers a reliable backend foundation with reproducible environments and safe schema evolution.",
       tags: ["FastAPI", "PostgreSQL", "Docker Compose", "Migrations"],
+      myRole: "Designed backend architecture, implemented core APIs, and established migration and quality controls.",
+      outcome: "Raised release confidence through reproducible environments and safer schema evolution in production.",
       problemContext:
         "A backend platform required reproducible deployment, robust data persistence, and secure environment-specific configuration.",
       architectureStrategy:
@@ -72,6 +78,8 @@ export const projectsDataByLocale: Record<Locale, Project[]> = {
       subtitle: "Full-stack System",
       oneLineValue: "Ships a practical full-stack workflow with clean API contracts and responsive UI behavior.",
       tags: ["React", "Node.js", "REST API", "Delivery Pipeline"],
+      myRole: "Owned full-stack integration design with clear API contracts and deployment flow alignment.",
+      outcome: "Delivered a maintainable product workflow with faster iteration across frontend and backend layers.",
       problemContext:
         "A product workflow needed a responsive user interface while maintaining a reliable backend API foundation for daily operations.",
       architectureStrategy:
@@ -98,6 +106,8 @@ export const projectsDataByLocale: Record<Locale, Project[]> = {
       subtitle: "AI 知识图谱平台",
       oneLineValue: "将非结构化知识转化为可追踪的图谱智能，提升分析与决策效率。",
       tags: ["微服务", "AI 流水线", "知识图谱", "搜索"],
+      myRole: "负责跨服务架构设计与后端主导开发，覆盖流程编排与数据层建模。",
+      outcome: "将分散笔记转为可检索知识图谱，显著提升信息追踪与分析效率。",
       problemContext: "来自笔记、会议与访谈的非结构化信息难以追踪关系，跨来源推理能力不足。",
       architectureStrategy:
         "构建 4 服务微服务流水线：ingestion -> NLP parsing -> graph storage -> suggestion engine，并以异步编排连接各服务。",
@@ -120,6 +130,8 @@ export const projectsDataByLocale: Record<Locale, Project[]> = {
       subtitle: "生产级后端系统",
       oneLineValue: "以可复现环境和可演进数据模型构建稳定可靠的后端底座。",
       tags: ["FastAPI", "PostgreSQL", "Docker Compose", "迁移策略"],
+      myRole: "主导后端架构与核心 API 实现，并建立迁移与质量保障流程。",
+      outcome: "通过可复现环境和迁移策略提升发布稳定性与线上变更可控性。",
       problemContext: "后端平台需要可复现部署、稳健的数据持久化能力与按环境隔离的安全配置。",
       architectureStrategy:
         "基于 FastAPI + PostgreSQL + SQLAlchemy，结合 Docker Compose 编排、迁移策略与测试覆盖确保发布质量。",
@@ -141,6 +153,8 @@ export const projectsDataByLocale: Record<Locale, Project[]> = {
       subtitle: "全栈系统",
       oneLineValue: "通过清晰 API 契约与响应式界面实现可持续迭代的全栈交付。",
       tags: ["React", "Node.js", "REST API", "部署流水线"],
+      myRole: "负责全栈集成架构，统一前后端 API 契约与交付流程。",
+      outcome: "实现更高效的功能迭代节奏，并保持前后端协同稳定性。",
       problemContext: "产品场景需要响应式前端体验，同时要求后端 API 在日常业务中稳定可靠。",
       architectureStrategy: "构建 React 前端与 Node.js 后端，通过 REST API 连接，并配套持续部署流程。",
       architectureHighlights: [
@@ -163,6 +177,8 @@ export const projectsDataByLocale: Record<Locale, Project[]> = {
       subtitle: "KI-Wissensgraph Plattform",
       oneLineValue: "Wandelt unstrukturierte Inhalte in nachvollziehbare Graph-Intelligenz für schnellere Entscheidungen um.",
       tags: ["Microservices", "AI Pipeline", "Knowledge Graph", "Search"],
+      myRole: "Architekturverantwortung und Backend-Lead über Service-Grenzen, Orchestrierung und Datenmodell.",
+      outcome: "Verbesserte Retrieval-Qualität und schnellere Analyse durch überführte Notizen in abfragbare Graph-Strukturen.",
       problemContext:
         "Unstrukturierte Inhalte aus Notizen, Meetings und Interviews waren schwer nachverfolgbar und boten kaum quellübergreifende Reasoning-Fähigkeit.",
       architectureStrategy:
@@ -188,6 +204,8 @@ export const projectsDataByLocale: Record<Locale, Project[]> = {
       subtitle: "Produktives Backend-System",
       oneLineValue: "Schafft eine robuste Backend-Basis mit reproduzierbaren Umgebungen und sicherer Schema-Evolution.",
       tags: ["FastAPI", "PostgreSQL", "Docker Compose", "Migrations"],
+      myRole: "Entwarf die Backend-Architektur, implementierte Kern-APIs und etablierte Migrations- und Qualitätsprozesse.",
+      outcome: "Steigerte Release-Sicherheit durch reproduzierbare Umgebungen und kontrollierte Schema-Änderungen.",
       problemContext:
         "Eine Backend-Plattform benötigte reproduzierbare Deployments, robuste Persistenz und sichere, umgebungsspezifische Konfiguration.",
       architectureStrategy:
@@ -212,6 +230,8 @@ export const projectsDataByLocale: Record<Locale, Project[]> = {
       subtitle: "Full-Stack-System",
       oneLineValue: "Liefert einen praxisnahen Full-Stack-Workflow mit klaren API-Verträgen und responsiver UX.",
       tags: ["React", "Node.js", "REST API", "Delivery Pipeline"],
+      myRole: "Verantwortete das Full-Stack-Integrationsdesign inkl. API-Verträgen und Delivery-Ablauf.",
+      outcome: "Ermöglichte schnellere Iteration bei stabiler Zusammenarbeit zwischen Frontend und Backend.",
       problemContext:
         "Die Anwendung brauchte eine responsive UI und gleichzeitig eine zuverlässige Backend-API für den täglichen Betrieb.",
       architectureStrategy:

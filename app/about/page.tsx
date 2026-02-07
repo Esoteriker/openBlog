@@ -8,11 +8,11 @@ export default function AboutPage() {
   const { locale } = useLocale();
   const profileData = profileDataByLocale[locale];
 
-  const timeline = [
-    { year: "2026", title: "Senior Solution Architect", summary: profileData.about.currentFocus[0] ?? "" },
-    { year: "2025", title: "AI Agent Systems", summary: profileData.about.currentFocus[1] ?? "" },
-    { year: "2024", title: "Architecture Hardening", summary: profileData.about.currentFocus[2] ?? "" }
-  ];
+  const timeline = profileData.about.timeline.map((item, index) => ({
+    year: `${2026 - index}`,
+    title: item.label,
+    summary: item.text
+  }));
 
   return (
     <PageShell>
@@ -33,6 +33,17 @@ export default function AboutPage() {
               <p className="text-xs uppercase tracking-[0.15em] text-ink/58">{profileData.about.capabilitiesTitle}</p>
               <ul className="space-y-2 text-sm text-ink/80">
                 {profileData.about.capabilities.map((item) => (
+                  <li key={item} className="rounded-md border border-border/70 bg-canvas/45 px-3 py-2">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="mt-6 space-y-3">
+              <p className="text-xs uppercase tracking-[0.15em] text-ink/58">{profileData.about.workingStyleTitle}</p>
+              <ul className="space-y-2 text-sm text-ink/80">
+                {profileData.about.workingStyle.map((item) => (
                   <li key={item} className="rounded-md border border-border/70 bg-canvas/45 px-3 py-2">
                     {item}
                   </li>

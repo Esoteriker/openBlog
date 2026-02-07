@@ -38,6 +38,18 @@ export function ProjectsSection({ header, labels, projects, buttonLabels }: Proj
                   <div className="space-y-4">
                     <div>
                       <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-accent">
+                        {labels.myRole}
+                      </p>
+                      <p className="text-sm leading-relaxed text-ink/84">{project.myRole}</p>
+                    </div>
+                    <div>
+                      <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-accent">
+                        {labels.outcome}
+                      </p>
+                      <p className="text-sm leading-relaxed text-ink/84">{project.outcome}</p>
+                    </div>
+                    <div>
+                      <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-accent">
                         {labels.problemContext}
                       </p>
                       <p className="text-sm leading-relaxed text-ink/84">{project.problemContext}</p>

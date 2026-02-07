@@ -1,23 +1,28 @@
 "use client";
 
 import Link from "next/link";
+import { ContactSection } from "@/components/contact-section";
 import { HeroSection } from "@/components/hero-section";
 import { PageShell } from "@/components/page-shell";
+import { WorkExperienceSection } from "@/components/work-experience-section";
 import { useLocale } from "@/components/locale-provider";
 import { profileDataByLocale } from "@/data/profile";
 import { projectsDataByLocale } from "@/data/projects";
+import { workExperienceByLocale } from "@/data/experience";
 
 export default function HomePage() {
   const { locale } = useLocale();
   const profileData = profileDataByLocale[locale];
   const projectsData = projectsDataByLocale[locale].slice(0, 4);
+  const workExperience = workExperienceByLocale[locale];
 
   return (
     <PageShell>
       <div className="space-y-10">
         <HeroSection content={profileData.hero} />
+        <WorkExperienceSection content={workExperience} />
 
-        <section className="space-y-4">
+        <section id="systems" className="space-y-4">
           <div className="flex items-center justify-between">
             <h2 className="text-2xl font-bold text-ink sm:text-3xl">{profileData.systemsUi.header.title}</h2>
             <Link href="/projects" className="text-sm font-semibold text-accent hover:opacity-80">
@@ -64,6 +69,8 @@ export default function HomePage() {
             </Link>
           </article>
         </section>
+
+        <ContactSection content={profileData.contact} />
       </div>
     </PageShell>
   );
