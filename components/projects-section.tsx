@@ -21,6 +21,17 @@ export function ProjectsSection({ header, labels, projects, buttonLabels }: Proj
                 <header className="space-y-1">
                   <h3 className="text-2xl font-bold tracking-tight text-ink">{project.name}</h3>
                   <p className="text-sm font-medium text-[#8b5cf6]">{project.subtitle}</p>
+                  <p className="pt-1 text-sm leading-relaxed text-ink/88">
+                    <span className="font-semibold text-accent">{labels.oneLineValue}: </span>
+                    {project.oneLineValue}
+                  </p>
+                  <ul className="flex flex-wrap gap-2 pt-1">
+                    {project.tags.map((tag) => (
+                      <li key={tag} className="neon-badge">
+                        {tag}
+                      </li>
+                    ))}
+                  </ul>
                 </header>
 
                 <div className="grid gap-5 lg:grid-cols-2">
@@ -85,7 +96,7 @@ export function ProjectsSection({ header, labels, projects, buttonLabels }: Proj
                     href={project.githubUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="neon-button-secondary"
+                    className="neon-button-primary"
                   >
                     {buttonLabels.github}
                   </a>

@@ -10,6 +10,21 @@ export const metadata: Metadata = {
   metadataBase: new URL(profileData.seo.url),
   title: profileData.seo.title,
   description: profileData.seo.description,
+  applicationName: "Haidong Xu Portfolio",
+  keywords: [
+    "Solution Architect",
+    "AI Agent Application Developer",
+    "Backend Systems Engineer",
+    "Microservices",
+    "Distributed Systems",
+    "Event-Driven Architecture"
+  ],
+  authors: [{ name: "Haidong Xu" }],
+  creator: "Haidong Xu",
+  robots: {
+    index: true,
+    follow: true
+  },
   openGraph: {
     type: "website",
     title: profileData.seo.title,
@@ -38,8 +53,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   width: "device-width",
-  initialScale: 1,
-  maximumScale: 1
+  initialScale: 1
 };
 
 export default function RootLayout({
@@ -49,7 +63,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
+      <body className="antialiased">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
           <LocaleProvider>{children}</LocaleProvider>
         </ThemeProvider>

@@ -7,7 +7,8 @@ type HeroSectionProps = {
 export function HeroSection({ content }: HeroSectionProps) {
   return (
     <section className="hero-shell glass-panel p-6 sm:p-9">
-      <div className="relative z-10 space-y-7 animate-fadeUp">
+      <div className="relative z-10 grid gap-8 animate-fadeUp lg:grid-cols-[1.3fr_1fr]">
+        <div className="space-y-7">
         <p className="inline-flex rounded-full border border-border/90 bg-canvas/60 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-ink/85">
           {content.systemRole}
         </p>
@@ -36,6 +37,19 @@ export function HeroSection({ content }: HeroSectionProps) {
             {content.ctas.secondary.label}
           </a>
         </div>
+        </div>
+
+        <aside className="neon-panel p-5" aria-label="Value highlights">
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-accent">{content.highlightsTitle}</p>
+          <ul className="mt-3 space-y-3 text-sm text-ink/84">
+            {content.quickPoints.map((point) => (
+              <li key={point} className="flex gap-2">
+                <span className="mt-1 h-1.5 w-1.5 rounded-full bg-accent" aria-hidden />
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
+        </aside>
       </div>
     </section>
   );

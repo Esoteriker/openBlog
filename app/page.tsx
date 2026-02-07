@@ -19,6 +19,12 @@ export default function HomePage() {
 
   return (
     <div className="text-ink">
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:bg-canvas focus:px-3 focus:py-2 focus:text-sm focus:font-semibold focus:text-ink"
+      >
+        Skip to content
+      </a>
       <Navbar
         name={profileData.name}
         title={profileData.title}
@@ -28,7 +34,10 @@ export default function HomePage() {
         languageLabel={profileData.labels.language}
         themeLabels={profileData.labels.theme}
       />
-      <main className="mx-auto flex w-full max-w-6xl flex-col gap-20 px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
+      <main
+        id="main-content"
+        className="mx-auto flex w-full max-w-6xl flex-col gap-20 px-4 py-10 sm:px-6 sm:py-14 lg:px-8"
+      >
         <HeroSection content={profileData.hero} />
         <AboutSection content={profileData.about} />
         <StrengthsSection content={profileData.principles} />

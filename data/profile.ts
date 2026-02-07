@@ -50,6 +50,8 @@ export type ProfileData = {
     headlineEmphasis: string;
     headlineTrailing: string;
     positioningStatement: string;
+    highlightsTitle: string;
+    quickPoints: string[];
     ctas: {
       primary: NavItem;
       secondary: NavItem;
@@ -78,6 +80,7 @@ export type ProfileData = {
   systemsUi: {
     header: SectionHeaderContent;
     labels: {
+      oneLineValue: string;
       problemContext: string;
       architectureStrategy: string;
       architectureHighlights: string;
@@ -123,22 +126,27 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
   en: {
     name: "Haidong Xu",
     github: "https://github.com/Esoteriker",
-    title: "Solution Architect and AI Agent Application Developer",
-    tagline: "Architecting scalable AI-native systems for the next decade",
+    title: "Senior Solution Architect | AI Agent Systems Engineer",
+    tagline: "Building production-ready AI agent platforms that scale reliably",
     navigation: [
       { label: "About", href: "#about" },
       { label: "Systems", href: "#systems" },
       { label: "Stack", href: "#stack" },
-      { label: "Philosophy", href: "#principles" },
       { label: "Contact", href: "#contact" }
     ],
     hero: {
       systemRole: "AI Infrastructure Command Center",
-      headlineLeading: "Architecting",
-      headlineEmphasis: "AI-native systems",
-      headlineTrailing: "for the next decade",
+      headlineLeading: "Building",
+      headlineEmphasis: "AI Agent Platforms",
+      headlineTrailing: "that stay reliable at scale",
       positioningStatement:
-        "I design resilient, secure, event-driven architectures that power intelligent systems at scale.",
+        "I architect and implement AI agent systems with event-driven backends, secure service orchestration, and production-grade reliability.",
+      highlightsTitle: "Why This Site",
+      quickPoints: [
+        "Microservice boundaries and API contracts for long-term maintainability",
+        "Event-driven orchestration for agent workflows and async processing",
+        "Observability and security guardrails designed in from day one"
+      ],
       ctas: {
         primary: { label: "Explore Systems", href: "#systems" },
         secondary: { label: "Contact", href: "#contact" }
@@ -148,12 +156,12 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
     about: {
       header: {
         eyebrow: "About",
-        title: "Solution Architect for Production Systems",
+        title: "Senior AI Agent Systems Engineer",
         description:
-          "Backend systems engineer focused on reliability, scale, and architecture clarity across distributed and AI-native platforms."
+          "I design and deliver backend architecture for AI agent applications operating under real production constraints."
       },
       intro:
-        "I work as a Solution Architect and AI Agent Application Developer, building backend systems that remain operable under growth through clear service boundaries, explicit contracts, resilient event flows, and measurable runtime behavior.",
+        "As a Solution Architect and AI Agent Application Developer, I focus on dependable system behavior under load: clear architecture, explicit contracts, resilient event pipelines, and measurable operational outcomes.",
       capabilitiesTitle: "Core Capability Modules",
       capabilities: [
         "Microservices architecture with bounded contexts and API contracts",
@@ -210,26 +218,26 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
     stack: {
       header: {
         eyebrow: "Stack",
-        title: "Technology Matrix",
+        title: "Core Technology Stack",
         description:
-          "Categorized stack for backend systems, delivery automation, and AI-native architecture execution."
+          "Grouped by execution domains so technical depth is easy to scan in seconds."
       },
       groups: [
         {
           category: "Backend",
-          items: ["FastAPI", "Node.js", "PostgreSQL", "Redis", "Neo4j", "Elasticsearch"]
+          items: ["FastAPI", "Node.js", "REST APIs", "Multi-tenant APIs", "JWT / API Key Auth"]
         },
         {
-          category: "Architecture",
-          items: ["Microservices", "Distributed Systems", "Event-Driven Architecture", "Multi-tenant APIs"]
+          category: "Cloud / Infra",
+          items: ["Microservices", "Distributed Systems", "Event-Driven Architecture", "Docker", "Docker Compose"]
+        },
+        {
+          category: "AI / Data",
+          items: ["PostgreSQL", "Redis", "Neo4j", "Elasticsearch", "LLM Integration Pipelines"]
         },
         {
           category: "DevOps",
-          items: ["Docker", "Docker Compose", "GitHub Actions", "CI/CD", "Git Hooks", "Lint + Secret Scan"]
-        },
-        {
-          category: "Frontend",
-          items: ["React", "Web Components", "Modern CSS"]
+          items: ["GitHub Actions", "CI/CD", "Git Hooks", "Lint + Secret Scan", "Observability"]
         }
       ]
     },
@@ -241,6 +249,7 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
           "Architecture-led project snapshots with strategy, scalability, and security considerations."
       },
       labels: {
+        oneLineValue: "System Value",
         problemContext: "Problem Context",
         architectureStrategy: "Architecture Strategy",
         architectureHighlights: "Architecture Highlights",
@@ -323,21 +332,27 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
   zh: {
     name: "徐海东",
     github: "https://github.com/Esoteriker",
-    title: "Solution Architect and AI Agent Application Developer",
-    tagline: "为下一个十年构建可扩展的 AI 原生系统",
+    title: "Senior Solution Architect | AI Agent Systems Engineer",
+    tagline: "构建可在生产环境稳定扩展的 AI Agent 平台",
     navigation: [
       { label: "关于", href: "#about" },
       { label: "系统", href: "#systems" },
       { label: "技术栈", href: "#stack" },
-      { label: "设计理念", href: "#principles" },
       { label: "联系", href: "#contact" }
     ],
     hero: {
       systemRole: "AI 基础设施指挥中心",
-      headlineLeading: "架构",
-      headlineEmphasis: "AI 原生系统",
-      headlineTrailing: "面向下一个十年",
-      positioningStatement: "我设计具备韧性、安全性与事件驱动能力的架构，让智能系统在规模化场景中稳定运行。",
+      headlineLeading: "构建",
+      headlineEmphasis: "AI Agent 平台",
+      headlineTrailing: "并在规模化场景保持稳定可靠",
+      positioningStatement:
+        "我负责 AI Agent 系统从架构到落地，重点是事件驱动编排、安全服务协作与生产级可靠性。",
+      highlightsTitle: "价值摘要",
+      quickPoints: [
+        "以服务边界和 API 契约保障长期可维护性",
+        "以事件驱动流程支撑 Agent 工作流与异步任务",
+        "从第一天引入可观测性与安全治理能力"
+      ],
       ctas: {
         primary: { label: "查看系统", href: "#systems" },
         secondary: { label: "联系我", href: "#contact" }
@@ -347,11 +362,11 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
     about: {
       header: {
         eyebrow: "关于",
-        title: "面向生产环境的解决方案架构师",
-        description: "专注于后端系统的可靠性、可扩展性与架构清晰度，覆盖分布式与 AI 原生平台。"
+        title: "资深 AI Agent 系统工程师",
+        description: "专注 AI Agent 应用的后端架构设计与生产环境交付。"
       },
       intro:
-        "我是一名 Solution Architect and AI Agent Application Developer，专注于构建可持续演进的后端系统：明确的服务边界、清晰的接口契约、稳健的事件流，以及可观测的运行行为。",
+        "作为 Solution Architect 与 AI Agent Application Developer，我关注系统在真实业务压力下的稳定运行：清晰架构、明确契约、韧性事件流和可度量的运维结果。",
       capabilitiesTitle: "核心能力模块",
       capabilities: [
         "基于边界上下文与 API 契约的微服务架构设计",
@@ -407,25 +422,25 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
     stack: {
       header: {
         eyebrow: "技术栈",
-        title: "技术能力矩阵",
-        description: "覆盖后端系统、交付自动化与 AI 原生架构实施的核心技术。"
+        title: "核心技术栈",
+        description: "按执行领域分组，便于快速扫描我的技术深度。"
       },
       groups: [
         {
           category: "后端",
-          items: ["FastAPI", "Node.js", "PostgreSQL", "Redis", "Neo4j", "Elasticsearch"]
+          items: ["FastAPI", "Node.js", "REST APIs", "多租户 APIs", "JWT / API Key 认证"]
         },
         {
-          category: "架构",
-          items: ["微服务", "分布式系统", "事件驱动架构", "多租户 API"]
+          category: "云 / 基础设施",
+          items: ["微服务", "分布式系统", "事件驱动架构", "Docker", "Docker Compose"]
+        },
+        {
+          category: "AI / 数据",
+          items: ["PostgreSQL", "Redis", "Neo4j", "Elasticsearch", "LLM 集成流水线"]
         },
         {
           category: "DevOps",
-          items: ["Docker", "Docker Compose", "GitHub Actions", "CI/CD", "Git Hooks", "Lint + 密钥扫描"]
-        },
-        {
-          category: "前端",
-          items: ["React", "Web Components", "现代 CSS"]
+          items: ["GitHub Actions", "CI/CD", "Git Hooks", "Lint + 密钥扫描", "可观测性"]
         }
       ]
     },
@@ -436,6 +451,7 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
         description: "以架构视角展示项目策略、扩展方案与安全设计要点。"
       },
       labels: {
+        oneLineValue: "系统价值",
         problemContext: "问题背景",
         architectureStrategy: "架构策略",
         architectureHighlights: "架构亮点",
@@ -514,22 +530,27 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
   de: {
     name: "Haidong Xu",
     github: "https://github.com/Esoteriker",
-    title: "Solution Architect and AI Agent Application Developer",
-    tagline: "Skalierbare KI-native Systeme für das nächste Jahrzehnt",
+    title: "Senior Solution Architect | AI Agent Systems Engineer",
+    tagline: "Produktionsreife AI-Agent-Plattformen, die zuverlässig skalieren",
     navigation: [
       { label: "Über mich", href: "#about" },
       { label: "Systeme", href: "#systems" },
       { label: "Stack", href: "#stack" },
-      { label: "Prinzipien", href: "#principles" },
       { label: "Kontakt", href: "#contact" }
     ],
     hero: {
       systemRole: "KI-Infrastruktur Command Center",
-      headlineLeading: "Architektur für",
-      headlineEmphasis: "KI-native Systeme",
-      headlineTrailing: "im nächsten Jahrzehnt",
+      headlineLeading: "Building",
+      headlineEmphasis: "AI Agent Platforms",
+      headlineTrailing: "that stay reliable at scale",
       positioningStatement:
-        "Ich entwerfe resiliente, sichere und ereignisgetriebene Architekturen, die intelligente Systeme in großem Maßstab tragen.",
+        "Ich entwerfe und implementiere AI-Agent-Systeme mit eventgetriebenen Backends, sicherer Service-Orchestrierung und produktionsreifer Zuverlässigkeit.",
+      highlightsTitle: "Kernnutzen",
+      quickPoints: [
+        "Klare Service-Grenzen und API-Verträge für wartbare Systeme",
+        "Event-getriebene Orchestrierung für Agent-Workflows und Async-Jobs",
+        "Observability und Security-Guardrails von Anfang an"
+      ],
       ctas: {
         primary: { label: "Systeme erkunden", href: "#systems" },
         secondary: { label: "Kontakt", href: "#contact" }
@@ -539,12 +560,12 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
     about: {
       header: {
         eyebrow: "Über mich",
-        title: "Solution Architect für produktive Systeme",
+        title: "Senior AI Agent Systems Engineer",
         description:
-          "Backend Engineer mit Fokus auf Zuverlässigkeit, Skalierung und Architekturklarheit in verteilten und KI-nativen Plattformen."
+          "Fokus auf Architektur und Delivery von Backend-Systemen für produktive AI-Agent-Anwendungen."
       },
       intro:
-        "Ich arbeite als Solution Architect and AI Agent Application Developer und fokussiere mich auf Backend-Systeme, die unter Wachstum stabil bleiben: klare Service-Grenzen, explizite Verträge, robuste Event-Flows und messbares Laufzeitverhalten.",
+        "Als Solution Architect und AI Agent Application Developer fokussiere ich mich auf stabile Systeme unter Last: klare Architektur, explizite Verträge, resiliente Event-Flows und messbare operative Ergebnisse.",
       capabilitiesTitle: "Kernfähigkeiten",
       capabilities: [
         "Microservice-Architekturen mit Bounded Contexts und API-Verträgen",
@@ -601,26 +622,26 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
     stack: {
       header: {
         eyebrow: "Stack",
-        title: "Technologie-Matrix",
+        title: "Core Technology Stack",
         description:
-          "Kategorisierter Stack für Backend-Systeme, Delivery-Automatisierung und KI-native Architekturumsetzung."
+          "Nach Ausführungsdomänen gruppiert, damit technische Schwerpunkte schnell erfassbar sind."
       },
       groups: [
         {
           category: "Backend",
-          items: ["FastAPI", "Node.js", "PostgreSQL", "Redis", "Neo4j", "Elasticsearch"]
+          items: ["FastAPI", "Node.js", "REST APIs", "Multi-Tenant APIs", "JWT / API-Key Auth"]
         },
         {
-          category: "Architektur",
-          items: ["Microservices", "Verteilte Systeme", "Event-Driven Architecture", "Multi-Tenant APIs"]
+          category: "Cloud / Infrastruktur",
+          items: ["Microservices", "Verteilte Systeme", "Event-Driven Architecture", "Docker", "Docker Compose"]
+        },
+        {
+          category: "AI / Data",
+          items: ["PostgreSQL", "Redis", "Neo4j", "Elasticsearch", "LLM Integration Pipelines"]
         },
         {
           category: "DevOps",
-          items: ["Docker", "Docker Compose", "GitHub Actions", "CI/CD", "Git Hooks", "Lint + Secret Scan"]
-        },
-        {
-          category: "Frontend",
-          items: ["React", "Web Components", "Modern CSS"]
+          items: ["GitHub Actions", "CI/CD", "Git Hooks", "Lint + Secret Scan", "Observability"]
         }
       ]
     },
@@ -632,6 +653,7 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
           "Architekturfokussierte Projekteinblicke mit Strategie, Skalierungsansatz und Sicherheitsaspekten."
       },
       labels: {
+        oneLineValue: "Systemwert",
         problemContext: "Problemkontext",
         architectureStrategy: "Architekturstrategie",
         architectureHighlights: "Architektur-Highlights",
