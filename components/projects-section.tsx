@@ -15,8 +15,6 @@ export function ProjectsSection({ header, labels, projects, buttonLabels }: Proj
       <SectionHeading content={header} />
       <div className="grid gap-5">
         {projects.map((project) => {
-          const hasCaseStudy = Boolean(project.caseStudyUrl);
-
           return (
             <article key={project.name} className="neon-panel p-5 sm:p-6">
               <div className="space-y-5">
@@ -91,27 +89,6 @@ export function ProjectsSection({ header, labels, projects, buttonLabels }: Proj
                   >
                     {buttonLabels.github}
                   </a>
-
-                  {project.liveUrl ? (
-                    <a href={project.liveUrl} target="_blank" rel="noreferrer" className="neon-button-secondary">
-                      {buttonLabels.live}
-                    </a>
-                  ) : null}
-
-                  {hasCaseStudy ? (
-                    <a
-                      href={project.caseStudyUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="neon-button-primary"
-                    >
-                      {buttonLabels.caseStudy}
-                    </a>
-                  ) : (
-                    <span className="neon-button-secondary cursor-not-allowed opacity-65">
-                      {buttonLabels.caseStudySoon}
-                    </span>
-                  )}
                 </footer>
               </div>
             </article>

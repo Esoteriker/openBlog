@@ -9,7 +9,6 @@ import { Navbar } from "@/components/navbar";
 import { ProjectsSection } from "@/components/projects-section";
 import { StackSection } from "@/components/stack-section";
 import { StrengthsSection } from "@/components/strengths-section";
-import { WritingSection } from "@/components/writing-section";
 import { profileDataByLocale } from "@/data/profile";
 import { projectsDataByLocale } from "@/data/projects";
 
@@ -40,7 +39,6 @@ export default function HomePage() {
           projects={projectsData}
           buttonLabels={profileData.systemsUi.buttons}
         />
-        <WritingSection content={profileData.insights} readLabel={profileData.labels.readInsight} />
         <ContactSection content={profileData.contact} />
       </main>
       <Footer name={profileData.name} note={profileData.footer.note} />

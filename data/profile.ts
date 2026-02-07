@@ -87,9 +87,6 @@ export type ProfileData = {
     };
     buttons: {
       github: string;
-      caseStudy: string;
-      caseStudySoon: string;
-      live: string;
     };
   };
   insights: {
@@ -126,7 +123,7 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
   en: {
     name: "Haidong Xu",
     github: "https://github.com/Esoteriker",
-    title: "Solution Architect | Backend Systems Engineer",
+    title: "Solution Architect and AI Agent Application Developer",
     tagline: "Architecting scalable AI-native systems for the next decade",
     navigation: [
       { label: "About", href: "#about" },
@@ -156,7 +153,7 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
           "Backend systems engineer focused on reliability, scale, and architecture clarity across distributed and AI-native platforms."
       },
       intro:
-        "My work centers on designing backend systems that remain operable under growth: clear service boundaries, explicit contracts, resilient event flows, and measurable runtime behavior.",
+        "I work as a Solution Architect and AI Agent Application Developer, building backend systems that remain operable under growth through clear service boundaries, explicit contracts, resilient event flows, and measurable runtime behavior.",
       capabilitiesTitle: "Core Capability Modules",
       capabilities: [
         "Microservices architecture with bounded contexts and API contracts",
@@ -219,20 +216,12 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
       },
       groups: [
         {
-          category: "Languages",
-          items: ["Python", "JavaScript", "TypeScript", "HTML", "CSS"]
-        },
-        {
           category: "Backend",
           items: ["FastAPI", "Node.js", "PostgreSQL", "Redis", "Neo4j", "Elasticsearch"]
         },
         {
           category: "Architecture",
           items: ["Microservices", "Distributed Systems", "Event-Driven Architecture", "Multi-tenant APIs"]
-        },
-        {
-          category: "Security",
-          items: ["JWT", "API Key Auth", "Encryption Practices", "Secret Management"]
         },
         {
           category: "DevOps",
@@ -260,10 +249,7 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
         securityConsiderations: "Security Considerations"
       },
       buttons: {
-        github: "GitHub",
-        caseStudy: "Case Study",
-        caseStudySoon: "Case Study Soon",
-        live: "Live"
+        github: "GitHub"
       }
     },
     insights: {
@@ -335,9 +321,9 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
     }
   },
   zh: {
-    name: "Haidong Xu",
+    name: "徐海东",
     github: "https://github.com/Esoteriker",
-    title: "解决方案架构师 | 后端系统工程师",
+    title: "Solution Architect and AI Agent Application Developer",
     tagline: "为下一个十年构建可扩展的 AI 原生系统",
     navigation: [
       { label: "关于", href: "#about" },
@@ -365,7 +351,7 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
         description: "专注于后端系统的可靠性、可扩展性与架构清晰度，覆盖分布式与 AI 原生平台。"
       },
       intro:
-        "我的核心工作是构建可持续演进的后端系统：明确的服务边界、清晰的接口契约、稳健的事件流，以及可观测的运行行为。",
+        "我是一名 Solution Architect and AI Agent Application Developer，专注于构建可持续演进的后端系统：明确的服务边界、清晰的接口契约、稳健的事件流，以及可观测的运行行为。",
       capabilitiesTitle: "核心能力模块",
       capabilities: [
         "基于边界上下文与 API 契约的微服务架构设计",
@@ -426,20 +412,12 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
       },
       groups: [
         {
-          category: "语言",
-          items: ["Python", "JavaScript", "TypeScript", "HTML", "CSS"]
-        },
-        {
           category: "后端",
           items: ["FastAPI", "Node.js", "PostgreSQL", "Redis", "Neo4j", "Elasticsearch"]
         },
         {
           category: "架构",
           items: ["微服务", "分布式系统", "事件驱动架构", "多租户 API"]
-        },
-        {
-          category: "安全",
-          items: ["JWT", "API Key 认证", "加密实践", "密钥管理"]
         },
         {
           category: "DevOps",
@@ -466,10 +444,7 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
         securityConsiderations: "安全考量"
       },
       buttons: {
-        github: "GitHub",
-        caseStudy: "案例研究",
-        caseStudySoon: "案例即将上线",
-        live: "在线演示"
+        github: "GitHub"
       }
     },
     insights: {
@@ -539,7 +514,7 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
   de: {
     name: "Haidong Xu",
     github: "https://github.com/Esoteriker",
-    title: "Solution Architect | Backend Systems Engineer",
+    title: "Solution Architect and AI Agent Application Developer",
     tagline: "Skalierbare KI-native Systeme für das nächste Jahrzehnt",
     navigation: [
       { label: "Über mich", href: "#about" },
@@ -569,7 +544,7 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
           "Backend Engineer mit Fokus auf Zuverlässigkeit, Skalierung und Architekturklarheit in verteilten und KI-nativen Plattformen."
       },
       intro:
-        "Im Zentrum meiner Arbeit stehen backendseitige Systeme, die unter Wachstum stabil bleiben: klare Service-Grenzen, explizite Verträge, robuste Event-Flows und messbares Laufzeitverhalten.",
+        "Ich arbeite als Solution Architect and AI Agent Application Developer und fokussiere mich auf Backend-Systeme, die unter Wachstum stabil bleiben: klare Service-Grenzen, explizite Verträge, robuste Event-Flows und messbares Laufzeitverhalten.",
       capabilitiesTitle: "Kernfähigkeiten",
       capabilities: [
         "Microservice-Architekturen mit Bounded Contexts und API-Verträgen",
@@ -632,20 +607,12 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
       },
       groups: [
         {
-          category: "Sprachen",
-          items: ["Python", "JavaScript", "TypeScript", "HTML", "CSS"]
-        },
-        {
           category: "Backend",
           items: ["FastAPI", "Node.js", "PostgreSQL", "Redis", "Neo4j", "Elasticsearch"]
         },
         {
           category: "Architektur",
           items: ["Microservices", "Verteilte Systeme", "Event-Driven Architecture", "Multi-Tenant APIs"]
-        },
-        {
-          category: "Sicherheit",
-          items: ["JWT", "API-Key Auth", "Encryption Practices", "Secret Management"]
         },
         {
           category: "DevOps",
@@ -673,10 +640,7 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
         securityConsiderations: "Sicherheitsaspekte"
       },
       buttons: {
-        github: "GitHub",
-        caseStudy: "Case Study",
-        caseStudySoon: "Case Study folgt",
-        live: "Live"
+        github: "GitHub"
       }
     },
     insights: {
