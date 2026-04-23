@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --canvas: 11 15 23;
-  --ink: 230 240 255;
-  --border: 43 66 97;
-  --accent: 0 240 255;
+  --canvas: 6 12 26;
+  --ink: 229 237 255;
+  --border: 38 52 86;
+  --accent: 59 130 246;
 }
 
 .light {
@@ -29,7 +29,10 @@ body {
 body {
   min-height: 100vh;
   color: rgb(var(--ink) / 1);
-  background: rgb(var(--canvas) / 1);
+  background:
+    radial-gradient(circle at 70% 30%, rgb(48 86 255 / 0.2), transparent 35%),
+    radial-gradient(circle at 35% 72%, rgb(115 75 255 / 0.15), transparent 38%),
+    rgb(var(--canvas) / 1);
   font-family: Calibri, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   text-rendering: geometricPrecision;
   overflow-x: hidden;
@@ -57,16 +60,16 @@ body::after {
 
 body::before {
   background:
-    linear-gradient(to right, rgb(var(--accent) / 0.08) 1px, transparent 1px),
-    linear-gradient(to bottom, rgb(var(--accent) / 0.08) 1px, transparent 1px),
-    radial-gradient(circle at 15% 10%, rgb(var(--accent) / 0.15), transparent 34%),
-    radial-gradient(circle at 85% 90%, rgb(139 92 246 / 0.16), transparent 32%);
+    linear-gradient(to right, rgb(var(--accent) / 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(var(--accent) / 0.05) 1px, transparent 1px),
+    radial-gradient(circle at 15% 10%, rgb(var(--accent) / 0.14), transparent 34%),
+    radial-gradient(circle at 85% 90%, rgb(139 92 246 / 0.14), transparent 32%);
   background-size:
     42px 42px,
     42px 42px,
     100% 100%,
     100% 100%;
-  opacity: 0.42;
+  opacity: 0.26;
 }
 
 body::after {
@@ -108,10 +111,10 @@ a {
 }
 
 .glass-panel {
-  border: 1px solid rgb(var(--border) / 0.82);
-  border-radius: 0.95rem;
-  background: linear-gradient(155deg, rgb(13 19 30 / 0.82), rgb(13 19 30 / 0.54));
-  backdrop-filter: blur(10px);
+  border: 1px solid rgb(var(--border) / 0.75);
+  border-radius: 0.9rem;
+  background: linear-gradient(145deg, rgb(8 16 34 / 0.92), rgb(8 16 34 / 0.68));
+  backdrop-filter: blur(8px);
 }
 
 .light .glass-panel {
@@ -119,12 +122,12 @@ a {
 }
 
 .neon-panel {
-  border: 1px solid rgb(var(--border) / 0.9);
-  border-radius: 0.95rem;
-  background: linear-gradient(155deg, rgb(12 18 28 / 0.9), rgb(12 18 28 / 0.6));
+  border: 1px solid rgb(var(--border) / 0.75);
+  border-radius: 0.9rem;
+  background: linear-gradient(150deg, rgb(8 16 34 / 0.92), rgb(8 16 34 / 0.72));
   box-shadow:
-    inset 0 0 0 1px rgb(var(--accent) / 0.04),
-    0 0 22px rgb(var(--accent) / 0.08);
+    inset 0 0 0 1px rgb(var(--accent) / 0.03),
+    0 10px 30px rgb(3 8 20 / 0.4);
   transition:
     transform 180ms ease,
     box-shadow 180ms ease,
@@ -137,14 +140,14 @@ a {
 
 .neon-panel:hover {
   transform: translateY(-2px);
-  border-color: rgb(var(--accent) / 0.75);
+  border-color: rgb(var(--accent) / 0.45);
   box-shadow:
-    inset 0 0 0 1px rgb(var(--accent) / 0.14),
-    0 0 28px rgb(var(--accent) / 0.2);
+    inset 0 0 0 1px rgb(var(--accent) / 0.08),
+    0 14px 34px rgb(2 8 23 / 0.55);
 }
 
 .neon-text-gradient {
-  background: linear-gradient(100deg, #00f0ff 0%, #8b5cf6 50%, #00f0ff 100%);
+  background: linear-gradient(100deg, #3b82f6 0%, #8b5cf6 55%, #22d3ee 100%);
   background-size: 220% 220%;
   background-clip: text;
   color: transparent;
@@ -152,14 +155,14 @@ a {
 }
 
 .neon-chip {
-  border: 1px solid rgb(var(--border) / 0.88);
+  border: 1px solid rgb(var(--border) / 0.72);
   border-radius: 999px;
   padding: 0.33rem 0.72rem;
   font-size: 0.73rem;
   font-weight: 600;
   letter-spacing: 0.05em;
   color: rgb(var(--ink) / 0.82);
-  background: rgb(10 16 25 / 0.55);
+  background: rgb(14 24 45 / 0.7);
 }
 
 .light .neon-chip {
@@ -167,12 +170,12 @@ a {
 }
 
 .neon-badge {
-  border: 1px solid rgb(var(--border) / 0.84);
+  border: 1px solid rgb(var(--border) / 0.72);
   border-radius: 999px;
   padding: 0.25rem 0.65rem;
   font-size: 0.76rem;
   color: rgb(var(--ink) / 0.86);
-  background: rgb(var(--accent) / 0.06);
+  background: rgb(35 55 95 / 0.35);
 }
 
 .neon-button-primary {
@@ -180,9 +183,9 @@ a {
   padding: 0.6rem 1rem;
   font-size: 0.84rem;
   font-weight: 700;
-  color: #07131a;
-  background: linear-gradient(90deg, #00f0ff, #7dd3fc 55%, #8b5cf6);
-  box-shadow: 0 0 28px rgb(var(--accent) / 0.35);
+  color: #dbeafe;
+  background: linear-gradient(90deg, #2563eb, #3b82f6 55%, #4f46e5);
+  box-shadow: 0 8px 24px rgb(30 64 175 / 0.35);
   transition:
     transform 160ms ease,
     box-shadow 160ms ease,

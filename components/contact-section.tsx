@@ -12,7 +12,7 @@ export function ContactSection({ content }: ContactSectionProps) {
     <section id="contact" className="space-y-8 scroll-mt-24">
       <SectionHeading content={content.header} />
       <div className="glass-panel p-6 sm:p-8">
-        <p className="max-w-3xl text-base leading-relaxed text-ink/86">{content.invitation}</p>
+        <p className="max-w-3xl text-base leading-relaxed text-ink/80">{content.invitation}</p>
         <div className="mt-6 flex flex-wrap gap-3">
           {primaryChannel ? (
             <a href={primaryChannel.href} className="neon-button-primary">
