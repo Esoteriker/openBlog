@@ -6,6 +6,8 @@ import { useLocale } from "@/components/locale-provider";
 import { profileDataByLocale } from "@/data/profile";
 import { showcasePagesByLocale } from "@/data/showcase-pages";
 
+type SkillTabKey = "all" | "frontend" | "backend" | "tools";
+
 function buildRadarPoints(values: number[], radius: number, cx: number, cy: number) {
   return values
     .map((value, index) => {
@@ -31,15 +33,56 @@ export default function SkillsPage() {
   const { locale } = useLocale();
   const profileData = profileDataByLocale[locale];
   const showcase = showcasePagesByLocale[locale].skills;
-  const [activeTab, setActiveTab] = useState<(typeof showcase.tabs)[number]["key"]>("all");
+  const [activeTab, setActiveTab] = useState<SkillTabKey>("all");
+
+  const skillViewConfig: Record<
+    SkillTabKey,
+    {
+      radarValues: number[];
+      trendStudy: number[];
+      trendImprove: number[];
+      groupKeys: Array<"frontend" | "backend" | "tools" | "foundation">;
+    }
+  > = {
+    all: {
+      radarValues: showcase.radarValues,
+      trendStudy: showcase.trendStudy,
+      trendImprove: showcase.trendImprove,
+      groupKeys: ["frontend", "backend", "tools", "foundation"]
+    },
+    frontend: {
+      radarValues: [94, 62, 74, 82, 76, 72],
+      trendStudy: [22, 34, 58, 68, 72, 81, 92],
+      trendImprove: [10, 18, 40, 47, 52, 59, 66],
+      groupKeys: ["frontend"]
+    },
+    backend: {
+      radarValues: [58, 94, 82, 86, 72, 74],
+      trendStudy: [30, 42, 66, 70, 63, 76, 88],
+      trendImprove: [12, 24, 44, 48, 46, 58, 68],
+      groupKeys: ["backend"]
+    },
+    tools: {
+      radarValues: [52, 68, 72, 78, 84, 91],
+      trendStudy: [18, 28, 46, 52, 58, 69, 79],
+      trendImprove: [8, 16, 28, 34, 43, 54, 61],
+      groupKeys: ["tools", "foundation"]
+    }
+  };
+
+  const currentView = skillViewConfig[activeTab];
 
   const visibleTagGroups = useMemo(() => {
-    return activeTab === "all" ? showcase.tagGroups : showcase.tagGroups.filter((group) => group.key === activeTab);
-  }, [activeTab, showcase.tagGroups]);
+    return showcase.tagGroups.filter((group) => currentView.groupKeys.includes(group.key));
+  }, [currentView.groupKeys, showcase.tagGroups]);
 
-  const radarPoints = buildRadarPoints(showcase.radarValues, 112, 140, 132);
-  const studyPoints = buildChartPoints(showcase.trendStudy, 420, 240, 24);
-  const improvePoints = buildChartPoints(showcase.trendImprove, 420, 240, 24);
+  const visibleMetrics = useMemo(() => {
+    return activeTab === "all" ? showcase.proficiency.slice(0, 6) : showcase.proficiency.filter((item) => item.category === activeTab);
+  }, [activeTab, showcase.proficiency]);
+
+  const radarPoints = buildRadarPoints(currentView.radarValues, 112, 140, 132);
+  const studyPoints = buildChartPoints(currentView.trendStudy, 420, 240, 24);
+  const improvePoints = buildChartPoints(currentView.trendImprove, 420, 240, 24);
 
   return (
     <PageShell>
@@ -101,8 +144,8 @@ export default function SkillsPage() {
                   stroke="rgb(var(--accent) / 0.9)"
                   strokeWidth="2"
                 />
-                {showcase.radarValues.map((value, index) => {
-                  const angle = (Math.PI * 2 * index) / showcase.radarValues.length - Math.PI / 2;
+                {currentView.radarValues.map((value, index) => {
+                  const angle = (Math.PI * 2 * index) / currentView.radarValues.length - Math.PI / 2;
                   const x = 140 + Math.cos(angle) * 112 * (value / 100);
                   const y = 132 + Math.sin(angle) * 112 * (value / 100);
                   return <circle key={`${value}-${index}`} cx={x} cy={y} r="4.5" fill="rgb(var(--accent) / 1)" />;
@@ -110,14 +153,20 @@ export default function SkillsPage() {
               </svg>
             </div>
             <div className="mt-4 border-t border-border/50 pt-4 text-sm text-ink/56">
-              {locale === "zh" ? "综合能力评估" : "Overall capability evaluation"}
+              {activeTab === "all"
+                ? locale === "zh"
+                  ? "综合能力评估"
+                  : "Overall capability evaluation"
+                : locale === "zh"
+                  ? `当前筛选：${showcase.tabs.find((tab) => tab.key === activeTab)?.label ?? ""}`
+                  : `Current filter: ${showcase.tabs.find((tab) => tab.key === activeTab)?.label ?? ""}`}
             </div>
           </article>
 
           <article className="neon-panel p-6">
             <h2 className="text-3xl font-bold tracking-tight text-ink">{showcase.proficiencyTitle}</h2>
             <ul className="mt-6 space-y-5">
-              {showcase.proficiency.map((item) => (
+              {visibleMetrics.map((item) => (
                 <li key={item.name}>
                   <div className="mb-2 flex items-center justify-between text-lg text-ink/86">
                     <span>{item.name}</span>
@@ -130,7 +179,13 @@ export default function SkillsPage() {
               ))}
             </ul>
             <div className="mt-6 border-t border-border/50 pt-4 text-sm text-ink/56">
-              {locale === "zh" ? "基于项目经验与学习投入的综合评估" : "Weighted by project experience and learning focus"}
+              {activeTab === "all"
+                ? locale === "zh"
+                  ? "基于项目经验与学习投入的综合评估"
+                  : "Weighted by project experience and learning focus"
+                : locale === "zh"
+                  ? "只展示当前分类下的核心技能"
+                  : "Showing core skills for the selected category"}
             </div>
           </article>
 
@@ -161,13 +216,13 @@ export default function SkillsPage() {
                 })}
                 <polyline points={studyPoints} fill="none" stroke="#3b82f6" strokeWidth="3" />
                 <polyline points={improvePoints} fill="none" stroke="#4ade80" strokeWidth="3" />
-                {showcase.trendStudy.map((value, index) => {
-                  const x = (420 / Math.max(showcase.trendStudy.length - 1, 1)) * index;
+                {currentView.trendStudy.map((value, index) => {
+                  const x = (420 / Math.max(currentView.trendStudy.length - 1, 1)) * index;
                   const y = 240 - (value / 100) * 216;
                   return <circle key={`study-${index}`} cx={x} cy={y} r="4" fill="#3b82f6" />;
                 })}
-                {showcase.trendImprove.map((value, index) => {
-                  const x = (420 / Math.max(showcase.trendImprove.length - 1, 1)) * index;
+                {currentView.trendImprove.map((value, index) => {
+                  const x = (420 / Math.max(currentView.trendImprove.length - 1, 1)) * index;
                   const y = 240 - (value / 100) * 216;
                   return <circle key={`improve-${index}`} cx={x} cy={y} r="4" fill="#4ade80" />;
                 })}

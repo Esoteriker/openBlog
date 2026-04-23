@@ -48,6 +48,7 @@ export type InterestCard = {
 };
 
 export type SkillMetric = {
+  category: "frontend" | "backend" | "tools";
   name: string;
   value: number;
   tone: string;
@@ -73,7 +74,7 @@ type LocaleShowcase = {
     milestones: AboutMilestone[];
   };
   skills: {
-    tabs: Array<{ key: SkillTagGroup["key"] | "all"; label: string; icon: string }>;
+    tabs: Array<{ key: "all" | "frontend" | "backend" | "tools"; label: string; icon: string }>;
     radarTitle: string;
     proficiencyTitle: string;
     trendTitle: string;
@@ -184,12 +185,18 @@ const zhShowcase: LocaleShowcase = {
     radarAxes: ["前端开发", "后端开发", "系统设计", "问题解决", "性能优化", "工具使用"],
     radarValues: [86, 88, 82, 84, 76, 72],
     proficiency: [
-      { name: "TypeScript", value: 90, tone: "from-violet-400 to-fuchsia-300" },
-      { name: "Angular", value: 88, tone: "from-blue-500 to-cyan-400" },
-      { name: "Spring Boot", value: 82, tone: "from-cyan-400 to-emerald-400" },
-      { name: "Java", value: 75, tone: "from-emerald-400 to-lime-400" },
-      { name: "Docker", value: 70, tone: "from-orange-400 to-amber-300" },
-      { name: "MySQL", value: 65, tone: "from-pink-500 to-rose-400" }
+      { category: "frontend", name: "TypeScript", value: 90, tone: "from-violet-400 to-fuchsia-300" },
+      { category: "frontend", name: "Angular", value: 88, tone: "from-blue-500 to-cyan-400" },
+      { category: "frontend", name: "JavaScript", value: 84, tone: "from-sky-400 to-blue-400" },
+      { category: "frontend", name: "ECharts", value: 78, tone: "from-cyan-400 to-teal-300" },
+      { category: "backend", name: "Spring Boot", value: 82, tone: "from-cyan-400 to-emerald-400" },
+      { category: "backend", name: "Java", value: 75, tone: "from-emerald-400 to-lime-400" },
+      { category: "backend", name: "FastAPI", value: 79, tone: "from-green-400 to-emerald-300" },
+      { category: "backend", name: "MySQL", value: 65, tone: "from-pink-500 to-rose-400" },
+      { category: "tools", name: "Docker", value: 70, tone: "from-orange-400 to-amber-300" },
+      { category: "tools", name: "Git", value: 80, tone: "from-amber-400 to-orange-300" },
+      { category: "tools", name: "Linux", value: 72, tone: "from-violet-400 to-indigo-300" },
+      { category: "tools", name: "PostgreSQL", value: 68, tone: "from-fuchsia-400 to-pink-300" }
     ],
     trendLabels: ["5月", "7月", "9月", "11月", "1月", "3月", "5月"],
     trendStudy: [28, 38, 70, 72, 58, 78, 94],
@@ -428,12 +435,18 @@ const enShowcase: LocaleShowcase = {
     radarAxes: ["Frontend", "Backend", "System Design", "Problem Solving", "Performance", "Tooling"],
     radarValues: [86, 88, 82, 84, 76, 72],
     proficiency: [
-      { name: "TypeScript", value: 90, tone: "from-violet-400 to-fuchsia-300" },
-      { name: "Angular", value: 88, tone: "from-blue-500 to-cyan-400" },
-      { name: "Spring Boot", value: 82, tone: "from-cyan-400 to-emerald-400" },
-      { name: "Java", value: 75, tone: "from-emerald-400 to-lime-400" },
-      { name: "Docker", value: 70, tone: "from-orange-400 to-amber-300" },
-      { name: "MySQL", value: 65, tone: "from-pink-500 to-rose-400" }
+      { category: "frontend", name: "TypeScript", value: 90, tone: "from-violet-400 to-fuchsia-300" },
+      { category: "frontend", name: "Angular", value: 88, tone: "from-blue-500 to-cyan-400" },
+      { category: "frontend", name: "JavaScript", value: 84, tone: "from-sky-400 to-blue-400" },
+      { category: "frontend", name: "ECharts", value: 78, tone: "from-cyan-400 to-teal-300" },
+      { category: "backend", name: "Spring Boot", value: 82, tone: "from-cyan-400 to-emerald-400" },
+      { category: "backend", name: "Java", value: 75, tone: "from-emerald-400 to-lime-400" },
+      { category: "backend", name: "FastAPI", value: 79, tone: "from-green-400 to-emerald-300" },
+      { category: "backend", name: "MySQL", value: 65, tone: "from-pink-500 to-rose-400" },
+      { category: "tools", name: "Docker", value: 70, tone: "from-orange-400 to-amber-300" },
+      { category: "tools", name: "Git", value: 80, tone: "from-amber-400 to-orange-300" },
+      { category: "tools", name: "Linux", value: 72, tone: "from-violet-400 to-indigo-300" },
+      { category: "tools", name: "PostgreSQL", value: 68, tone: "from-fuchsia-400 to-pink-300" }
     ],
     trendLabels: ["May", "Jul", "Sep", "Nov", "Jan", "Mar", "May"],
     trendStudy: [28, 38, 70, 72, 58, 78, 94],
