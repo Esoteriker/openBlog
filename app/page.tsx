@@ -1,56 +1,70 @@
 "use client";
 
-import { AboutSection } from "@/components/about-section";
-import { ContactSection } from "@/components/contact-section";
-import { Footer } from "@/components/footer";
+import Link from "next/link";
 import { HeroSection } from "@/components/hero-section";
+import { PageShell } from "@/components/page-shell";
 import { useLocale } from "@/components/locale-provider";
-import { Navbar } from "@/components/navbar";
-import { ProjectsSection } from "@/components/projects-section";
-import { StackSection } from "@/components/stack-section";
-import { StrengthsSection } from "@/components/strengths-section";
 import { profileDataByLocale } from "@/data/profile";
 import { projectsDataByLocale } from "@/data/projects";
 
 export default function HomePage() {
   const { locale } = useLocale();
   const profileData = profileDataByLocale[locale];
-  const projectsData = projectsDataByLocale[locale];
+  const projectsData = projectsDataByLocale[locale].slice(0, 4);
 
   return (
-    <div className="text-ink">
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:bg-canvas focus:px-3 focus:py-2 focus:text-sm focus:font-semibold focus:text-ink"
-      >
-        Skip to content
-      </a>
-      <Navbar
-        name={profileData.name}
-        title={profileData.title}
-        navItems={profileData.navigation}
-        githubUrl={profileData.github}
-        githubLabel={profileData.labels.navbarGithub}
-        languageLabel={profileData.labels.language}
-        themeLabels={profileData.labels.theme}
-      />
-      <main
-        id="main-content"
-        className="mx-auto flex w-full max-w-6xl flex-col gap-20 px-4 py-10 sm:px-6 sm:py-14 lg:px-8"
-      >
+    <PageShell>
+      <div className="space-y-10">
         <HeroSection content={profileData.hero} />
-        <AboutSection content={profileData.about} />
-        <StrengthsSection content={profileData.principles} />
-        <StackSection content={profileData.stack} />
-        <ProjectsSection
-          header={profileData.systemsUi.header}
-          labels={profileData.systemsUi.labels}
-          projects={projectsData}
-          buttonLabels={profileData.systemsUi.buttons}
-        />
-        <ContactSection content={profileData.contact} />
-      </main>
-      <Footer name={profileData.name} note={profileData.footer.note} />
-    </div>
+
+        <section className="space-y-4">
+          <div className="flex items-center justify-between">
+            <h2 className="text-2xl font-bold text-ink sm:text-3xl">{profileData.systemsUi.header.title}</h2>
+            <Link href="/projects" className="text-sm font-semibold text-accent hover:opacity-80">
+              View all →
+            </Link>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            {projectsData.map((project) => (
+              <article key={project.name} className="neon-panel p-4">
+                <p className="text-xs text-indigo-300">{project.subtitle}</p>
+                <h3 className="mt-2 text-lg font-bold">{project.name}</h3>
+                <p className="mt-2 line-clamp-3 text-sm text-ink/78">{project.oneLineValue}</p>
+                <ul className="mt-3 flex flex-wrap gap-2">
+                  {project.tags.slice(0, 3).map((tag) => (
+                    <li key={tag} className="neon-badge">
+                      {tag}
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="grid gap-4 lg:grid-cols-2">
+          <article className="neon-panel p-6">
+            <h3 className="text-xl font-bold text-ink">{profileData.about.header.title}</h3>
+            <p className="mt-3 text-sm leading-relaxed text-ink/80">{profileData.about.intro}</p>
+            <Link href="/about" className="mt-4 inline-flex text-sm font-semibold text-accent hover:opacity-80">
+              Learn more →
+            </Link>
+          </article>
+          <article className="neon-panel p-6">
+            <h3 className="text-xl font-bold text-ink">{profileData.stack.header.title}</h3>
+            <ul className="mt-3 flex flex-wrap gap-2">
+              {profileData.stack.groups.flatMap((group) => group.items).slice(0, 10).map((item) => (
+                <li key={item} className="neon-badge">
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <Link href="/skills" className="mt-4 inline-flex text-sm font-semibold text-accent hover:opacity-80">
+              Explore skills →
+            </Link>
+          </article>
+        </section>
+      </div>
+    </PageShell>
   );
 }

@@ -21,7 +21,7 @@ export function ThemeToggle({ lightLabel, darkLabel, loadingLabel }: ThemeToggle
     return (
       <button
         type="button"
-        className="rounded-md border border-border/80 bg-canvas/75 px-3 py-1.5 text-xs font-semibold text-ink/75"
+        className="rounded-lg border border-border/80 bg-canvas/75 px-3 py-1 text-[11px] font-semibold text-ink/75"
       >
         {loadingLabel}
       </button>
@@ -34,10 +34,10 @@ export function ThemeToggle({ lightLabel, darkLabel, loadingLabel }: ThemeToggle
     <button
       type="button"
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="rounded-md border border-border/90 bg-canvas/70 px-3 py-1.5 text-xs font-semibold text-ink transition hover:border-accent"
+      className="rounded-lg border border-border/80 bg-canvas/80 px-3 py-1 text-[11px] font-semibold text-ink transition hover:border-accent hover:text-accent"
       aria-label="Toggle theme"
     >
-      {isDark ? lightLabel : darkLabel}
+      {isDark ? `☀ ${lightLabel}` : `☾ ${darkLabel}`}
     </button>
   );
 }

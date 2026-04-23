@@ -20,7 +20,7 @@ export function ProjectsSection({ header, labels, projects, buttonLabels }: Proj
               <div className="space-y-5">
                 <header className="space-y-1">
                   <h3 className="text-2xl font-bold tracking-tight text-ink">{project.name}</h3>
-                  <p className="text-sm font-medium text-[#8b5cf6]">{project.subtitle}</p>
+                  <p className="text-sm font-medium text-indigo-300">{project.subtitle}</p>
                   <p className="pt-1 text-sm leading-relaxed text-ink/88">
                     <span className="font-semibold text-accent">{labels.oneLineValue}: </span>
                     {project.oneLineValue}
