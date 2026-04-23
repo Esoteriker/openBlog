@@ -2,102 +2,127 @@
 
 import { useMemo, useState } from "react";
 import { PageShell } from "@/components/page-shell";
+import { Pagination } from "@/components/pagination";
+import { ShowcaseThumbnail } from "@/components/showcase-thumbnail";
 import { useLocale } from "@/components/locale-provider";
 import { profileDataByLocale } from "@/data/profile";
-import { projectsDataByLocale } from "@/data/projects";
+import { showcasePagesByLocale } from "@/data/showcase-pages";
+
+const PROJECTS_PER_PAGE = 4;
 
 export default function ProjectsPage() {
   const { locale } = useLocale();
   const profileData = profileDataByLocale[locale];
-  const projects = projectsDataByLocale[locale];
+  const showcase = showcasePagesByLocale[locale].projects;
 
-  const [activeTag, setActiveTag] = useState("all");
+  const [activeTab, setActiveTab] = useState<(typeof showcase.tabs)[number]["key"]>("all");
   const [search, setSearch] = useState("");
+  const [page, setPage] = useState(1);
 
-  const filterTags = ["all", ...Array.from(new Set(projects.flatMap((p) => p.tags))).slice(0, 6)];
-
-  const filtered = useMemo(() => {
-    return projects.filter((project) => {
-      const byTag = activeTag === "all" || project.tags.includes(activeTag);
-      const bySearch =
-        !search ||
-        `${project.name} ${project.subtitle} ${project.oneLineValue} ${project.tags.join(" ")}`
-          .toLowerCase()
-          .includes(search.toLowerCase());
-      return byTag && bySearch;
+  const filteredProjects = useMemo(() => {
+    return showcase.items.filter((project) => {
+      const categoryMatch = activeTab === "all" || project.category === activeTab;
+      const query = `${project.title} ${project.summary} ${project.tags.join(" ")}`.toLowerCase();
+      const searchMatch = !search || query.includes(search.toLowerCase());
+      return categoryMatch && searchMatch;
     });
-  }, [projects, activeTag, search]);
+  }, [activeTab, search, showcase.items]);
+
+  const totalPages = Math.max(1, Math.ceil(filteredProjects.length / PROJECTS_PER_PAGE));
+  const currentPage = Math.min(page, totalPages);
+  const visibleProjects = filteredProjects.slice((currentPage - 1) * PROJECTS_PER_PAGE, currentPage * PROJECTS_PER_PAGE);
 
   return (
     <PageShell>
-      <div className="space-y-6">
-        <header className="space-y-2">
+      <div className="space-y-8">
+        <header className="space-y-2 pr-28">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent/85">{profileData.systemsUi.header.eyebrow}</p>
-          <h1 className="text-4xl font-extrabold text-ink">{profileData.systemsUi.header.title}</h1>
-          <p className="text-ink/72">{profileData.systemsUi.header.description}</p>
+          <h1 className="text-4xl font-extrabold tracking-tight text-ink sm:text-5xl">
+            {locale === "zh" ? "我的项目" : profileData.systemsUi.header.title}
+          </h1>
+          <p className="text-lg text-ink/72">{profileData.systemsUi.header.description}</p>
         </header>
 
-        <section className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
-          <div className="flex flex-wrap gap-2">
-            {filterTags.map((tag) => {
-              const active = tag === activeTag;
+        <section className="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
+          <div className="flex flex-wrap gap-3">
+            {showcase.tabs.map((tab) => {
+              const active = activeTab === tab.key;
               return (
                 <button
-                  key={tag}
+                  key={tab.key}
                   type="button"
-                  onClick={() => setActiveTag(tag)}
-                  className={`rounded-lg border px-3 py-1.5 text-sm font-semibold transition ${
-                    active ? "border-accent/65 bg-accent/20 text-accent" : "border-border/80 text-ink/80 hover:border-accent/55"
-                  }`}
+                  onClick={() => {
+                    setActiveTab(tab.key);
+                    setPage(1);
+                  }}
+                  className={`dashboard-tab px-6 py-4 text-base font-semibold ${active ? "dashboard-tab-active" : ""}`}
                 >
-                  {tag}
+                  {tab.label}
                 </button>
               );
             })}
           </div>
-          <input
-            value={search}
-            onChange={(event) => setSearch(event.target.value)}
-            placeholder="Search projects..."
-            className="w-full max-w-sm rounded-lg border border-border/80 bg-canvas/70 px-3 py-2 text-sm text-ink outline-none transition focus:border-accent/70"
-          />
+
+          <div className="relative w-full max-w-sm">
+            <span className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-sm text-ink/44">⌕</span>
+            <input
+              value={search}
+              onChange={(event) => {
+                setSearch(event.target.value);
+                setPage(1);
+              }}
+              placeholder={showcase.searchPlaceholder}
+              className="dashboard-search w-full pl-11 pr-4 py-4 text-base"
+            />
+          </div>
         </section>
 
-        <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {filtered.map((project) => (
-            <article key={project.name} className="neon-panel flex h-full flex-col p-5">
-              <p className="text-xs text-indigo-300">{project.subtitle}</p>
-              <h2 className="mt-2 text-xl font-bold text-ink">{project.name}</h2>
-              <p className="mt-2 text-sm leading-relaxed text-ink/80">{project.oneLineValue}</p>
+        <section className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          {visibleProjects.map((project) => (
+            <article key={project.title} className="neon-panel flex h-full flex-col p-4">
+              <ShowcaseThumbnail variant={project.variant} className="h-44 w-full" />
+              <div className="mt-5 flex flex-1 flex-col">
+                <h2 className="text-3xl font-bold tracking-tight text-ink">{project.title}</h2>
+                <p className="mt-3 text-base leading-relaxed text-ink/72">{project.summary}</p>
 
-              <ul className="mt-4 flex flex-wrap gap-2">
-                {project.tags.map((tag) => (
-                  <li key={tag} className="neon-badge">
-                    {tag}
-                  </li>
-                ))}
-              </ul>
+                <ul className="mt-5 flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <li key={tag} className="neon-badge px-3 py-1.5">
+                      {tag}
+                    </li>
+                  ))}
+                </ul>
 
-              <div className="mt-4 grid gap-2 text-xs text-ink/72">
-                <p>
-                  <span className="font-semibold text-accent">{profileData.systemsUi.labels.problemContext}: </span>
-                  {project.problemContext}
-                </p>
-              </div>
-
-              <div className="mt-auto flex gap-3 pt-4">
-                <a href={project.githubUrl} target="_blank" rel="noreferrer" className="neon-button-primary text-xs">
-                  GitHub
-                </a>
-                {project.liveUrl ? (
-                  <a href={project.liveUrl} target="_blank" rel="noreferrer" className="neon-button-secondary text-xs">
-                    Live
-                  </a>
-                ) : null}
+                <div className="mt-auto flex items-center justify-end gap-3 pt-6">
+                  {project.githubUrl ? (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex h-11 w-11 items-center justify-center rounded-full border border-border/75 bg-canvas/45 text-sm font-semibold text-ink/84 transition hover:border-accent/60 hover:text-accent"
+                      aria-label={showcase.githubLabel}
+                    >
+                      GH
+                    </a>
+                  ) : null}
+                  {project.liveUrl ? (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex h-11 w-11 items-center justify-center rounded-full border border-border/75 bg-canvas/45 text-sm font-semibold text-ink/84 transition hover:border-accent/60 hover:text-accent"
+                      aria-label={showcase.liveLabel}
+                    >
+                      ↗
+                    </a>
+                  ) : null}
+                </div>
               </div>
             </article>
           ))}
         </section>
+
+        <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={setPage} />
       </div>
     </PageShell>
   );

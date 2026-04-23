@@ -1,6 +1,6 @@
 export type Locale = "en" | "zh" | "de";
 
-export const defaultLocale: Locale = "en";
+export const defaultLocale: Locale = "zh";
 
 export const localeOptions: Array<{ code: Locale; label: string }> = [
   { code: "en", label: "EN" },

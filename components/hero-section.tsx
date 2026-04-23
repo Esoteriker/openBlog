@@ -83,7 +83,7 @@ export function HeroSection({ content }: HeroSectionProps) {
           </div>
 
           <div className="flex justify-start md:justify-end">
-            <div className="relative h-20 w-20 overflow-hidden rounded-2xl border border-border/70 bg-white/95 shadow-[0_0_16px_rgb(var(--accent)/0.12)] sm:h-24 sm:w-24">
+            <div className="avatar-shell relative h-20 w-20 overflow-hidden rounded-2xl border border-border/70 shadow-[0_0_16px_rgb(var(--accent)/0.12)] sm:h-24 sm:w-24">
               <Image
                 src="/avatar.svg"
                 alt="Haidong Xu avatar"

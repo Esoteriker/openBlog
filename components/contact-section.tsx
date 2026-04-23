@@ -6,7 +6,7 @@ type ContactSectionProps = {
 };
 
 export function ContactSection({ content }: ContactSectionProps) {
-  const primaryChannel = content.channels.find((item) => item.label.toLowerCase() === "email");
+  const primaryChannel = content.channels.find((item) => item.href.startsWith("mailto:"));
 
   return (
     <section id="contact" className="space-y-8 scroll-mt-24">
@@ -21,7 +21,7 @@ export function ContactSection({ content }: ContactSectionProps) {
           ) : null}
 
           {content.channels
-            .filter((item) => item.label.toLowerCase() !== "email")
+            .filter((item) => !item.href.startsWith("mailto:"))
             .map((item) => (
               <a
                 key={item.label}

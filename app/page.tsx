@@ -6,9 +6,9 @@ import { HeroSection } from "@/components/hero-section";
 import { PageShell } from "@/components/page-shell";
 import { WorkExperienceSection } from "@/components/work-experience-section";
 import { useLocale } from "@/components/locale-provider";
+import { workExperienceByLocale } from "@/data/experience";
 import { profileDataByLocale } from "@/data/profile";
 import { projectsDataByLocale } from "@/data/projects";
-import { workExperienceByLocale } from "@/data/experience";
 
 export default function HomePage() {
   const { locale } = useLocale();
@@ -32,7 +32,7 @@ export default function HomePage() {
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
             {projectsData.map((project) => (
               <article key={project.name} className="neon-panel p-4">
-                <p className="text-xs text-indigo-300">{project.subtitle}</p>
+                <p className="project-subtitle text-xs">{project.subtitle}</p>
                 <h3 className="mt-2 text-lg font-bold">{project.name}</h3>
                 <p className="mt-2 line-clamp-3 text-sm text-ink/78">{project.oneLineValue}</p>
                 <ul className="mt-3 flex flex-wrap gap-2">
