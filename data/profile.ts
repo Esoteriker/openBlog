@@ -98,6 +98,7 @@ export type ProfileData = {
     };
     buttons: {
       github: string;
+      live: string;
     };
   };
   insights: {
@@ -134,8 +135,8 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
   en: {
     name: "Haidong Xu",
     github: "https://github.com/Esoteriker",
-    title: "Senior Solution Architect | AI Agent Engineer",
-    tagline: "Building production-ready AI agent platforms that scale reliably",
+    title: "AI Product Engineer | Full-Stack Engineer",
+    tagline: "Shipping AI-assisted product workflows across frontend, backend, and data-heavy systems",
     navigation: [
       { label: "About", href: "#about" },
       { label: "Experience", href: "#experience" },
@@ -144,103 +145,103 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
       { label: "Contact", href: "#contact" }
     ],
     hero: {
-      systemRole: "Personal Engineering Portfolio",
-      headlineLeading: "Building",
-      headlineEmphasis: "AI Agent Platforms",
-      headlineTrailing: "that stay reliable at scale",
+      systemRole: "Personal Product Engineering Portfolio",
+      headlineLeading: "Shipping",
+      headlineEmphasis: "AI Product Workflows",
+      headlineTrailing: "with reliable full-stack systems",
       typingTitles: [
-        "Senior AI Agent Engineer",
-        "Senior Solution Architect",
-        "Senior Full Stack Developer"
+        "AI Product Engineer",
+        "Senior Product Engineer (AI/LLM)",
+        "Full-Stack Software Engineer"
       ],
       positioningStatement:
-        "I help product and platform teams move AI agents from demo to production with resilient architecture, secure orchestration, and reliable runtime operations.",
+        "I build production features across TypeScript frontends, Java/Python backend services, REST APIs, AI model integrations, and data-heavy workflows.",
       highlightsTitle: "Why This Site",
       quickPoints: [
-        "Microservice boundaries and API contracts for long-term maintainability",
-        "Event-driven orchestration for agent workflows and async processing",
-        "Observability and security guardrails designed in from day one"
+        "AI-assisted retrieval, explanation, and report-generation workflows",
+        "Backend APIs and async jobs with retry, timeout, status, and fallback paths",
+        "Typed product interfaces, developer packages, Cypress coverage, and release ownership"
       ],
       ctas: {
-        primary: { label: "Explore Systems", href: "#systems" },
+        primary: { label: "Explore Product Systems", href: "#systems" },
         secondary: { label: "Contact", href: "#contact" }
       },
-      telemetry: ["Microservices", "Distributed Systems", "Event-Driven Core", "AI Infrastructure"]
+      telemetry: ["AI API Integration", "TypeScript", "REST APIs", "Async Jobs"]
     },
     about: {
       header: {
         eyebrow: "About",
-        title: "Senior AI Agent Engineer",
+        title: "AI Product Engineer",
         description:
-          "I design and deliver backend architecture for AI agent applications operating under real production constraints."
+          "I turn product requirements into reliable full-stack workflows, API contracts, and AI-assisted user experiences."
       },
       intro:
-        "As a senior Solution Architect and AI Agent Application Developer, I own architecture decisions that reduce delivery risk and improve system outcomes: predictable scaling, stable operations, and faster production rollout.",
+        "As a full-stack product engineer, I work across TypeScript interfaces, backend APIs, AI/LLM service integration, async execution, debugging, and release quality. I like the practical middle ground where product behavior, system reliability, and developer experience all have to agree.",
       capabilitiesTitle: "Core Capability Modules",
       capabilities: [
-        "Microservices architecture with bounded contexts and API contracts",
-        "Distributed workflow design with asynchronous processing patterns",
-        "Production hardening across performance, resilience, and maintainability"
+        "AI/LLM product workflows with model APIs, RAG patterns, retry/fallback handling, and graceful degradation",
+        "Backend API design for web and mobile clients with clear contracts, error behavior, and ownership boundaries",
+        "Frontend product delivery with TypeScript, React/Next.js, Angular, data visualization, and reusable component packages"
       ],
       workingStyleTitle: "How I Work",
       workingStyle: [
-        "Translate ambiguous product goals into clear architecture decisions and execution plans",
-        "Own critical reliability paths: failure handling, service boundaries, and incident response clarity",
-        "Partner with product and engineering teams to ship safely, iterate fast, and scale predictably"
+        "Translate user workflows into typed interfaces, API reviews, and maintainable service boundaries",
+        "Design long-running jobs around status tracking, retries, timeouts, logs, and recoverable execution paths",
+        "Use observability, Cypress regression coverage, CI gates, and release triage to keep delivery grounded"
       ],
       timelineTitle: "Now / Recently / Next",
       timeline: [
         {
           label: "Now",
-          text: "Building AI agent workflows with event-driven orchestration and production observability."
+          text: "Shipping AI-assisted product workflows that connect model APIs with internal services for retrieval, explanation, and reporting."
         },
         {
           label: "Recently",
-          text: "Delivered microservice pipelines for knowledge graph indexing and retrieval-driven reasoning."
+          text: "Delivered backend APIs, async task orchestration, and data-heavy TypeScript workflows for industrial engineering software."
         },
         {
           label: "Next",
-          text: "Expanding agent runtime guardrails with stronger governance, evaluation, and rollback paths."
+          text: "Deepening developer-facing product work around typed packages, integration guides, observability, and AI workflow quality."
         }
       ]
     },
     principles: {
       header: {
         eyebrow: "Philosophy",
-        title: "System Design Principles",
+        title: "Product Engineering Principles",
         description:
-          "Architecture modules that guide how systems are shaped, scaled, and secured in production."
+          "The delivery habits I use when product behavior, AI services, and backend reliability meet in production."
       },
       items: [
         {
           module: "M-01",
-          title: "Scalable by Architecture",
-          summary: "Use domain boundaries and contract-first interfaces so scaling decisions stay predictable."
+          title: "Contracts Before Coupling",
+          summary: "Clarify typed interfaces, API contracts, and error behavior before teams depend on hidden assumptions."
         },
         {
           module: "M-02",
-          title: "Event-Driven Core",
-          summary: "Model system behavior through events to enable decoupling, resilience, and replayability."
+          title: "Resilience in the Workflow",
+          summary: "Build retry, timeout, status tracking, fallback, and graceful degradation into user-facing flows."
         },
         {
           module: "M-03",
-          title: "Secure by Default",
-          summary: "Apply least privilege, controlled secrets, and strong authentication from the initial design."
+          title: "Debuggable by Design",
+          summary: "Use logs, dependency chains, service interaction traces, and user impact analysis to shorten investigations."
         },
         {
           module: "M-04",
-          title: "Data-Centric Intelligence",
-          summary: "Design for graph, search, and transactional workloads to support intelligent product behavior."
+          title: "AI as Product Behavior",
+          summary: "Treat model calls as product workflows with retrieval context, quality checks, rate limits, and fallbacks."
         },
         {
           module: "M-05",
-          title: "Observability Built-In",
-          summary: "Instrument traces, metrics, and logs so distributed systems stay explainable in production."
+          title: "Developer Experience Compounds",
+          summary: "Invest in typed packages, documentation, API reviews, and integration conventions to reduce future friction."
         },
         {
           module: "M-06",
-          title: "AI-Ready Infrastructure",
-          summary: "Build infrastructure that supports model integration, safety controls, and iterative rollout."
+          title: "Quality Gates Enable Speed",
+          summary: "Use Cypress coverage, CI workflows, code reviews, and release triage so product iteration can stay fast."
         }
       ]
     },
@@ -249,29 +250,29 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
         eyebrow: "Stack",
         title: "Core Technology Stack",
         description:
-          "Grouped by execution domains so technical depth is easy to scan in seconds."
+          "Grouped around the product surfaces and runtime paths I work on most."
       },
       groups: [
         {
-          category: "Backend",
-          items: ["FastAPI", "Node.js", "REST APIs", "Multi-tenant APIs", "JWT / API Key Auth"]
+          category: "AI / Product",
+          items: ["OpenAI API", "RAG", "Prompt Engineering", "Tool Calling", "Retry / Fallback Design"]
         },
         {
-          category: "Cloud / Infra",
-          items: ["Microservices", "Distributed Systems", "Event-Driven Architecture", "Docker", "Docker Compose"]
+          category: "Backend / Data",
+          items: ["Java", "Python", "Spring Boot", "FastAPI", "Node.js", "REST APIs", "SQL", "Async Jobs"]
         },
         {
-          category: "AI / Data",
-          items: ["PostgreSQL", "Redis", "Neo4j", "Elasticsearch", "LLM Integration Pipelines"]
+          category: "Frontend / Delivery",
+          items: ["TypeScript", "React", "Next.js", "Angular", "Data Visualization", "WebAssembly", "Cypress", "Docker"]
         }
       ]
     },
     systemsUi: {
       header: {
         eyebrow: "Systems",
-        title: "Featured Systems",
+        title: "Featured Product Systems",
         description:
-          "Architecture-led project snapshots with strategy, scalability, and security considerations."
+          "Resume-backed snapshots of AI-assisted workflows, backend services, and developer-facing product infrastructure."
       },
       labels: {
         oneLineValue: "System Value",
@@ -285,7 +286,8 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
         securityConsiderations: "Security Considerations"
       },
       buttons: {
-        github: "GitHub"
+        github: "GitHub",
+        live: "Open"
       }
     },
     insights: {
@@ -293,24 +295,24 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
         eyebrow: "Insights",
         title: "Engineering Philosophy / Insights",
         description:
-          "Architecture notes that capture design tradeoffs, operational lessons, and backend strategy decisions."
+          "Notes on product engineering tradeoffs, AI integration reliability, and developer experience."
       },
       items: [
         {
-          title: "From Features to System Boundaries",
-          summary: "Why early boundary design prevents hidden coupling in rapidly scaling platforms.",
+          title: "AI APIs Are Product Workflows",
+          summary: "Why retries, fallbacks, caching, rate limits, and user-facing states matter as much as the model call.",
           status: "Draft",
           href: "#"
         },
         {
-          title: "Event Streams as Operational Memory",
-          summary: "Using event logs to improve resilience, replay, and observability in distributed systems.",
+          title: "Typed Interfaces Reduce Product Friction",
+          summary: "How package APIs, integration guides, and reviews make shared frontend infrastructure easier to adopt.",
           status: "Draft",
           href: "#"
         },
         {
-          title: "Designing AI Workflows for Production",
-          summary: "Patterns for combining LLM services with guardrails, caching, and fallback paths.",
+          title: "Debugging Across Service Boundaries",
+          summary: "A practical loop for reading logs, dependency chains, and user impact during production investigations.",
           status: "Draft",
           href: "#"
         }
@@ -319,18 +321,18 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
     contact: {
       header: {
         eyebrow: "Contact",
-        title: "Build the Next Intelligent Platform",
+        title: "Build Reliable AI Product Workflows",
         description:
-          "Available for solution architecture, backend strategy, and AI-native infrastructure collaboration."
+          "Available for AI product engineering, full-stack delivery, backend APIs, and developer experience work."
       },
       invitation:
-        "If your platform needs resilient architecture and production-grade execution, let's connect.",
+        "If your product needs AI integration that survives real users, changing data, and production constraints, let's connect.",
       channels: [
         { label: "Email", value: "esoteriker.dev@gmail.com", href: "mailto:esoteriker.dev@gmail.com" },
         {
           label: "LinkedIn",
           value: "Haidong Xu",
-          href: "https://www.linkedin.com/search/results/all/?keywords=Haidong%20Xu"
+          href: "https://www.linkedin.com/in/haidong-xu/"
         },
         { label: "Website", value: "haidong-dev.com", href: "https://haidong-dev.com" }
       ]
@@ -346,21 +348,21 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
       }
     },
     seo: {
-      title: "Haidong Xu | Solution Architect",
+      title: "Haidong Xu | AI Product Engineer",
       description:
-        "Cyberpunk-inspired portfolio for a Solution Architect and Backend Systems Engineer focused on microservices, distributed systems, and AI-native infrastructure.",
+        "Portfolio for an AI Product Engineer and Full-Stack Software Engineer focused on AI integrations, backend APIs, TypeScript workflows, and developer experience.",
       url: "https://haidong-dev.com",
       ogImage: "/opengraph-image"
     },
     footer: {
-      note: "AI-native systems architecture dashboard for backend and distributed engineering strategy."
+      note: "Product engineering portfolio for AI integrations, backend APIs, and full-stack delivery."
     }
   },
   zh: {
     name: "徐海东",
     github: "https://github.com/Esoteriker",
-    title: "Senior Solution Architect | AI Agent Engineer",
-    tagline: "构建可在生产环境稳定扩展的 AI Agent 平台",
+    title: "AI Product Engineer | Full-Stack Engineer",
+    tagline: "交付覆盖前端、后端与数据工作流的 AI 辅助产品体验",
     navigation: [
       { label: "关于", href: "#about" },
       { label: "经历", href: "#experience" },
@@ -369,101 +371,101 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
       { label: "联系", href: "#contact" }
     ],
     hero: {
-      systemRole: "个人工程作品集",
-      headlineLeading: "构建",
-      headlineEmphasis: "AI Agent 平台",
-      headlineTrailing: "并在规模化场景保持稳定可靠",
+      systemRole: "个人产品工程作品集",
+      headlineLeading: "交付",
+      headlineEmphasis: "AI 产品工作流",
+      headlineTrailing: "并用全栈系统保障可靠运行",
       typingTitles: [
-        "Senior AI Agent Engineer",
-        "Senior Solution Architect",
-        "Senior Full Stack Developer"
+        "AI Product Engineer",
+        "Senior Product Engineer (AI/LLM)",
+        "Full-Stack Software Engineer"
       ],
       positioningStatement:
-        "我帮助产品与平台团队将 AI Agent 从 Demo 推向生产环境，重点解决架构韧性、安全编排与运行稳定性问题。",
+        "我负责 TypeScript 前端、Java/Python 后端服务、REST API、AI 模型集成与数据密集型工作流的生产级功能交付。",
       highlightsTitle: "价值摘要",
       quickPoints: [
-        "以服务边界和 API 契约保障长期可维护性",
-        "以事件驱动流程支撑 Agent 工作流与异步任务",
-        "从第一天引入可观测性与安全治理能力"
+        "AI 辅助的检索、解释与报告生成产品流程",
+        "带重试、超时、状态追踪与回退路径的后端 API 和异步任务",
+        "类型化产品接口、开发者包、Cypress 覆盖与发布质量负责"
       ],
       ctas: {
-        primary: { label: "查看系统", href: "#systems" },
+        primary: { label: "查看产品系统", href: "#systems" },
         secondary: { label: "联系我", href: "#contact" }
       },
-      telemetry: ["微服务", "分布式系统", "事件驱动核心", "AI 基础设施"]
+      telemetry: ["AI API 集成", "TypeScript", "REST APIs", "异步任务"]
     },
     about: {
       header: {
         eyebrow: "关于",
-        title: "资深 AI Agent 系统工程师",
-        description: "专注 AI Agent 应用的后端架构设计与生产环境交付。"
+        title: "AI 产品工程师",
+        description: "把产品需求转化为可靠的全栈工作流、API 契约与 AI 辅助用户体验。"
       },
       intro:
-        "作为资深 Solution Architect 与 AI Agent Application Developer，我主导关键架构决策，降低交付风险并提升系统结果：可预测扩展、稳定运行与更快上线。",
+        "作为全栈产品工程师，我跨 TypeScript 界面、后端 API、AI/LLM 服务集成、异步执行、调试与发布质量工作。我的兴趣点在产品行为、系统可靠性与开发者体验真正对齐的地方。",
       capabilitiesTitle: "核心能力模块",
       capabilities: [
-        "基于边界上下文与 API 契约的微服务架构设计",
-        "面向异步处理模式的分布式流程设计",
-        "围绕性能、韧性与可维护性的生产级工程落地"
+        "基于模型 API、RAG、重试/回退与优雅降级的 AI/LLM 产品工作流",
+        "面向 Web 与移动端的后端 API 设计，明确契约、错误行为与集成责任边界",
+        "基于 TypeScript、React/Next.js、Angular、数据可视化与组件包的前端产品交付"
       ],
       workingStyleTitle: "我的协作方式",
       workingStyle: [
-        "将模糊的产品目标拆解为清晰的架构决策与执行路径",
-        "主导可靠性关键路径：故障处理、服务边界与响应流程",
-        "与产品和工程团队协同，在安全前提下快速迭代并稳定扩展"
+        "把用户流程拆成类型化接口、API review 与可维护的服务边界",
+        "围绕状态追踪、重试、超时、日志与可恢复执行路径设计长任务",
+        "通过可观测性、Cypress 回归、CI 质量门与发布排障保持交付稳定"
       ],
       timelineTitle: "Now / Recently / Next",
       timeline: [
         {
           label: "Now",
-          text: "构建具备事件驱动编排与可观测性的 AI Agent 工作流。"
+          text: "交付连接模型 API 与内部服务的 AI 辅助产品流程，覆盖检索、解释与报告生成。"
         },
         {
           label: "Recently",
-          text: "交付面向知识图谱索引与检索推理的微服务流水线。"
+          text: "为工业工程软件交付后端 API、异步任务编排与数据密集型 TypeScript 工作流。"
         },
         {
           label: "Next",
-          text: "增强 Agent 运行时护栏，完善治理、评估与回滚机制。"
+          text: "继续深入类型化包、集成文档、可观测性与 AI 工作流质量等开发者体验方向。"
         }
       ]
     },
     principles: {
       header: {
         eyebrow: "理念",
-        title: "系统设计原则",
-        description: "用于指导系统建模、扩展与安全治理的架构模块。"
+        title: "产品工程原则",
+        description: "当产品行为、AI 服务与后端可靠性在生产环境相遇时，我遵循的交付习惯。"
       },
       items: [
         {
           module: "M-01",
-          title: "以架构实现可扩展",
-          summary: "通过清晰的领域边界与契约优先接口，让扩展决策保持可预测。"
+          title: "先契约，后耦合",
+          summary: "在团队依赖形成前，先明确类型化接口、API 契约与错误行为。"
         },
         {
           module: "M-02",
-          title: "事件驱动核心",
-          summary: "以事件建模系统行为，提升解耦能力、韧性与可回放性。"
+          title: "把韧性放进流程",
+          summary: "在用户可见流程里内建重试、超时、状态追踪、回退与优雅降级。"
         },
         {
           module: "M-03",
-          title: "默认安全",
-          summary: "从设计初期就落地最小权限、密钥控制与强认证机制。"
+          title: "默认可调试",
+          summary: "用日志、依赖链、服务交互与用户影响分析缩短生产问题定位时间。"
         },
         {
           module: "M-04",
-          title: "数据驱动智能",
-          summary: "兼顾图数据库、搜索与事务数据，支撑智能化产品能力。"
+          title: "把 AI 当成产品行为",
+          summary: "将模型调用放进完整产品流程，配套检索上下文、质量检查、限流与回退。"
         },
         {
           module: "M-05",
-          title: "内建可观测性",
-          summary: "通过指标、链路与日志让分布式系统在生产中可解释、可排障。"
+          title: "开发者体验会复利",
+          summary: "投资类型化包、文档、API review 与集成约定，降低未来协作摩擦。"
         },
         {
           module: "M-06",
-          title: "AI 就绪基础设施",
-          summary: "构建可支持模型集成、安全护栏与渐进式发布的基础设施。"
+          title: "质量门支撑速度",
+          summary: "用 Cypress、CI、代码评审与发布排障机制，让产品迭代保持速度。"
         }
       ]
     },
@@ -471,28 +473,28 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
       header: {
         eyebrow: "技术栈",
         title: "核心技术栈",
-        description: "按执行领域分组，便于快速扫描我的技术深度。"
+        description: "围绕我最常处理的产品界面与运行路径分组。"
       },
       groups: [
         {
-          category: "后端",
-          items: ["FastAPI", "Node.js", "REST APIs", "多租户 APIs", "JWT / API Key 认证"]
+          category: "AI / 产品",
+          items: ["OpenAI API", "RAG", "Prompt Engineering", "Tool Calling", "重试 / 回退设计"]
         },
         {
-          category: "云 / 基础设施",
-          items: ["微服务", "分布式系统", "事件驱动架构", "Docker", "Docker Compose"]
+          category: "后端 / 数据",
+          items: ["Java", "Python", "Spring Boot", "FastAPI", "Node.js", "REST APIs", "SQL", "异步任务"]
         },
         {
-          category: "AI / 数据",
-          items: ["PostgreSQL", "Redis", "Neo4j", "Elasticsearch", "LLM 集成流水线"]
+          category: "前端 / 交付",
+          items: ["TypeScript", "React", "Next.js", "Angular", "数据可视化", "WebAssembly", "Cypress", "Docker"]
         }
       ]
     },
     systemsUi: {
       header: {
         eyebrow: "系统",
-        title: "精选系统项目",
-        description: "以架构视角展示项目策略、扩展方案与安全设计要点。"
+        title: "精选产品系统",
+        description: "基于最新简历内容展示 AI 辅助流程、后端服务与开发者产品基础设施。"
       },
       labels: {
         oneLineValue: "系统价值",
@@ -506,31 +508,32 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
         securityConsiderations: "安全考量"
       },
       buttons: {
-        github: "GitHub"
+        github: "GitHub",
+        live: "打开"
       }
     },
     insights: {
       header: {
         eyebrow: "洞察",
         title: "工程理念 / 技术笔记",
-        description: "记录架构取舍、运行经验与后端系统设计思路。"
+        description: "记录产品工程取舍、AI 集成可靠性与开发者体验思考。"
       },
       items: [
         {
-          title: "从功能到系统边界",
-          summary: "为何早期边界设计能避免规模增长后的隐性耦合。",
+          title: "AI API 也是产品工作流",
+          summary: "为什么重试、回退、缓存、限流和用户可见状态与模型调用同样重要。",
           status: "草稿",
           href: "#"
         },
         {
-          title: "事件流即系统记忆",
-          summary: "如何用事件日志增强分布式系统的韧性、回放与可观测性。",
+          title: "类型化接口降低产品摩擦",
+          summary: "组件包 API、集成指南与 review 如何提升共享前端基础设施的采用质量。",
           status: "草稿",
           href: "#"
         },
         {
-          title: "面向生产的 AI 工作流设计",
-          summary: "结合 LLM 服务、缓存与降级策略的实战模式。",
+          title: "跨服务边界调试",
+          summary: "生产排障中如何结合日志、依赖链与用户影响建立判断路径。",
           status: "草稿",
           href: "#"
         }
@@ -539,16 +542,16 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
     contact: {
       header: {
         eyebrow: "联系",
-        title: "一起构建下一代智能平台",
-        description: "可合作方向包括解决方案架构、后端系统策略与 AI 原生基础设施。"
+        title: "一起构建可靠的 AI 产品工作流",
+        description: "可合作方向包括 AI 产品工程、全栈交付、后端 API 与开发者体验。"
       },
-      invitation: "如果你的平台需要高韧性架构与生产级交付能力，欢迎联系我。",
+      invitation: "如果你的产品需要能经受真实用户、复杂数据与生产约束的 AI 集成，欢迎联系我。",
       channels: [
         { label: "邮箱", value: "esoteriker.dev@gmail.com", href: "mailto:esoteriker.dev@gmail.com" },
         {
           label: "LinkedIn",
           value: "Haidong Xu",
-          href: "https://www.linkedin.com/search/results/all/?keywords=Haidong%20Xu"
+          href: "https://www.linkedin.com/in/haidong-xu/"
         },
         { label: "网站", value: "haidong-dev.com", href: "https://haidong-dev.com" }
       ]
@@ -564,20 +567,20 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
       }
     },
     seo: {
-      title: "Haidong Xu | 解决方案架构师",
-      description: "面向微服务、分布式系统与 AI 原生基础设施的赛博风格架构师个人站。",
+      title: "Haidong Xu | AI 产品工程师",
+      description: "面向 AI 集成、后端 API、TypeScript 工作流与开发者体验的全栈产品工程作品集。",
       url: "https://haidong-dev.com",
       ogImage: "/opengraph-image"
     },
     footer: {
-      note: "聚焦后端与分布式工程策略的 AI 原生系统架构面板。"
+      note: "聚焦 AI 集成、后端 API 与全栈交付的产品工程作品集。"
     }
   },
   de: {
     name: "Haidong Xu",
     github: "https://github.com/Esoteriker",
-    title: "Senior Solution Architect | AI Agent Engineer",
-    tagline: "Produktionsreife AI-Agent-Plattformen, die zuverlässig skalieren",
+    title: "AI Product Engineer | Full-Stack Engineer",
+    tagline: "AI-gestützte Produkt-Workflows über Frontend, Backend und datenintensive Systeme liefern",
     navigation: [
       { label: "Über mich", href: "#about" },
       { label: "Erfahrung", href: "#experience" },
@@ -586,103 +589,103 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
       { label: "Kontakt", href: "#contact" }
     ],
     hero: {
-      systemRole: "Persönliches Engineering-Portfolio",
-      headlineLeading: "Building",
-      headlineEmphasis: "AI Agent Platforms",
-      headlineTrailing: "that stay reliable at scale",
+      systemRole: "Persönliches Product-Engineering-Portfolio",
+      headlineLeading: "Shipping",
+      headlineEmphasis: "AI Product Workflows",
+      headlineTrailing: "with reliable full-stack systems",
       typingTitles: [
-        "Senior AI Agent Engineer",
-        "Senior Solution Architect",
-        "Senior Full Stack Developer"
+        "AI Product Engineer",
+        "Senior Product Engineer (AI/LLM)",
+        "Full-Stack Software Engineer"
       ],
       positioningStatement:
-        "Ich unterstütze Produkt- und Plattformteams dabei, AI-Agenten von der Demo in die Produktion zu bringen – mit resilienter Architektur, sicherer Orchestrierung und zuverlässigem Betrieb.",
+        "Ich entwickle produktive Features über TypeScript-Frontends, Java/Python-Backend-Services, REST APIs, AI-Modellintegrationen und datenintensive Workflows.",
       highlightsTitle: "Kernnutzen",
       quickPoints: [
-        "Klare Service-Grenzen und API-Verträge für wartbare Systeme",
-        "Event-getriebene Orchestrierung für Agent-Workflows und Async-Jobs",
-        "Observability und Security-Guardrails von Anfang an"
+        "AI-gestützte Retrieval-, Erklärungs- und Report-Workflows",
+        "Backend APIs und Async-Jobs mit Retry, Timeout, Status und Fallback-Pfaden",
+        "Typisierte Produktinterfaces, Developer Packages, Cypress Coverage und Release Ownership"
       ],
       ctas: {
-        primary: { label: "Systeme erkunden", href: "#systems" },
+        primary: { label: "Produktsysteme erkunden", href: "#systems" },
         secondary: { label: "Kontakt", href: "#contact" }
       },
-      telemetry: ["Microservices", "Verteilte Systeme", "Event-Driven Core", "KI-Infrastruktur"]
+      telemetry: ["AI API Integration", "TypeScript", "REST APIs", "Async Jobs"]
     },
     about: {
       header: {
         eyebrow: "Über mich",
-        title: "Senior AI Agent Engineer",
+        title: "AI Product Engineer",
         description:
-          "Fokus auf Architektur und Delivery von Backend-Systemen für produktive AI-Agent-Anwendungen."
+          "Ich übersetze Produktanforderungen in verlässliche Full-Stack-Workflows, API-Verträge und AI-gestützte Nutzererlebnisse."
       },
       intro:
-        "Als Senior Solution Architect und AI Agent Application Developer verantworte ich Architekturentscheidungen, die Delivery-Risiken senken und messbare Ergebnisse liefern: planbare Skalierung, stabiler Betrieb und schnellere Produktivsetzung.",
+        "Als Full-Stack Product Engineer arbeite ich über TypeScript-UIs, Backend APIs, AI/LLM-Serviceintegration, asynchrone Ausführung, Debugging und Release-Qualität hinweg.",
       capabilitiesTitle: "Kernfähigkeiten",
       capabilities: [
-        "Microservice-Architekturen mit Bounded Contexts und API-Verträgen",
-        "Design verteilter Abläufe mit asynchronen Verarbeitungsmustern",
-        "Produktionshärtung in Bezug auf Performance, Resilienz und Wartbarkeit"
+        "AI/LLM-Produktworkflows mit Modell-APIs, RAG, Retry/Fallback und Graceful Degradation",
+        "Backend-API-Design für Web- und Mobile-Clients mit klaren Verträgen, Fehlerverhalten und Ownership",
+        "Frontend Product Delivery mit TypeScript, React/Next.js, Angular, Datenvisualisierung und wiederverwendbaren Packages"
       ],
       workingStyleTitle: "Arbeitsweise",
       workingStyle: [
-        "Übersetze unklare Produktziele in klare Architekturentscheidungen und umsetzbare Pläne",
-        "Verantworte kritische Reliability-Pfade: Failure-Handling, Service-Grenzen, Incident-Klarheit",
-        "Arbeite eng mit Produkt- und Engineering-Teams für sichere Releases und planbare Skalierung"
+        "Übersetze User Workflows in typisierte Interfaces, API Reviews und wartbare Service-Grenzen",
+        "Modelliere Long-Running Jobs mit Status Tracking, Retries, Timeouts, Logs und recoverable Execution Paths",
+        "Nutze Observability, Cypress Regression Coverage, CI Gates und Release Triage für stabile Lieferung"
       ],
       timelineTitle: "Now / Recently / Next",
       timeline: [
         {
           label: "Now",
-          text: "Baue AI-Agent-Workflows mit eventgetriebener Orchestrierung und produktiver Observability."
+          text: "Liefere AI-gestützte Produktworkflows, die Modell-APIs mit internen Services für Retrieval, Erklärung und Reporting verbinden."
         },
         {
           label: "Recently",
-          text: "Geliefert: Microservice-Pipelines für Wissensgraph-Indizierung und retrieval-basiertes Reasoning."
+          text: "Geliefert: Backend APIs, Async-Task-Orchestrierung und datenintensive TypeScript-Workflows für industrielle Engineering-Software."
         },
         {
           label: "Next",
-          text: "Ausbau von Runtime-Guardrails mit stärkerer Governance, Evaluation und Rollback-Strategien."
+          text: "Vertiefe Developer Experience rund um typisierte Packages, Integration Guides, Observability und AI-Workflow-Qualität."
         }
       ]
     },
     principles: {
       header: {
         eyebrow: "Prinzipien",
-        title: "System Design Principles",
+        title: "Product Engineering Principles",
         description:
-          "Architekturmodule, die den Aufbau, die Skalierung und die Absicherung produktiver Systeme steuern."
+          "Lieferprinzipien für Produktverhalten, AI-Services und Backend-Zuverlässigkeit in Produktion."
       },
       items: [
         {
           module: "M-01",
-          title: "Skalierbar durch Architektur",
-          summary: "Domänengrenzen und Contract-first Schnittstellen machen Skalierungsentscheidungen berechenbar."
+          title: "Contracts Before Coupling",
+          summary: "Typisierte Interfaces, API-Verträge und Fehlerverhalten klären, bevor Abhängigkeiten wachsen."
         },
         {
           module: "M-02",
-          title: "Event-Driven Core",
-          summary: "Systemverhalten über Events modellieren, um Entkopplung, Resilienz und Replay zu ermöglichen."
+          title: "Resilienz im Workflow",
+          summary: "Retry, Timeout, Status Tracking, Fallback und Graceful Degradation in User-Flows einbauen."
         },
         {
           module: "M-03",
-          title: "Secure by Default",
-          summary: "Least Privilege, kontrollierte Secrets und starke Authentifizierung von Anfang an."
+          title: "Debuggable by Design",
+          summary: "Logs, Dependency Chains, Service Interactions und User Impact für schnelle Ursachenanalyse nutzen."
         },
         {
           module: "M-04",
-          title: "Datenzentrierte Intelligenz",
-          summary: "Graph-, Search- und transaktionale Workloads kombinieren, um intelligente Produkte zu ermöglichen."
+          title: "AI als Produktverhalten",
+          summary: "Modellaufrufe als Workflow mit Retrieval-Kontext, Qualitätschecks, Rate Limits und Fallbacks behandeln."
         },
         {
           module: "M-05",
-          title: "Observability Built-In",
-          summary: "Metriken, Traces und Logs integrieren, damit verteilte Systeme erklärbar bleiben."
+          title: "Developer Experience zahlt sich aus",
+          summary: "Typisierte Packages, Dokumentation, API Reviews und Integrationskonventionen reduzieren Reibung."
         },
         {
           module: "M-06",
-          title: "KI-fähige Infrastruktur",
-          summary: "Infrastruktur für Modellintegration, Sicherheitsleitplanken und iterativen Rollout bauen."
+          title: "Quality Gates ermöglichen Tempo",
+          summary: "Cypress, CI, Code Reviews und Release Triage halten Produktiteration schnell und belastbar."
         }
       ]
     },
@@ -691,29 +694,29 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
         eyebrow: "Stack",
         title: "Core Technology Stack",
         description:
-          "Nach Ausführungsdomänen gruppiert, damit technische Schwerpunkte schnell erfassbar sind."
+          "Gruppiert nach Produktflächen und Runtime-Pfaden, an denen ich am häufigsten arbeite."
       },
       groups: [
         {
-          category: "Backend",
-          items: ["FastAPI", "Node.js", "REST APIs", "Multi-Tenant APIs", "JWT / API-Key Auth"]
+          category: "AI / Produkt",
+          items: ["OpenAI API", "RAG", "Prompt Engineering", "Tool Calling", "Retry / Fallback Design"]
         },
         {
-          category: "Cloud / Infrastruktur",
-          items: ["Microservices", "Verteilte Systeme", "Event-Driven Architecture", "Docker", "Docker Compose"]
+          category: "Backend / Data",
+          items: ["Java", "Python", "Spring Boot", "FastAPI", "Node.js", "REST APIs", "SQL", "Async Jobs"]
         },
         {
-          category: "AI / Data",
-          items: ["PostgreSQL", "Redis", "Neo4j", "Elasticsearch", "LLM Integration Pipelines"]
+          category: "Frontend / Delivery",
+          items: ["TypeScript", "React", "Next.js", "Angular", "Datenvisualisierung", "WebAssembly", "Cypress", "Docker"]
         }
       ]
     },
     systemsUi: {
       header: {
         eyebrow: "Systeme",
-        title: "Ausgewählte Systeme",
+        title: "Ausgewählte Produktsysteme",
         description:
-          "Architekturfokussierte Projekteinblicke mit Strategie, Skalierungsansatz und Sicherheitsaspekten."
+          "Lebenslaufbasierte Einblicke in AI-gestützte Workflows, Backend-Services und Developer-Infrastruktur."
       },
       labels: {
         oneLineValue: "Systemwert",
@@ -727,7 +730,8 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
         securityConsiderations: "Sicherheitsaspekte"
       },
       buttons: {
-        github: "GitHub"
+        github: "GitHub",
+        live: "Öffnen"
       }
     },
     insights: {
@@ -735,24 +739,24 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
         eyebrow: "Insights",
         title: "Engineering Philosophy / Insights",
         description:
-          "Architekturnotizen zu Trade-offs, Betriebserfahrungen und Backend-Strategieentscheidungen."
+          "Notizen zu Product-Engineering-Tradeoffs, AI-Integrationszuverlässigkeit und Developer Experience."
       },
       items: [
         {
-          title: "Von Features zu Systemgrenzen",
-          summary: "Warum frühes Boundary-Design versteckte Kopplung in skalierenden Plattformen verhindert.",
+          title: "AI APIs sind Produktworkflows",
+          summary: "Warum Retries, Fallbacks, Caching, Rate Limits und sichtbare Zustände so wichtig sind wie der Modellaufruf.",
           status: "Entwurf",
           href: "#"
         },
         {
-          title: "Event Streams als operatives Gedächtnis",
-          summary: "Wie Event-Logs Resilienz, Replay und Observability in verteilten Systemen stärken.",
+          title: "Typisierte Interfaces reduzieren Reibung",
+          summary: "Wie Package APIs, Integration Guides und Reviews gemeinsame Frontend-Infrastruktur nutzbarer machen.",
           status: "Entwurf",
           href: "#"
         },
         {
-          title: "KI-Workflows für Produktion entwerfen",
-          summary: "Muster für LLM-Services mit Guardrails, Caching und Fallback-Pfaden.",
+          title: "Debugging über Service-Grenzen",
+          summary: "Ein praktischer Ablauf für Logs, Dependency Chains und User Impact in Production Investigations.",
           status: "Entwurf",
           href: "#"
         }
@@ -761,18 +765,18 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
     contact: {
       header: {
         eyebrow: "Kontakt",
-        title: "Gemeinsam die nächste intelligente Plattform bauen",
+        title: "Zuverlässige AI-Produktworkflows bauen",
         description:
-          "Offen für Zusammenarbeit bei Solution Architecture, Backend-Strategie und KI-nativer Infrastruktur."
+          "Offen für AI Product Engineering, Full-Stack Delivery, Backend APIs und Developer Experience."
       },
       invitation:
-        "Wenn Ihre Plattform resiliente Architektur und produktionsreife Umsetzung braucht, lassen Sie uns sprechen.",
+        "Wenn Ihr Produkt AI-Integration braucht, die reale Nutzer, wechselnde Daten und Produktionsbedingungen aushält, lassen Sie uns sprechen.",
       channels: [
         { label: "E-Mail", value: "esoteriker.dev@gmail.com", href: "mailto:esoteriker.dev@gmail.com" },
         {
           label: "LinkedIn",
           value: "Haidong Xu",
-          href: "https://www.linkedin.com/search/results/all/?keywords=Haidong%20Xu"
+          href: "https://www.linkedin.com/in/haidong-xu/"
         },
         { label: "Webseite", value: "haidong-dev.com", href: "https://haidong-dev.com" }
       ]
@@ -788,14 +792,14 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
       }
     },
     seo: {
-      title: "Haidong Xu | Solution Architect",
+      title: "Haidong Xu | AI Product Engineer",
       description:
-        "Cyberpunk-inspirierte Website für einen Solution Architect mit Fokus auf Microservices, verteilte Systeme und KI-native Infrastruktur.",
+        "Portfolio für einen AI Product Engineer und Full-Stack Software Engineer mit Fokus auf AI-Integrationen, Backend APIs, TypeScript Workflows und Developer Experience.",
       url: "https://haidong-dev.com",
       ogImage: "/opengraph-image"
     },
     footer: {
-      note: "KI-native Architekturzentrale für Backend- und Distributed-Engineering-Strategien."
+      note: "Product-Engineering-Portfolio für AI-Integrationen, Backend APIs und Full-Stack Delivery."
     }
   }
 };

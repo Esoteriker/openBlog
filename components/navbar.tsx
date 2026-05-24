@@ -61,7 +61,7 @@ export function Navbar({
 
   return (
     <>
-      <header className="border-b border-border/70 bg-canvas/85 px-4 py-3 backdrop-blur-xl lg:hidden">
+      <header className="border-b border-border/65 bg-canvas/88 px-4 py-3 shadow-[0_10px_24px_rgb(var(--shadow-rgb)/0.08)] backdrop-blur-xl lg:hidden">
         <div className="flex items-center justify-between gap-4">
           <div className="min-w-0">
             <p className="truncate text-base font-bold tracking-tight text-ink">{name}</p>
@@ -79,10 +79,10 @@ export function Navbar({
               return (
                 <li key={item.href}>
                   <Link
-                    className={`rounded-md border px-3 py-1.5 transition ${
+                    className={`rounded-lg border px-3 py-1.5 transition ${
                       active
-                        ? "border-accent/70 bg-accent/20 text-accent"
-                        : "border-border/75 bg-canvas/65 text-ink/84 hover:border-accent/70 hover:text-accent"
+                        ? "border-ink/35 bg-ink/10 text-ink"
+                        : "border-border/65 bg-canvas/58 text-ink/72 hover:border-ink/30 hover:text-ink"
                     }`}
                     href={item.href}
                   >
@@ -95,8 +95,8 @@ export function Navbar({
         </nav>
       </header>
 
-      <aside className="sidebar-shell fixed inset-y-0 left-0 z-40 hidden w-[220px] border-r border-border/70 px-4 pb-6 pt-5 lg:flex lg:flex-col">
-        <div className="rounded-2xl border border-border/70 bg-canvas/38 px-3 py-4">
+      <aside className="sidebar-shell fixed inset-y-0 left-0 z-40 hidden w-[220px] border-r border-border/65 px-4 pb-6 pt-5 lg:flex lg:flex-col">
+        <div className="rounded-xl border border-border/65 bg-canvas/36 px-3 py-4 shadow-[inset_0_1px_0_rgb(255_255_255/0.05)]">
           <p className="text-xl font-extrabold tracking-tight text-ink">{name}</p>
           <p className="mt-1 text-xs text-ink/60">{title}</p>
         </div>
@@ -109,13 +109,13 @@ export function Navbar({
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className={`group flex items-center gap-3 rounded-2xl border px-4 py-3 text-sm font-semibold transition ${
+                    className={`group flex items-center gap-3 rounded-xl border px-4 py-3 text-sm font-semibold transition ${
                       active
-                        ? "border-accent/55 bg-accent/16 text-accent shadow-[0_10px_24px_rgb(var(--accent)/0.16)]"
-                        : "border-transparent text-ink/80 hover:border-accent/40 hover:bg-accent/10 hover:text-accent"
+                        ? "border-border/65 bg-ink/[0.06] text-ink shadow-[inset_2px_0_0_rgb(var(--ink)/0.42)]"
+                        : "border-transparent text-ink/64 hover:border-border/65 hover:bg-ink/[0.045] hover:text-ink"
                     }`}
                   >
-                    <span className="inline-flex w-6 justify-center text-xs text-accent/90">{item.icon}</span>
+                    <span className="inline-flex w-6 justify-center text-xs text-ink/52 transition group-hover:text-ink/76">{item.icon}</span>
                     <span>{item.label}</span>
                   </Link>
                 </li>
@@ -132,7 +132,7 @@ export function Navbar({
                 href={item.href}
                 target={item.href.startsWith("mailto:") ? undefined : "_blank"}
                 rel={item.href.startsWith("mailto:") ? undefined : "noreferrer"}
-                className="flex h-11 w-11 items-center justify-center rounded-full border border-border/75 bg-canvas/45 text-sm font-semibold text-ink/82 transition hover:border-accent/60 hover:text-accent"
+                className="flex h-11 w-11 items-center justify-center rounded-lg border border-border/65 bg-canvas/42 text-sm font-semibold text-ink/68 transition hover:border-ink/35 hover:bg-ink/[0.045] hover:text-ink"
                 aria-label={item.label}
                 title={item.label}
               >

@@ -8,7 +8,7 @@ type ShowcaseThumbnailProps = {
 
 function frame(children: ReactNode, className = "") {
   return (
-    <div className={`relative overflow-hidden rounded-2xl border border-border/70 bg-[#09111f] ${className}`}>
+    <div className={`relative overflow-hidden rounded-lg border border-border/70 bg-[#111315] grayscale ${className}`}>
       {children}
     </div>
   );

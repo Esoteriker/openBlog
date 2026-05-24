@@ -31,7 +31,7 @@ export default function AboutPage() {
         <section className="grid gap-6 xl:grid-cols-[0.82fr_1.55fr]">
           <article className="neon-panel p-7">
             <div className="flex flex-col items-center text-center">
-              <div className="relative h-44 w-44 overflow-hidden rounded-full border border-accent/40 bg-canvas/40 shadow-[0_0_0_8px_rgb(var(--accent)/0.08),0_0_32px_rgb(var(--accent)/0.2)]">
+              <div className="relative h-44 w-44 overflow-hidden rounded-full border border-border/70 bg-canvas/40 shadow-[0_1px_2px_rgb(var(--shadow-rgb)/0.12)]">
                 <Image src="/avatar.svg" alt={profileData.name} fill sizes="176px" className="object-cover" priority />
               </div>
               <h2 className="mt-6 text-4xl font-extrabold tracking-tight text-ink">{profileData.name}</h2>
@@ -58,7 +58,7 @@ export default function AboutPage() {
                   href={item.href}
                   target={item.href.startsWith("mailto:") ? undefined : "_blank"}
                   rel={item.href.startsWith("mailto:") ? undefined : "noreferrer"}
-                  className="flex h-12 w-12 items-center justify-center rounded-full border border-border/75 bg-canvas/45 text-sm font-semibold text-ink/82 transition hover:border-accent/65 hover:text-accent"
+                  className="flex h-12 w-12 items-center justify-center rounded-lg border border-border/75 bg-canvas/45 text-sm font-semibold text-ink/72 transition hover:border-ink/35 hover:text-ink"
                   aria-label={item.label}
                 >
                   {item.icon}
@@ -78,7 +78,7 @@ export default function AboutPage() {
                     {index !== showcase.milestones.length - 1 ? (
                       <span className="absolute left-[12px] top-10 h-[calc(100%+28px)] w-px bg-gradient-to-b from-accent/80 to-transparent md:left-[18px]" />
                     ) : null}
-                    <span className={`absolute left-0 top-1 h-6 w-6 rounded-full ${item.accentClass} shadow-[0_0_22px_currentColor] md:left-1`} />
+                    <span className={`absolute left-0 top-1 h-6 w-6 rounded-full ${item.accentClass} shadow-[0_1px_2px_rgb(var(--shadow-rgb)/0.12)] md:left-1`} />
                     <p className="text-2xl font-bold text-accent">{item.year}</p>
                   </div>
 

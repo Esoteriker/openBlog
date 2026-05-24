@@ -128,11 +128,11 @@ type LocaleShowcase = {
 const zhShowcase: LocaleShowcase = {
   about: {
     location: "维也纳，奥地利",
-    subtitle: "全栈与 AI 应用架构工程师",
+    subtitle: "AI 产品工程师 / 全栈软件工程师",
     bioLines: [
-      "热爱技术，专注于把复杂系统做成可长期演进的产品。",
-      "擅长后端系统、数据工作流、前端体验与工程化交付之间的平衡。",
-      "持续把新技术应用到真实业务里，追求稳定、清晰、可维护。"
+      "我专注把 AI/LLM 能力接入真实产品流程，让检索、解释与报告生成不仅能跑，还能可靠交付。",
+      "日常工作横跨 TypeScript 前端、Java/Python 后端服务、REST API、异步任务与数据密集型工作流。",
+      "我喜欢把产品体验、系统可靠性和开发者体验放在同一张桌子上解决。"
     ],
     resumeLabel: "查看简历",
     timelineTitle: "成长历程",
@@ -147,27 +147,27 @@ const zhShowcase: LocaleShowcase = {
     milestones: [
       {
         year: "2025",
-        title: "Agent Engineer",
-        summary: "开始专注于 Agent 工程方向，围绕 AI 工作流、运行时治理与多 Agent 协作持续深入。",
-        accentClass: "bg-emerald-400"
+        title: "AI Product Engineer",
+        summary: "聚焦模型 API、RAG、重试/回退与优雅降级，把 AI 能力做成可交付的产品工作流。",
+        accentClass: "bg-stone-400"
       },
       {
         year: "2022",
-        title: "TUM Master + Full Stack Engineer at Siemens",
-        summary: "同年开始在慕尼黑工业大学攻读硕士，并在西门子正式担任全栈工程师，参与企业级系统研发与交付。",
-        accentClass: "bg-sky-400"
+        title: "TUM Master + Siemens Software Engineer",
+        summary: "开始在慕尼黑工业大学攻读信息系统硕士，并在 Siemens 全职交付工业测试平台功能。",
+        accentClass: "bg-zinc-500"
       },
       {
         year: "2021",
-        title: "Siemens Intern",
-        summary: "在西门子开始实习，进入真实工业软件环境，参与前后端协作与工程交付流程。",
-        accentClass: "bg-violet-400"
+        title: "Siemens Part-time Engineer",
+        summary: "构建内部 NPM UI 组件包与数据可视化模块，沉淀类型化 API、使用规范和发布流程。",
+        accentClass: "bg-neutral-400"
       },
       {
         year: "2019",
         title: "Bachelor at University of Göttingen",
-        summary: "本科阶段进入哥廷根大学，系统学习计算机与软件工程相关基础，为后续工程实践打下扎实基础。",
-        accentClass: "bg-amber-400"
+        summary: "在哥廷根大学学习 Business Informatics，为后续产品工程、数据分析和软件交付打下基础。",
+        accentClass: "bg-amber-600/80"
       }
     ]
   },
@@ -182,56 +182,56 @@ const zhShowcase: LocaleShowcase = {
     proficiencyTitle: "技能熟练度",
     trendTitle: "学习趋势（近一年）",
     tagTitle: "技术标签",
-    radarAxes: ["前端开发", "后端开发", "系统设计", "问题解决", "性能优化", "工具使用"],
-    radarValues: [86, 88, 82, 84, 76, 72],
+    radarAxes: ["前端产品", "后端 API", "AI 集成", "异步任务", "调试排障", "交付质量"],
+    radarValues: [90, 88, 84, 82, 86, 84],
     proficiency: [
-      { category: "frontend", name: "TypeScript", value: 90, tone: "from-violet-400 to-fuchsia-300" },
-      { category: "frontend", name: "Angular", value: 88, tone: "from-blue-500 to-cyan-400" },
-      { category: "frontend", name: "JavaScript", value: 84, tone: "from-sky-400 to-blue-400" },
-      { category: "frontend", name: "ECharts", value: 78, tone: "from-cyan-400 to-teal-300" },
-      { category: "backend", name: "Spring Boot", value: 82, tone: "from-cyan-400 to-emerald-400" },
-      { category: "backend", name: "Java", value: 75, tone: "from-emerald-400 to-lime-400" },
-      { category: "backend", name: "FastAPI", value: 79, tone: "from-green-400 to-emerald-300" },
-      { category: "backend", name: "MySQL", value: 65, tone: "from-pink-500 to-rose-400" },
-      { category: "tools", name: "Docker", value: 70, tone: "from-orange-400 to-amber-300" },
-      { category: "tools", name: "Git", value: 80, tone: "from-amber-400 to-orange-300" },
-      { category: "tools", name: "Linux", value: 72, tone: "from-violet-400 to-indigo-300" },
-      { category: "tools", name: "PostgreSQL", value: 68, tone: "from-fuchsia-400 to-pink-300" }
+      { category: "frontend", name: "TypeScript", value: 90, tone: "from-zinc-600 to-stone-400" },
+      { category: "frontend", name: "Angular", value: 88, tone: "from-slate-600 to-zinc-400" },
+      { category: "frontend", name: "React / Next.js", value: 84, tone: "from-neutral-600 to-stone-400" },
+      { category: "frontend", name: "Data Visualization", value: 82, tone: "from-stone-600 to-zinc-400" },
+      { category: "backend", name: "REST API Design", value: 88, tone: "from-zinc-700 to-zinc-400" },
+      { category: "backend", name: "Java / Spring Boot", value: 82, tone: "from-stone-700 to-amber-600" },
+      { category: "backend", name: "Python / FastAPI", value: 78, tone: "from-neutral-700 to-stone-500" },
+      { category: "backend", name: "Async Jobs", value: 82, tone: "from-slate-700 to-neutral-400" },
+      { category: "tools", name: "OpenAI API / RAG", value: 82, tone: "from-stone-700 to-amber-500" },
+      { category: "tools", name: "Cypress / CI", value: 80, tone: "from-zinc-700 to-stone-500" },
+      { category: "tools", name: "Docker / Linux", value: 74, tone: "from-neutral-700 to-zinc-500" },
+      { category: "tools", name: "Observability", value: 76, tone: "from-slate-700 to-stone-500" }
     ],
     trendLabels: ["5月", "7月", "9月", "11月", "1月", "3月", "5月"],
     trendStudy: [28, 38, 70, 72, 58, 78, 94],
     trendImprove: [12, 20, 48, 50, 38, 62, 70],
     trendStudyLabel: "学习投入",
     trendImproveLabel: "技能提升",
-    footerNote: "保持学习，持续成长。",
+    footerNote: "把 AI 集成、API 契约和交付质量放到同一个工程闭环里。",
     tagGroups: [
       {
         key: "frontend",
-        title: "前端开发",
+        title: "前端产品",
         icon: "</>",
-        tone: "text-sky-300",
-        tags: ["TypeScript", "Angular", "JavaScript", "HTML5", "CSS3", "RxJS", "NgRx", "ECharts"]
+        tone: "text-zinc-300",
+        tags: ["TypeScript", "React", "Next.js", "Angular", "JavaScript", "HTML/CSS", "Data Visualization", "WebAssembly"]
       },
       {
         key: "backend",
-        title: "后端开发",
+        title: "后端与数据",
         icon: "▤",
-        tone: "text-emerald-300",
-        tags: ["Java", "Spring Boot", "Spring MVC", "RESTful API", "GraphQL", "Redis", "MySQL", "JPA"]
+        tone: "text-stone-300",
+        tags: ["Java", "Python", "Spring Boot", "FastAPI", "Node.js", "Express", "REST APIs", "SQL", "Async Jobs"]
       },
       {
         key: "tools",
-        title: "工具&平台",
+        title: "AI 与交付",
         icon: "✚",
-        tone: "text-violet-300",
-        tags: ["Docker", "Git", "Linux", "PostgreSQL", "Nginx", "Kafka", "RabbitMQ", "Jenkins"]
+        tone: "text-neutral-300",
+        tags: ["OpenAI API", "RAG", "Prompt Engineering", "Tool Calling", "Retry/Fallback", "Docker", "GitLab CI/CD", "Cypress"]
       },
       {
         key: "foundation",
-        title: "基础能力",
+        title: "开发者体验",
         icon: "▣",
         tone: "text-amber-300",
-        tags: ["数据结构", "算法", "设计模式", "系统设计", "性能优化", "测试", "CI/CD", "敏捷开发"]
+        tags: ["NPM Packages", "Typed APIs", "Swagger/OpenAPI", "Documentation", "Observability", "Debugging", "Code Review", "Jira"]
       }
     ]
   },
@@ -247,50 +247,47 @@ const zhShowcase: LocaleShowcase = {
     liveLabel: "预览",
     items: [
       {
-        title: "openTree 知识图谱平台",
-        summary: "围绕知识抽取、图谱建模与混合检索构建可追踪的 AI 知识平台。",
-        category: "backend",
-        tags: ["FastAPI", "Neo4j", "Elasticsearch", "Redis"],
-        variant: "knowledge",
-        githubUrl: "https://github.com/Esoteriker/openTree"
-      },
-      {
-        title: "clouDA Backup API",
-        summary: "面向生产环境的后端底座，强调可复现部署、迁移策略与稳定运维。",
-        category: "backend",
-        tags: ["FastAPI", "PostgreSQL", "Docker", "SQLAlchemy"],
-        variant: "api",
-        githubUrl: "https://github.com/Esoteriker/clouDA-backup-fastapi"
-      },
-      {
-        title: "PetMate 全栈应用",
-        summary: "提供完整用户流程与交互体验的全栈产品原型，支持持续迭代。",
+        title: "WFP Hunger-Map",
+        summary: "用 Next.js、TypeScript 与 AI API 构建数据密集型公共产品的解释与摘要体验。",
         category: "fullstack",
-        tags: ["React", "Node.js", "REST API", "Responsive UI"],
-        variant: "product",
-        githubUrl: "https://github.com/Esoteriker/pj-reactjs-petmate",
-        liveUrl: "https://esoteriker.github.io/pj-reactjs-petmate"
+        tags: ["Next.js", "TypeScript", "AI API", "Data"],
+        variant: "signals",
+        liveUrl: "https://www.wfp.org/hunger-map"
       },
       {
-        title: "Agent Runtime Guardrails",
-        summary: "把执行策略、回退链路和审计日志组织成可治理的 Agent 运行时。",
+        title: "EDA 任务编排平台",
+        summary: "连接 Web 前端与多个 EDA 工具服务，支持长耗时任务、状态追踪、日志反馈与权限控制。",
         category: "backend",
-        tags: ["Workflow", "Guardrails", "Tracing", "Policy"],
+        tags: ["Backend", "Docker", "Async Jobs", "Auth"],
         variant: "workflow"
       },
       {
-        title: "Observability Command Center",
-        summary: "用于链路、指标与事件聚合的可观测性面板，帮助快速定位异常。",
+        title: "内部 NPM UI 组件包",
+        summary: "面向数据密集型产品团队的类型化 UI 组件库与 Canvas 可视化模块。",
         category: "frontend",
-        tags: ["Dashboard", "Metrics", "Logs", "Tracing"],
+        tags: ["TypeScript", "NPM", "Canvas", "DX"],
+        variant: "product"
+      },
+      {
+        title: "AI 辅助报告生成流程",
+        summary: "将外部模型 API 接入内部服务，围绕检索、解释、报告生成、重试与降级组织产品流程。",
+        category: "backend",
+        tags: ["OpenAI API", "RAG", "Fallback", "Reports"],
+        variant: "knowledge"
+      },
+      {
+        title: "生产调试与可观测性流程",
+        summary: "结合日志、依赖链、服务交互与用户影响分析，缩短跨模块生产问题定位时间。",
+        category: "backend",
+        tags: ["Logs", "Debugging", "Observability", "Triage"],
         variant: "observability"
       },
       {
-        title: "Architecture Decision Notebook",
-        summary: "以 ADR 与案例快照沉淀架构演进轨迹，便于团队共享上下文。",
+        title: "Cypress 与 CI 质量门",
+        summary: "用回归覆盖、API review、发布流程和线上排障机制支撑稳定迭代。",
         category: "fullstack",
-        tags: ["ADR", "Knowledge Base", "Docs", "Collaboration"],
-        variant: "architecture"
+        tags: ["Cypress", "CI/CD", "Release", "API Review"],
+        variant: "systems"
       }
     ]
   },
@@ -312,50 +309,50 @@ const zhShowcase: LocaleShowcase = {
     openLabel: "打开",
     posts: [
       {
-        title: "从功能到系统边界",
-        summary: "为什么早期边界设计能避免规模增长后的隐性耦合，以及如何识别服务拆分拐点。",
+        title: "AI API 也是产品工作流",
+        summary: "为什么重试、回退、缓存、限流和用户可见状态与模型调用同样重要。",
         category: "notes",
-        tags: ["Architecture", "Microservices"],
-        date: "2026-04-28",
-        readTime: "5 分钟阅读",
+        tags: ["AI", "Reliability"],
+        date: "2026-05-23",
+        readTime: "6 分钟阅读",
         variant: "signals",
         href: "#"
       },
       {
-        title: "面向生产的 AI 工作流设计",
-        summary: "结合 LLM 服务、缓存、降级和审计机制，构建可治理的 Agent 执行流程。",
+        title: "类型化接口如何降低产品摩擦",
+        summary: "组件包 API、使用指南和集成约定如何减少重复实现并提升跨团队采用质量。",
         category: "projects",
-        tags: ["AI", "Workflows", "Reliability"],
-        date: "2026-04-15",
-        readTime: "8 分钟阅读",
-        variant: "spring",
+        tags: ["TypeScript", "DX", "NPM"],
+        date: "2026-05-22",
+        readTime: "7 分钟阅读",
+        variant: "product",
         href: "#"
       },
       {
-        title: "Docker Compose 在后端交付中的价值",
-        summary: "把本地开发、CI 与预发布环境拉到同一条运行基线时，需要注意哪些细节。",
+        title: "长耗时任务应该怎样对用户透明",
+        summary: "围绕状态追踪、日志反馈、重试和权限控制设计异步任务体验。",
         category: "learning",
-        tags: ["Docker", "DevOps", "Compose"],
-        date: "2026-03-30",
+        tags: ["Async Jobs", "Backend", "UX"],
+        date: "2026-05-18",
         readTime: "6 分钟阅读",
-        variant: "docker",
+        variant: "workflow",
         href: "#"
       },
       {
-        title: "如何设计一个高可用系统",
-        summary: "从故障域、超时、重试与可观测性四个方面拆解高可用系统设计的基本盘。",
+        title: "跨服务边界调试",
+        summary: "从日志、依赖链、服务交互和用户影响四个角度拆解生产排障路径。",
         category: "notes",
-        tags: ["Systems", "Architecture", "Availability"],
+        tags: ["Debugging", "Observability", "Triage"],
         date: "2026-03-10",
-        readTime: "10 分钟阅读",
-        variant: "systems",
+        readTime: "8 分钟阅读",
+        variant: "observability",
         href: "#"
       },
       {
-        title: "用 ECharts 构建架构可视化面板",
-        summary: "如何用图表、密度和层级关系把复杂运行数据组织成一眼可读的界面。",
+        title: "数据可视化性能优化笔记",
+        summary: "一次 Canvas 可视化与数据流重构如何带来关键视图 18% 的运行时性能提升。",
         category: "projects",
-        tags: ["Charts", "Data Viz", "Frontend"],
+        tags: ["Canvas", "Data Viz", "Performance"],
         date: "2026-02-20",
         readTime: "7 分钟阅读",
         variant: "charts",
@@ -365,32 +362,34 @@ const zhShowcase: LocaleShowcase = {
   },
   resume: {
     title: "我的简历",
-    description: "面向 AI Agent 平台、后端系统和分布式工程的能力摘要。",
+    description: "面向 AI 产品工程、全栈交付、后端 API 与开发者体验的能力摘要。",
     summaryTitle: "职业摘要",
     summary: [
-      "专注于 AI Agent 应用、分布式系统与生产级后端平台建设。",
-      "擅长把模糊需求收敛为清晰架构边界、可靠交付路径与可观测运行策略。",
-      "在服务拆分、异步编排、数据建模和交付工程上有持续实践。"
+      "全栈产品工程师，具备 TypeScript 前端、Java/Python 后端服务、REST API 与数据密集型产品经验。",
+      "有 AI/LLM 产品工作流实践，覆盖模型 API 集成、检索/解释流程、重试/回退、调试与发布质量。",
+      "能够在用户体验、API 契约、异步任务、可观测性与开发者体验之间建立稳定交付闭环。"
     ],
     strengthsTitle: "优势能力",
     strengths: [
-      "微服务与事件驱动架构设计",
-      "AI 工作流与知识图谱场景建模",
-      "生产环境稳定性与可观测性治理",
-      "前后端协作与产品化交付"
+      "AI API 集成与 RAG 产品流程",
+      "后端 API、异步任务与状态追踪",
+      "TypeScript 前端与数据可视化",
+      "NPM 包、类型化接口与开发者体验",
+      "Cypress、CI/CD 与发布质量"
     ],
     experienceTitle: "项目 / 经验亮点",
     educationTitle: "教育背景",
     education: [
-      "2022-2025 M.Sc., Technical University of Munich",
-      "2019-2022 Bachelor's studies, University of Goettingen"
+      "10.2022 - 12.2025 M.Sc. Information Systems, Technical University of Munich",
+      "10.2019 - 08.2022 B.Sc. Business Informatics, University of Goettingen",
+      "12.2021 Google Data Analytics Professional Certificate"
     ],
     availabilityTitle: "合作方向",
     availability: [
-      "Solution Architecture",
-      "AI Agent Engineering",
-      "Backend Platform Strategy",
-      "System Design Review"
+      "AI Product Engineering",
+      "Full-stack Product Delivery",
+      "Backend API and Async Jobs",
+      "Developer Experience"
     ]
   }
 };
@@ -398,11 +397,11 @@ const zhShowcase: LocaleShowcase = {
 const enShowcase: LocaleShowcase = {
   about: {
     location: "Vienna, Austria",
-    subtitle: "Full-stack and AI systems engineer",
+    subtitle: "AI Product Engineer / Full-Stack Software Engineer",
     bioLines: [
-      "I enjoy turning complex ideas into products that can evolve for years.",
-      "My work sits at the intersection of backend systems, data workflows, frontend experience, and delivery engineering.",
-      "I like bringing new technology into real business contexts without losing clarity or reliability."
+      "I focus on bringing AI/LLM capabilities into real product workflows, where retrieval, explanation, and report generation need to be reliable.",
+      "My day-to-day work spans TypeScript frontends, Java/Python backend services, REST APIs, async jobs, and data-heavy workflows.",
+      "I like solving product experience, system reliability, and developer experience as one connected engineering problem."
     ],
     resumeLabel: "Open Resume",
     timelineTitle: "Growth Timeline",
@@ -415,10 +414,10 @@ const enShowcase: LocaleShowcase = {
       { icon: "Cam", title: "Photography", summary: "Capturing details helps me notice patterns others miss." }
     ],
     milestones: [
-      { year: "2025", title: "Agent Engineer", summary: "Moved fully into agent engineering with a focus on production AI workflows, runtime governance, and orchestration.", accentClass: "bg-emerald-400" },
-      { year: "2022", title: "TUM Master + Full Stack Engineer at Siemens", summary: "Started a master's degree at the Technical University of Munich and formally joined Siemens as a full stack engineer in the same year.", accentClass: "bg-sky-400" },
-      { year: "2021", title: "Siemens Intern", summary: "Began an internship at Siemens and worked inside enterprise software delivery and cross-functional product teams.", accentClass: "bg-violet-400" },
-      { year: "2019", title: "Bachelor at University of Göttingen", summary: "Started bachelor's studies at the University of Göttingen and built the academic foundation for later engineering work.", accentClass: "bg-amber-400" }
+      { year: "2025", title: "AI Product Engineer", summary: "Focused on model APIs, RAG, retry/fallback handling, and graceful degradation to make AI useful inside product workflows.", accentClass: "bg-stone-400" },
+      { year: "2022", title: "TUM Master + Siemens Software Engineer", summary: "Started the M.Sc. in Information Systems at TUM and joined Siemens full-time to ship industrial testing platform features.", accentClass: "bg-zinc-500" },
+      { year: "2021", title: "Siemens Part-time Engineer", summary: "Built an internal NPM UI package and visualization modules with typed APIs, usage conventions, and release flow.", accentClass: "bg-neutral-400" },
+      { year: "2019", title: "Business Informatics at Göttingen", summary: "Started B.Sc. Business Informatics, building foundations in product engineering, data analysis, and software delivery.", accentClass: "bg-amber-600/80" }
     ]
   },
   skills: {
@@ -432,56 +431,56 @@ const enShowcase: LocaleShowcase = {
     proficiencyTitle: "Proficiency",
     trendTitle: "Learning Trend (12 months)",
     tagTitle: "Technology Tags",
-    radarAxes: ["Frontend", "Backend", "System Design", "Problem Solving", "Performance", "Tooling"],
-    radarValues: [86, 88, 82, 84, 76, 72],
+    radarAxes: ["Frontend Product", "Backend APIs", "AI Integration", "Async Jobs", "Debugging", "Delivery Quality"],
+    radarValues: [90, 88, 84, 82, 86, 84],
     proficiency: [
-      { category: "frontend", name: "TypeScript", value: 90, tone: "from-violet-400 to-fuchsia-300" },
-      { category: "frontend", name: "Angular", value: 88, tone: "from-blue-500 to-cyan-400" },
-      { category: "frontend", name: "JavaScript", value: 84, tone: "from-sky-400 to-blue-400" },
-      { category: "frontend", name: "ECharts", value: 78, tone: "from-cyan-400 to-teal-300" },
-      { category: "backend", name: "Spring Boot", value: 82, tone: "from-cyan-400 to-emerald-400" },
-      { category: "backend", name: "Java", value: 75, tone: "from-emerald-400 to-lime-400" },
-      { category: "backend", name: "FastAPI", value: 79, tone: "from-green-400 to-emerald-300" },
-      { category: "backend", name: "MySQL", value: 65, tone: "from-pink-500 to-rose-400" },
-      { category: "tools", name: "Docker", value: 70, tone: "from-orange-400 to-amber-300" },
-      { category: "tools", name: "Git", value: 80, tone: "from-amber-400 to-orange-300" },
-      { category: "tools", name: "Linux", value: 72, tone: "from-violet-400 to-indigo-300" },
-      { category: "tools", name: "PostgreSQL", value: 68, tone: "from-fuchsia-400 to-pink-300" }
+      { category: "frontend", name: "TypeScript", value: 90, tone: "from-zinc-600 to-stone-400" },
+      { category: "frontend", name: "Angular", value: 88, tone: "from-slate-600 to-zinc-400" },
+      { category: "frontend", name: "React / Next.js", value: 84, tone: "from-neutral-600 to-stone-400" },
+      { category: "frontend", name: "Data Visualization", value: 82, tone: "from-stone-600 to-zinc-400" },
+      { category: "backend", name: "REST API Design", value: 88, tone: "from-zinc-700 to-zinc-400" },
+      { category: "backend", name: "Java / Spring Boot", value: 82, tone: "from-stone-700 to-amber-600" },
+      { category: "backend", name: "Python / FastAPI", value: 78, tone: "from-neutral-700 to-stone-500" },
+      { category: "backend", name: "Async Jobs", value: 82, tone: "from-slate-700 to-neutral-400" },
+      { category: "tools", name: "OpenAI API / RAG", value: 82, tone: "from-stone-700 to-amber-500" },
+      { category: "tools", name: "Cypress / CI", value: 80, tone: "from-zinc-700 to-stone-500" },
+      { category: "tools", name: "Docker / Linux", value: 74, tone: "from-neutral-700 to-zinc-500" },
+      { category: "tools", name: "Observability", value: 76, tone: "from-slate-700 to-stone-500" }
     ],
     trendLabels: ["May", "Jul", "Sep", "Nov", "Jan", "Mar", "May"],
     trendStudy: [28, 38, 70, 72, 58, 78, 94],
     trendImprove: [12, 20, 48, 50, 38, 62, 70],
     trendStudyLabel: "Learning Investment",
     trendImproveLabel: "Skill Growth",
-    footerNote: "Keep learning and compounding.",
+    footerNote: "Keeping AI integration, API contracts, and delivery quality in one engineering loop.",
     tagGroups: [
       {
         key: "frontend",
-        title: "Frontend",
+        title: "Frontend Product",
         icon: "</>",
-        tone: "text-sky-300",
-        tags: ["TypeScript", "Angular", "JavaScript", "HTML5", "CSS3", "RxJS", "NgRx", "ECharts"]
+        tone: "text-zinc-300",
+        tags: ["TypeScript", "React", "Next.js", "Angular", "JavaScript", "HTML/CSS", "Data Visualization", "WebAssembly"]
       },
       {
         key: "backend",
-        title: "Backend",
+        title: "Backend and Data",
         icon: "▤",
-        tone: "text-emerald-300",
-        tags: ["Java", "Spring Boot", "Spring MVC", "RESTful API", "GraphQL", "Redis", "MySQL", "JPA"]
+        tone: "text-stone-300",
+        tags: ["Java", "Python", "Spring Boot", "FastAPI", "Node.js", "Express", "REST APIs", "SQL", "Async Jobs"]
       },
       {
         key: "tools",
-        title: "Tools & Platform",
+        title: "AI and Delivery",
         icon: "✚",
-        tone: "text-violet-300",
-        tags: ["Docker", "Git", "Linux", "PostgreSQL", "Nginx", "Kafka", "RabbitMQ", "Jenkins"]
+        tone: "text-neutral-300",
+        tags: ["OpenAI API", "RAG", "Prompt Engineering", "Tool Calling", "Retry/Fallback", "Docker", "GitLab CI/CD", "Cypress"]
       },
       {
         key: "foundation",
-        title: "Core Fundamentals",
+        title: "Developer Experience",
         icon: "▣",
         tone: "text-amber-300",
-        tags: ["Data Structures", "Algorithms", "Design Patterns", "System Design", "Testing", "CI/CD", "Performance", "Agile"]
+        tags: ["NPM Packages", "Typed APIs", "Swagger/OpenAPI", "Documentation", "Observability", "Debugging", "Code Review", "Jira"]
       }
     ]
   },
@@ -496,12 +495,12 @@ const enShowcase: LocaleShowcase = {
     githubLabel: "GitHub",
     liveLabel: "Open",
     items: [
-      { title: "openTree Knowledge Graph", summary: "Traceable AI knowledge platform for extraction, graph modeling, and hybrid retrieval.", category: "backend", tags: ["FastAPI", "Neo4j", "Elasticsearch", "Redis"], variant: "knowledge", githubUrl: "https://github.com/Esoteriker/openTree" },
-      { title: "clouDA Backup API", summary: "Production backend foundation focused on reproducible deployment and safe schema evolution.", category: "backend", tags: ["FastAPI", "PostgreSQL", "Docker", "SQLAlchemy"], variant: "api", githubUrl: "https://github.com/Esoteriker/clouDA-backup-fastapi" },
-      { title: "PetMate Full-stack App", summary: "A full-stack product prototype with clear user flows and sustainable iteration speed.", category: "fullstack", tags: ["React", "Node.js", "REST API", "Responsive UI"], variant: "product", githubUrl: "https://github.com/Esoteriker/pj-reactjs-petmate", liveUrl: "https://esoteriker.github.io/pj-reactjs-petmate" },
-      { title: "Agent Runtime Guardrails", summary: "Governed runtime patterns for execution policies, fallbacks, and audit traces.", category: "backend", tags: ["Workflow", "Guardrails", "Tracing", "Policy"], variant: "workflow" },
-      { title: "Observability Command Center", summary: "A dashboard-first view for metrics, traces, and operational event correlation.", category: "frontend", tags: ["Dashboard", "Metrics", "Logs", "Tracing"], variant: "observability" },
-      { title: "Architecture Decision Notebook", summary: "A knowledge system for ADR snapshots and architecture evolution narratives.", category: "fullstack", tags: ["ADR", "Knowledge Base", "Docs", "Collaboration"], variant: "architecture" }
+      { title: "WFP Hunger-Map", summary: "A data-rich public product using Next.js, TypeScript, and AI APIs for explanation and summary experiences.", category: "fullstack", tags: ["Next.js", "TypeScript", "AI API", "Data"], variant: "signals", liveUrl: "https://www.wfp.org/hunger-map" },
+      { title: "EDA Task Orchestration Platform", summary: "Connects a web frontend with multiple EDA tool services through async jobs, status tracking, logs, and authorization.", category: "backend", tags: ["Backend", "Docker", "Async Jobs", "Auth"], variant: "workflow" },
+      { title: "Internal NPM UI Package", summary: "Typed UI primitives and Canvas visualization modules for data-heavy product teams.", category: "frontend", tags: ["TypeScript", "NPM", "Canvas", "DX"], variant: "product" },
+      { title: "AI-assisted Report Workflow", summary: "Connects external model APIs with internal services for retrieval, explanation, reporting, retry, and graceful degradation.", category: "backend", tags: ["OpenAI API", "RAG", "Fallback", "Reports"], variant: "knowledge" },
+      { title: "Production Debugging Flow", summary: "Uses logs, dependency chains, service interactions, and user impact analysis to shorten cross-module investigations.", category: "backend", tags: ["Logs", "Debugging", "Observability", "Triage"], variant: "observability" },
+      { title: "Cypress and CI Quality Gates", summary: "Regression coverage, API reviews, release workflow, and production triage practices for stable iteration.", category: "fullstack", tags: ["Cypress", "CI/CD", "Release", "API Review"], variant: "systems" }
     ]
   },
   blog: {
@@ -521,34 +520,39 @@ const enShowcase: LocaleShowcase = {
     subscribeButton: "Subscribe",
     openLabel: "Open",
     posts: [
-      { title: "From Features to System Boundaries", summary: "Why early boundary design prevents hidden coupling and slows future complexity growth.", category: "notes", tags: ["Architecture", "Microservices"], date: "2026-04-28", readTime: "5 min read", variant: "signals", href: "#" },
-      { title: "Designing AI Workflows for Production", summary: "Blending LLM calls, caching, fallback policies, and audit trails into one runtime.", category: "projects", tags: ["AI", "Workflows", "Reliability"], date: "2026-04-15", readTime: "8 min read", variant: "spring", href: "#" },
-      { title: "Docker Compose for Predictable Delivery", summary: "How to keep local development, CI, and preview environments aligned on one runtime baseline.", category: "learning", tags: ["Docker", "DevOps", "Compose"], date: "2026-03-30", readTime: "6 min read", variant: "docker", href: "#" },
-      { title: "How to Design Highly Available Systems", summary: "A practical checklist for fault domains, timeout budgets, retries, and observability coverage.", category: "notes", tags: ["Systems", "Architecture", "Availability"], date: "2026-03-10", readTime: "10 min read", variant: "systems", href: "#" },
-      { title: "Building Architecture Dashboards with ECharts", summary: "Ways to turn dense runtime data into calm, legible visual hierarchy.", category: "projects", tags: ["Charts", "Data Viz", "Frontend"], date: "2026-02-20", readTime: "7 min read", variant: "charts", href: "#" }
+      { title: "AI APIs Are Product Workflows", summary: "Why retries, fallbacks, caching, rate limits, and visible user states matter as much as the model call.", category: "notes", tags: ["AI", "Reliability"], date: "2026-05-23", readTime: "6 min read", variant: "signals", href: "#" },
+      { title: "Typed Interfaces Reduce Product Friction", summary: "How package APIs, usage guidelines, and integration conventions reduce duplicate implementation work.", category: "projects", tags: ["TypeScript", "DX", "NPM"], date: "2026-05-22", readTime: "7 min read", variant: "product", href: "#" },
+      { title: "Making Long-running Jobs Transparent", summary: "Designing async job UX around status tracking, log feedback, retries, and authorization controls.", category: "learning", tags: ["Async Jobs", "Backend", "UX"], date: "2026-05-18", readTime: "6 min read", variant: "workflow", href: "#" },
+      { title: "Debugging Across Service Boundaries", summary: "A practical loop for reading logs, dependency chains, service interactions, and user impact.", category: "notes", tags: ["Debugging", "Observability", "Triage"], date: "2026-03-10", readTime: "8 min read", variant: "observability", href: "#" },
+      { title: "Data Visualization Performance Notes", summary: "How Canvas visualization and data-flow refactoring produced an 18% runtime improvement on key views.", category: "projects", tags: ["Canvas", "Data Viz", "Performance"], date: "2026-02-20", readTime: "7 min read", variant: "charts", href: "#" }
     ]
   },
   resume: {
     title: "Resume",
-    description: "A concise summary focused on AI agent platforms, backend systems, and distributed engineering.",
+    description: "A concise summary for AI product engineering, full-stack delivery, backend APIs, and developer experience.",
     summaryTitle: "Professional Summary",
     summary: [
-      "Focused on AI agent applications, distributed systems, and production backend platforms.",
-      "Strong at turning ambiguity into architecture boundaries, delivery plans, and resilient runtime paths.",
-      "Hands-on across service design, async orchestration, data modeling, and engineering delivery."
+      "Full-stack product engineer with production experience across TypeScript frontends, Java/Python backend services, REST APIs, and data-heavy product workflows.",
+      "Built AI/LLM product workflows with model API integration, retrieval/explanation flows, retry/fallback handling, debugging, and release quality ownership.",
+      "Comfortable connecting user experience, API contracts, async execution, observability, and developer experience into one delivery loop."
     ],
     strengthsTitle: "Core Strengths",
     strengths: [
-      "Microservices and event-driven architecture",
-      "AI workflows and knowledge graph modeling",
-      "Production reliability and observability strategy",
-      "Cross-functional delivery from architecture to implementation"
+      "AI API integration and RAG product flows",
+      "Backend APIs, async jobs, and status tracking",
+      "TypeScript frontend and data visualization",
+      "NPM packages, typed APIs, and developer experience",
+      "Cypress, CI/CD, and release quality"
     ],
     experienceTitle: "Selected Experience",
     educationTitle: "Education",
-    education: ["2022-2025 M.Sc., Technical University of Munich", "2019-2022 Bachelor's studies, University of Göttingen"],
+    education: [
+      "10.2022 - 12.2025 M.Sc. Information Systems, Technical University of Munich",
+      "10.2019 - 08.2022 B.Sc. Business Informatics, University of Göttingen",
+      "12.2021 Google Data Analytics Professional Certificate"
+    ],
     availabilityTitle: "Open To",
-    availability: ["Solution Architecture", "AI Agent Engineering", "Backend Platform Strategy", "System Design Review"]
+    availability: ["AI Product Engineering", "Full-stack Product Delivery", "Backend API and Async Jobs", "Developer Experience"]
   }
 };
 

@@ -103,16 +103,30 @@ export function ProjectsSection({ header, labels, projects, buttonLabels }: Proj
                   </div>
                 </div>
 
-                <footer className="flex flex-wrap gap-3 pt-1">
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="neon-button-primary"
-                  >
-                    {buttonLabels.github}
-                  </a>
-                </footer>
+                {project.githubUrl || project.liveUrl ? (
+                  <footer className="flex flex-wrap gap-3 pt-1">
+                    {project.githubUrl ? (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="neon-button-primary"
+                      >
+                        {buttonLabels.github}
+                      </a>
+                    ) : null}
+                    {project.liveUrl ? (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="neon-button-secondary"
+                      >
+                        {buttonLabels.live}
+                      </a>
+                    ) : null}
+                  </footer>
+                ) : null}
               </div>
             </article>
           );

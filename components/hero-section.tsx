@@ -1,108 +1,90 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import type { ProfileData } from "@/data/profile";
 
 type HeroSectionProps = {
   content: ProfileData["hero"];
 };
 
-type TypingPhase = "typing" | "holdTyped" | "deleting" | "holdDeleted";
-
-const TYPE_SPEED_MS = 72;
-const DELETE_SPEED_MS = 48;
-const HOLD_TYPED_MS = 1300;
-const HOLD_DELETED_MS = 320;
-
 export function HeroSection({ content }: HeroSectionProps) {
-  const titles = content.typingTitles;
-  const [titleIndex, setTitleIndex] = useState(0);
-  const [visibleText, setVisibleText] = useState("");
-  const [phase, setPhase] = useState<TypingPhase>("typing");
-
-  const longestTitle = titles.reduce((longest, current) => (current.length > longest.length ? current : longest), "");
   const primaryHref = content.ctas.primary.href.startsWith("#") ? "/projects" : content.ctas.primary.href;
-
-  useEffect(() => {
-    if (!titles.length) {
-      return;
-    }
-
-    const fullText = titles[titleIndex];
-    let timeout: ReturnType<typeof setTimeout> | undefined;
-
-    if (phase === "typing") {
-      if (visibleText.length < fullText.length) {
-        timeout = setTimeout(() => {
-          setVisibleText(fullText.slice(0, visibleText.length + 1));
-        }, TYPE_SPEED_MS);
-      } else {
-        setPhase("holdTyped");
-      }
-    } else if (phase === "holdTyped") {
-      timeout = setTimeout(() => setPhase("deleting"), HOLD_TYPED_MS);
-    } else if (phase === "deleting") {
-      if (visibleText.length > 0) {
-        timeout = setTimeout(() => {
-          setVisibleText(fullText.slice(0, visibleText.length - 1));
-        }, DELETE_SPEED_MS);
-      } else {
-        setPhase("holdDeleted");
-      }
-    } else {
-      timeout = setTimeout(() => {
-        setTitleIndex((prev) => (prev + 1) % titles.length);
-        setPhase("typing");
-      }, HOLD_DELETED_MS);
-    }
-
-    return () => {
-      if (timeout) {
-        clearTimeout(timeout);
-      }
-    };
-  }, [phase, titleIndex, titles, visibleText]);
+  const telemetry = content.telemetry.slice(0, 4);
 
   return (
-    <section id="about" className="hero-shell glass-panel p-6 sm:p-9">
-      <div className="relative z-10 animate-fadeUp">
-        <div className="grid items-start gap-7 md:grid-cols-[1fr_auto]">
-          <div className="space-y-3">
-            <h1
-              className="relative text-3xl font-bold tracking-tight text-ink sm:text-5xl lg:text-6xl"
-              aria-label={titles[titleIndex] ?? ""}
-            >
-              <span className="invisible">{longestTitle}</span>
-              <span aria-hidden className="absolute inset-0">
-                <span className="neon-text-gradient">{visibleText}</span>
-                <span className="typing-caret" />
-              </span>
+    <section id="about" className="hero-shell home-hero px-6 py-8 sm:px-8 sm:py-10 lg:px-10">
+      <div className="relative z-10 flex min-h-[500px] flex-col justify-between gap-10 lg:min-h-[620px]">
+        <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_360px] xl:grid-cols-[minmax(0,1fr)_420px]">
+          <div className="max-w-4xl space-y-6 animate-fadeUp">
+            <p className="inline-flex rounded-full border border-border/70 bg-canvas/35 px-3 py-1 text-xs font-semibold text-ink/68 backdrop-blur">
+              {content.systemRole}
+            </p>
+            <h1 className="text-balance text-4xl font-bold leading-[1.05] tracking-tight text-ink sm:text-6xl lg:text-7xl">
+              <span>{content.headlineLeading} </span>
+              <span className="neon-text-gradient">{content.headlineEmphasis}</span>
+              <span> {content.headlineTrailing}</span>
             </h1>
-            <p className="max-w-3xl text-base leading-relaxed text-ink/82 sm:text-lg">{content.positioningStatement}</p>
+            <p className="max-w-2xl text-base leading-relaxed text-ink/72 sm:text-lg">{content.positioningStatement}</p>
+
+            <div className="flex flex-wrap gap-3 pt-1">
+              <a href={primaryHref} className="neon-button-primary">
+                {content.ctas.primary.label}
+              </a>
+              <a href={content.ctas.secondary.href} className="neon-button-secondary">
+                {content.ctas.secondary.label}
+              </a>
+            </div>
           </div>
 
-          <div className="flex justify-start md:justify-end">
-            <div className="avatar-shell relative h-20 w-20 overflow-hidden rounded-2xl border border-border/70 shadow-[0_0_16px_rgb(var(--accent)/0.12)] sm:h-24 sm:w-24">
-              <Image
-                src="/avatar.svg"
-                alt="Haidong Xu avatar"
-                fill
-                sizes="(min-width: 640px) 96px, 80px"
-                className="object-cover"
-                priority
-              />
+          <div className="hero-visual-card min-h-[320px] p-5">
+            <div className="flex items-center justify-between border-b border-border/60 pb-4">
+              <div className="flex items-center gap-2">
+                <span className="h-2.5 w-2.5 rounded-full bg-[rgb(var(--accent))]" />
+                <span className="h-2.5 w-2.5 rounded-full bg-[rgb(var(--accent-alt))]" />
+                <span className="h-2.5 w-2.5 rounded-full bg-[rgb(var(--accent-cool))]" />
+              </div>
+              <span className="text-xs font-semibold text-ink/48">LIVE STACK</span>
+            </div>
+
+            <div className="mt-6 grid grid-cols-[88px_1fr] gap-5">
+              <div className="avatar-shell relative h-24 w-24 overflow-hidden rounded-2xl border border-border/70 shadow-[0_12px_28px_rgb(var(--shadow-rgb)/0.12)]">
+                <Image
+                  src="/avatar.svg"
+                  alt="Haidong Xu avatar"
+                  fill
+                  sizes="96px"
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <div className="space-y-3">
+                {telemetry.map((item, index) => (
+                  <div key={item} className="flex items-center gap-3">
+                    <span className="text-xs font-semibold text-ink/42">0{index + 1}</span>
+                    <span className="h-px flex-1 bg-border/80" />
+                    <span className="text-xs font-semibold text-ink/72">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-10 flex h-24 items-end gap-3 border-t border-border/60 pt-6">
+              {[44, 72, 52, 90, 62].map((height, index) => (
+                <span
+                  key={height}
+                  className="signal-bar flex-1 rounded-t-md bg-[linear-gradient(180deg,rgb(var(--accent-alt)/0.8),rgb(var(--accent)/0.72))]"
+                  style={{ height: `${height}%` }}
+                  aria-hidden="true"
+                />
+              ))}
             </div>
           </div>
         </div>
 
-        <div className="mt-7 flex flex-wrap gap-3 pt-1">
-          <a href={primaryHref} className="neon-button-primary">
-            {content.ctas.primary.label}
-          </a>
-          <a href={content.ctas.secondary.href} className="neon-button-secondary">
-            {content.ctas.secondary.label}
-          </a>
+        <div className="grid gap-3 border-t border-border/60 pt-5 text-xs font-semibold uppercase tracking-[0.14em] text-ink/52 sm:grid-cols-4">
+          {telemetry.map((item) => (
+            <span key={item}>{item}</span>
+          ))}
         </div>
       </div>
     </section>

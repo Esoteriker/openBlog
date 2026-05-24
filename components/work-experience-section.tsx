@@ -6,49 +6,27 @@ type WorkExperienceSectionProps = {
 };
 
 export function WorkExperienceSection({ content }: WorkExperienceSectionProps) {
-  return (
-    <section id="experience" className="space-y-8 scroll-mt-24">
-      <SectionHeading content={content.header} />
-      <div className="grid gap-5">
-        {content.items.map((item) => (
-          <article key={item.name} className="neon-panel p-5 sm:p-6">
-            <div className="grid gap-5 lg:grid-cols-[1.15fr_1fr]">
-              <div className="space-y-4">
-                <div>
-                  <h3 className="text-xl font-bold tracking-tight text-ink sm:text-2xl">{item.name}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-ink/84">{item.context}</p>
-                </div>
-                <div>
-                  <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-accent">
-                    {content.labels.role}
-                  </p>
-                  <p className="text-sm text-ink/84">{item.role}</p>
-                </div>
-                <div>
-                  <p className="mb-2 text-xs font-semibold uppercase tracking-[0.14em] text-accent">
-                    {content.labels.impact}
-                  </p>
-                  <p className="text-sm text-ink/84">{item.impact}</p>
-                </div>
-              </div>
+  const featuredItems = content.items.slice(0, 2);
 
-              <div className="space-y-4">
-                <ul className="space-y-2 text-sm text-ink/84">
-                  {item.highlights.map((highlight) => (
-                    <li key={highlight} className="rounded-md border border-border/80 bg-canvas/45 px-3 py-2">
-                      {highlight}
-                    </li>
-                  ))}
-                </ul>
-                <ul className="flex flex-wrap gap-2">
-                  {item.tech.map((tag) => (
-                    <li key={tag} className="neon-badge">
-                      {tag}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+  return (
+    <section id="experience" className="space-y-5 scroll-mt-24">
+      <SectionHeading content={content.header} />
+      <div className="grid gap-4 lg:grid-cols-2">
+        {featuredItems.map((item, index) => (
+          <article key={item.name} className="neon-panel group relative overflow-hidden p-5 sm:p-6">
+            <span className="absolute right-5 top-5 text-5xl font-bold text-ink/[0.035] transition group-hover:text-accent/10">
+              0{index + 1}
+            </span>
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-accent/80">{item.role.split("|")[0]?.trim()}</p>
+            <h3 className="mt-4 max-w-xl text-xl font-bold tracking-tight text-ink sm:text-2xl">{item.name}</h3>
+            <p className="mt-3 line-clamp-2 text-sm leading-relaxed text-ink/68">{item.impact}</p>
+            <ul className="mt-5 flex flex-wrap gap-2">
+              {item.tech.slice(0, 4).map((tag) => (
+                <li key={tag} className="neon-badge">
+                  {tag}
+                </li>
+              ))}
+            </ul>
           </article>
         ))}
       </div>

@@ -13,30 +13,30 @@ import { projectsDataByLocale } from "@/data/projects";
 export default function HomePage() {
   const { locale } = useLocale();
   const profileData = profileDataByLocale[locale];
-  const projectsData = projectsDataByLocale[locale].slice(0, 4);
+  const projectsData = projectsDataByLocale[locale].slice(0, 3);
   const workExperience = workExperienceByLocale[locale];
+  const viewAllLabel = locale === "zh" ? "全部项目" : "View all";
 
   return (
     <PageShell>
-      <div className="space-y-10">
+      <div className="space-y-12">
         <HeroSection content={profileData.hero} />
         <WorkExperienceSection content={workExperience} />
 
-        <section id="systems" className="space-y-4">
+        <section id="systems" className="space-y-5">
           <div className="flex items-center justify-between">
             <h2 className="text-2xl font-bold text-ink sm:text-3xl">{profileData.systemsUi.header.title}</h2>
             <Link href="/projects" className="text-sm font-semibold text-accent hover:opacity-80">
-              View all →
+              {viewAllLabel} →
             </Link>
           </div>
-          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          <div className="grid gap-4 lg:grid-cols-3">
             {projectsData.map((project) => (
-              <article key={project.name} className="neon-panel p-4">
-                <p className="project-subtitle text-xs">{project.subtitle}</p>
-                <h3 className="mt-2 text-lg font-bold">{project.name}</h3>
-                <p className="mt-2 line-clamp-3 text-sm text-ink/78">{project.oneLineValue}</p>
-                <ul className="mt-3 flex flex-wrap gap-2">
-                  {project.tags.slice(0, 3).map((tag) => (
+              <article key={project.name} className="neon-panel p-5">
+                <p className="project-subtitle text-xs font-semibold uppercase tracking-[0.12em]">{project.subtitle}</p>
+                <h3 className="mt-3 text-lg font-bold">{project.name}</h3>
+                <ul className="mt-5 flex flex-wrap gap-2">
+                  {project.tags.slice(0, 2).map((tag) => (
                     <li key={tag} className="neon-badge">
                       {tag}
                     </li>
@@ -45,29 +45,6 @@ export default function HomePage() {
               </article>
             ))}
           </div>
-        </section>
-
-        <section className="grid gap-4 lg:grid-cols-2">
-          <article className="neon-panel p-6">
-            <h3 className="text-xl font-bold text-ink">{profileData.about.header.title}</h3>
-            <p className="mt-3 text-sm leading-relaxed text-ink/80">{profileData.about.intro}</p>
-            <Link href="/about" className="mt-4 inline-flex text-sm font-semibold text-accent hover:opacity-80">
-              Learn more →
-            </Link>
-          </article>
-          <article className="neon-panel p-6">
-            <h3 className="text-xl font-bold text-ink">{profileData.stack.header.title}</h3>
-            <ul className="mt-3 flex flex-wrap gap-2">
-              {profileData.stack.groups.flatMap((group) => group.items).slice(0, 10).map((item) => (
-                <li key={item} className="neon-badge">
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <Link href="/skills" className="mt-4 inline-flex text-sm font-semibold text-accent hover:opacity-80">
-              Explore skills →
-            </Link>
-          </article>
         </section>
 
         <ContactSection content={profileData.contact} />

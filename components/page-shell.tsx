@@ -33,7 +33,7 @@ export function PageShell({ children }: PageShellProps) {
       />
 
       <div className="pointer-events-none fixed right-4 top-4 z-50 hidden items-center gap-3 lg:flex">
-        <div className="pointer-events-auto inline-flex items-center gap-2 rounded-full border border-border/75 bg-canvas/60 px-2 py-2 shadow-[0_16px_32px_rgb(var(--shadow-rgb)/0.16)] backdrop-blur-xl">
+        <div className="pointer-events-auto inline-flex items-center gap-2 rounded-xl border border-border/70 bg-canvas/68 px-2 py-2 shadow-[0_1px_2px_rgb(var(--shadow-rgb)/0.1)] backdrop-blur-xl">
           <LanguageToggle label={profileData.labels.language} />
           <ThemeToggle
             lightLabel={profileData.labels.theme.light}

@@ -12,12 +12,12 @@ export const metadata: Metadata = {
   description: profileData.seo.description,
   applicationName: "Haidong Xu Portfolio",
   keywords: [
-    "Solution Architect",
-    "AI Agent Application Developer",
-    "Backend Systems Engineer",
-    "Microservices",
-    "Distributed Systems",
-    "Event-Driven Architecture"
+    "AI Product Engineer",
+    "Full-Stack Software Engineer",
+    "AI API Integration",
+    "Backend API Design",
+    "TypeScript",
+    "Developer Experience"
   ],
   authors: [{ name: "Haidong Xu" }],
   creator: "Haidong Xu",

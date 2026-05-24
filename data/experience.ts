@@ -23,7 +23,7 @@ export const workExperienceByLocale: Record<Locale, WorkExperienceSection> = {
     header: {
       eyebrow: "Experience",
       title: "Work Experience",
-      description: "Selected delivery work focused on UI systems, architecture ownership, and production reliability."
+      description: "Resume-backed delivery work across AI integrations, backend APIs, frontend product workflows, and developer-facing packages."
     },
     labels: {
       role: "Role",
@@ -31,43 +31,35 @@ export const workExperienceByLocale: Record<Locale, WorkExperienceSection> = {
     },
     items: [
       {
-        name: "SCADAS RS Web Application",
-        role: "Web Developer (UI and Data Visualization)",
+        name: "Siemens Digital Industries Software",
+        role: "Software Engineer, Full-time | 08.2022 - Present | Goettingen, Germany",
         context:
-          "Built and maintained operational dashboards for industrial monitoring where clarity and reliability were critical.",
-        impact: "Improved real-time data readability and operator decision speed through stable, visualization-first UI design.",
+          "Delivering production features for an industrial testing platform across TypeScript frontend modules, Java backend services, REST APIs, and data-heavy engineering workflows.",
+        impact:
+          "Improved product reliability by clarifying API contracts, hardening long-running job flows, and connecting AI-assisted services to internal product workflows.",
         highlights: [
-          "Implemented dynamic charts using the internal visualization library",
-          "Developed reusable UI modules to improve maintainability",
-          "Partnered with backend teams to align data contracts and rendering behavior"
+          "Integrated external model APIs with internal services for retrieval, explanation, and report-generation scenarios",
+          "Designed backend APIs for web and mobile clients with clear service boundaries, error behavior, and ownership",
+          "Built async task-processing flows with retry, timeout, error propagation, status tracking, and recoverable execution paths",
+          "Improved debugging by analyzing logs, dependency chains, service interactions, and user impact during production investigations",
+          "Drove Cypress regression coverage, CI quality gates, API reviews, release workflows, and production issue triage"
         ],
-        tech: ["Web Components", "Data Visualization", "Internal UI Library", "Frontend Architecture"]
+        tech: ["TypeScript", "Java", "REST APIs", "AI API Integration", "Async Jobs", "Cypress", "CI/CD"]
       },
       {
-        name: "Testlab Event Marker Mobile App",
-        role: "Angular Developer",
+        name: "Internal NPM UI Component Package",
+        role: "Software Engineer, Part-time | 10.2021 - 08.2022",
         context:
-          "Delivered a mobile workflow for event marking and data interaction that had to stay responsive in lab environments.",
-        impact: "Shipped an end-to-end mobile app flow with consistent behavior, helping teams capture and classify events faster.",
+          "Built and published a typed internal UI component library for data-heavy enterprise applications, including reusable design primitives and product-team integration conventions.",
+        impact:
+          "Reduced duplicate frontend implementation work and improved adoption consistency across product teams while raising visualization performance on key views.",
         highlights: [
-          "Developed Angular-based web components with structured UI interactions",
-          "Integrated frontend modules with backend services via contract-driven APIs",
-          "Owned lifecycle from implementation to deployment and production fixes"
+          "Defined component API contracts, state patterns, usage guidelines, and package release flow",
+          "Maintained reusable Canvas-based visualization components with unified interfaces and coding conventions",
+          "Optimized rendering and data-flow pipelines, delivering an 18% runtime performance improvement on critical views",
+          "Refactored legacy modules into cleaner layered structures for better testability and maintainability"
         ],
-        tech: ["Angular", "TypeScript", "Mobile UI", "REST APIs"]
-      },
-      {
-        name: "Siemens-Style Internal UI Library",
-        role: "Developer and Maintainer",
-        context:
-          "Maintained a shared internal component and chart library used by multiple enterprise applications.",
-        impact: "Standardized design language and reduced repeated UI implementation effort across product teams.",
-        highlights: [
-          "Built and maintained reusable UI patterns and chart modules",
-          "Improved performance and resolved cross-application UI defects",
-          "Documented usage guidelines to improve consistency and onboarding"
-        ],
-        tech: ["Design System", "Component Library", "Charting", "UI Performance"]
+        tech: ["TypeScript", "NPM Packages", "Canvas", "Data Visualization", "Developer Experience", "Documentation"]
       }
     ]
   },
@@ -75,7 +67,7 @@ export const workExperienceByLocale: Record<Locale, WorkExperienceSection> = {
     header: {
       eyebrow: "经历",
       title: "工作经历",
-      description: "聚焦于界面系统、架构负责与生产稳定性的代表性项目经历。"
+      description: "基于最新英文简历同步，覆盖 AI 集成、后端 API、前端产品工作流与开发者包。"
     },
     labels: {
       role: "角色",
@@ -83,40 +75,31 @@ export const workExperienceByLocale: Record<Locale, WorkExperienceSection> = {
     },
     items: [
       {
-        name: "SCADAS RS Web 应用",
-        role: "Web Developer（UI 与数据可视化）",
-        context: "负责工业监控场景下的可视化看板开发与维护，强调可读性与稳定性。",
-        impact: "通过稳定的数据可视化交互提升实时信息可读性，加快操作决策效率。",
+        name: "Siemens Digital Industries Software",
+        role: "Software Engineer，全职 | 08.2022 - 至今 | Goettingen, Germany",
+        context: "为工业测试平台交付生产功能，覆盖 TypeScript 前端模块、Java 后端服务、REST API 与数据密集型工程工作流。",
+        impact: "通过明确 API 契约、加固长任务流程，并将 AI 辅助服务接入内部产品工作流，提升产品可靠性。",
         highlights: [
-          "基于内部图表库实现动态可视化组件",
-          "构建可复用 UI 模块，降低后续维护成本",
-          "与后端团队协作对齐数据契约与渲染行为"
+          "集成外部模型 API 与内部服务，支持检索、解释与报告生成场景",
+          "为 Web 与移动客户端设计后端 API，明确服务边界、错误行为与集成责任",
+          "构建带重试、超时、错误传播、状态追踪与可恢复路径的异步任务流程",
+          "通过日志、依赖链、服务交互与用户影响分析改进生产问题调试",
+          "推进 Cypress 回归覆盖、CI 质量门、API review、发布流程与线上问题排障"
         ],
-        tech: ["Web Components", "数据可视化", "内部 UI 库", "前端架构"]
+        tech: ["TypeScript", "Java", "REST APIs", "AI API 集成", "异步任务", "Cypress", "CI/CD"]
       },
       {
-        name: "Testlab Event Marker 移动应用",
-        role: "Angular Developer",
-        context: "交付用于事件标记与数据交互的移动端流程，要求在实验室场景保持稳定响应。",
-        impact: "完成端到端移动应用交付，帮助团队更快完成事件记录与分类。",
+        name: "内部 NPM UI 组件包",
+        role: "Software Engineer，兼职 | 10.2021 - 08.2022",
+        context: "为数据密集型企业应用构建并发布类型化内部 UI 组件库，包含可复用设计基础、发布流程与团队集成规范。",
+        impact: "减少跨产品团队的重复前端实现，提高组件采用一致性，并在关键视图上提升可视化性能。",
         highlights: [
-          "使用 Angular 开发结构化交互组件",
-          "通过契约化 API 与后端服务联调",
-          "负责从实现到部署与线上修复的完整生命周期"
+          "定义组件 API 契约、状态模式、使用规范与包发布流程",
+          "维护基于 Canvas 的可复用可视化组件，统一接口与编码约定",
+          "优化渲染与数据流管线，使关键视图运行时性能提升 18%",
+          "将遗留模块重构为更清晰的分层结构，提升可测试性与可维护性"
         ],
-        tech: ["Angular", "TypeScript", "移动端 UI", "REST APIs"]
-      },
-      {
-        name: "Siemens 风格内部 UI 库",
-        role: "开发与维护负责人",
-        context: "维护多业务线复用的内部组件与图表库，保障一致性与可扩展性。",
-        impact: "统一设计语言并减少重复开发，提升跨团队交付效率。",
-        highlights: [
-          "构建并维护可复用 UI 模式与图表模块",
-          "优化性能并修复跨应用 UI 问题",
-          "沉淀使用规范，降低上手与协作成本"
-        ],
-        tech: ["Design System", "组件库", "图表系统", "UI 性能优化"]
+        tech: ["TypeScript", "NPM Packages", "Canvas", "数据可视化", "开发者体验", "文档"]
       }
     ]
   },
@@ -125,7 +108,7 @@ export const workExperienceByLocale: Record<Locale, WorkExperienceSection> = {
       eyebrow: "Erfahrung",
       title: "Berufserfahrung",
       description:
-        "Ausgewählte Lieferprojekte mit Fokus auf UI-Systeme, Architekturverantwortung und produktive Stabilität."
+        "Lebenslaufbasierte Delivery-Arbeit über AI-Integrationen, Backend APIs, Frontend-Workflows und Developer Packages."
     },
     labels: {
       role: "Rolle",
@@ -133,46 +116,35 @@ export const workExperienceByLocale: Record<Locale, WorkExperienceSection> = {
     },
     items: [
       {
-        name: "SCADAS RS Web-Anwendung",
-        role: "Web Developer (UI und Datenvisualisierung)",
+        name: "Siemens Digital Industries Software",
+        role: "Software Engineer, Vollzeit | 08.2022 - Heute | Goettingen, Deutschland",
         context:
-          "Entwicklung und Wartung von Dashboards für industrielles Monitoring mit hohen Anforderungen an Klarheit und Verlässlichkeit.",
+          "Liefere produktive Features für eine industrielle Testplattform über TypeScript-Frontendmodule, Java-Backendservices, REST APIs und datenintensive Engineering-Workflows.",
         impact:
-          "Verbesserte Lesbarkeit von Echtzeitdaten und schnellere Entscheidungen durch stabile, visualisierungsorientierte UI-Architektur.",
+          "Verbesserte Produktzuverlässigkeit durch klare API-Verträge, robustere Long-Running Jobs und AI-gestützte Services in internen Produktworkflows.",
         highlights: [
-          "Dynamische Visualisierungen mit einer internen Chart-Bibliothek umgesetzt",
-          "Wiederverwendbare UI-Module zur besseren Wartbarkeit aufgebaut",
-          "Mit Backend-Teams Datenverträge und Rendering-Verhalten abgestimmt"
+          "Externe Modell-APIs mit internen Services für Retrieval, Erklärungen und Report-Generierung integriert",
+          "Backend APIs für Web- und Mobile-Clients mit klaren Service-Grenzen, Fehlerverhalten und Ownership entworfen",
+          "Async-Task-Flows mit Retry, Timeout, Error Propagation, Status Tracking und Recovery-Pfaden gebaut",
+          "Debugging durch Analyse von Logs, Dependency Chains, Service Interactions und User Impact verbessert",
+          "Cypress Regression Coverage, CI Quality Gates, API Reviews, Release Workflows und Production Triage vorangetrieben"
         ],
-        tech: ["Web Components", "Datenvisualisierung", "Interne UI-Bibliothek", "Frontend-Architektur"]
+        tech: ["TypeScript", "Java", "REST APIs", "AI API Integration", "Async Jobs", "Cypress", "CI/CD"]
       },
       {
-        name: "Testlab Event Marker Mobile App",
-        role: "Angular Developer",
+        name: "Internes NPM UI Component Package",
+        role: "Software Engineer, Teilzeit | 10.2021 - 08.2022",
         context:
-          "Lieferung eines mobilen Workflows für Event-Markierung und Datennutzung mit stabiler Bedienung im Laborbetrieb.",
+          "Baute und veröffentlichte eine typisierte interne UI-Komponentenbibliothek für datenintensive Enterprise-Anwendungen inklusive Design-Primitives und Integrationskonventionen.",
         impact:
-          "End-to-End-Mobilablauf erfolgreich ausgeliefert und die Geschwindigkeit bei Erfassung und Klassifizierung von Events erhöht.",
+          "Reduzierte doppelte Frontend-Implementierungen und verbesserte Adoption-Konsistenz über Produktteams hinweg; kritische Visualisierungsansichten wurden schneller.",
         highlights: [
-          "Angular-basierte Komponenten mit klaren UI-Interaktionen entwickelt",
-          "Frontend-Module über vertraglich definierte APIs mit Backend-Services integriert",
-          "Verantwortung über den gesamten Zyklus von Implementierung bis Deployment und Fixes"
+          "Component API Contracts, State Patterns, Usage Guidelines und Package Release Flow definiert",
+          "Canvas-basierte Visualisierungskomponenten mit einheitlichen Interfaces und Coding Conventions gepflegt",
+          "Rendering- und Data-Flow-Pipelines optimiert und 18% Runtime Performance Improvement auf Key Views erreicht",
+          "Legacy-Module in sauberere Schichten refaktoriert, um Testbarkeit und Wartbarkeit zu verbessern"
         ],
-        tech: ["Angular", "TypeScript", "Mobile UI", "REST APIs"]
-      },
-      {
-        name: "Siemens-Style interne UI-Bibliothek",
-        role: "Developer und Maintainer",
-        context:
-          "Pflege einer gemeinsamen internen Komponenten- und Chart-Bibliothek für mehrere Enterprise-Anwendungen.",
-        impact:
-          "Designsprache standardisiert und wiederholten UI-Implementierungsaufwand über Produktteams hinweg reduziert.",
-        highlights: [
-          "Wiederverwendbare UI-Patterns und Chart-Module aufgebaut und gepflegt",
-          "Performance optimiert und anwendungsübergreifende UI-Fehler behoben",
-          "Nutzungsrichtlinien dokumentiert und Onboarding beschleunigt"
-        ],
-        tech: ["Design System", "Komponentenbibliothek", "Charting", "UI-Performance"]
+        tech: ["TypeScript", "NPM Packages", "Canvas", "Datenvisualisierung", "Developer Experience", "Dokumentation"]
       }
     ]
   }

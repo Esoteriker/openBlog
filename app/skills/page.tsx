@@ -80,7 +80,12 @@ export default function SkillsPage() {
     return activeTab === "all" ? showcase.proficiency.slice(0, 6) : showcase.proficiency.filter((item) => item.category === activeTab);
   }, [activeTab, showcase.proficiency]);
 
-  const radarPoints = buildRadarPoints(currentView.radarValues, 112, 140, 132);
+  const radarCenterX = 160;
+  const radarCenterY = 150;
+  const radarGridRadii = [34, 54, 74, 94, 110];
+  const radarValueRadius = 110;
+  const radarLabelRadius = 126;
+  const radarPoints = buildRadarPoints(currentView.radarValues, radarValueRadius, radarCenterX, radarCenterY);
   const studyPoints = buildChartPoints(currentView.trendStudy, 420, 240, 24);
   const improvePoints = buildChartPoints(currentView.trendImprove, 420, 240, 24);
 
@@ -116,22 +121,28 @@ export default function SkillsPage() {
           <article className="neon-panel p-6">
             <h2 className="text-3xl font-bold tracking-tight text-ink">{showcase.radarTitle}</h2>
             <div className="mt-6 flex justify-center">
-              <svg viewBox="0 0 280 280" className="h-[300px] w-full max-w-[320px]">
-                {[36, 56, 76, 96, 112].map((radius) => (
+              <svg viewBox="0 0 320 300" className="h-[300px] w-full max-w-[340px]">
+                {radarGridRadii.map((radius) => (
                   <polygon
                     key={radius}
-                    points={buildRadarPoints([100, 100, 100, 100, 100, 100], radius, 140, 132)}
+                    points={buildRadarPoints([100, 100, 100, 100, 100, 100], radius, radarCenterX, radarCenterY)}
                     fill="none"
                     stroke="rgb(var(--border) / 0.38)"
                   />
                 ))}
                 {showcase.radarAxes.map((label, index) => {
                   const angle = (Math.PI * 2 * index) / showcase.radarAxes.length - Math.PI / 2;
-                  const x = 140 + Math.cos(angle) * 126;
-                  const y = 132 + Math.sin(angle) * 126;
+                  const x = radarCenterX + Math.cos(angle) * radarLabelRadius;
+                  const y = radarCenterY + Math.sin(angle) * radarLabelRadius;
                   return (
                     <g key={label}>
-                      <line x1="140" y1="132" x2={x} y2={y} stroke="rgb(var(--border) / 0.38)" />
+                      <line
+                        x1={radarCenterX}
+                        y1={radarCenterY}
+                        x2={x}
+                        y2={y}
+                        stroke="rgb(var(--border) / 0.38)"
+                      />
                       <text x={x} y={y} fill="rgb(var(--ink) / 0.76)" fontSize="12" textAnchor="middle">
                         {label}
                       </text>
@@ -146,8 +157,8 @@ export default function SkillsPage() {
                 />
                 {currentView.radarValues.map((value, index) => {
                   const angle = (Math.PI * 2 * index) / currentView.radarValues.length - Math.PI / 2;
-                  const x = 140 + Math.cos(angle) * 112 * (value / 100);
-                  const y = 132 + Math.sin(angle) * 112 * (value / 100);
+                  const x = radarCenterX + Math.cos(angle) * radarValueRadius * (value / 100);
+                  const y = radarCenterY + Math.sin(angle) * radarValueRadius * (value / 100);
                   return <circle key={`${value}-${index}`} cx={x} cy={y} r="4.5" fill="rgb(var(--accent) / 1)" />;
                 })}
               </svg>
@@ -193,15 +204,15 @@ export default function SkillsPage() {
             <h2 className="text-3xl font-bold tracking-tight text-ink">{showcase.trendTitle}</h2>
             <div className="mt-4 flex items-center justify-end gap-6 text-sm text-ink/66">
               <span className="inline-flex items-center gap-2">
-                <span className="h-2.5 w-2.5 rounded-full bg-blue-400" />
+                <span className="h-2.5 w-2.5 rounded-full bg-zinc-400" />
                 {showcase.trendStudyLabel}
               </span>
               <span className="inline-flex items-center gap-2">
-                <span className="h-2.5 w-2.5 rounded-full bg-emerald-400" />
+                <span className="h-2.5 w-2.5 rounded-full bg-amber-500/80" />
                 {showcase.trendImproveLabel}
               </span>
             </div>
-            <div className="mt-4 overflow-hidden rounded-2xl border border-border/60 bg-canvas/30 p-4">
+            <div className="mt-4 overflow-hidden rounded-lg border border-border/60 bg-canvas/30 p-4">
               <svg viewBox="0 0 420 240" className="h-[280px] w-full">
                 {[0, 25, 50, 75, 100].map((tick) => {
                   const y = 240 - (tick / 100) * 216;
@@ -214,23 +225,23 @@ export default function SkillsPage() {
                     </g>
                   );
                 })}
-                <polyline points={studyPoints} fill="none" stroke="#3b82f6" strokeWidth="3" />
-                <polyline points={improvePoints} fill="none" stroke="#4ade80" strokeWidth="3" />
+                <polyline points={studyPoints} fill="none" stroke="rgb(var(--ink) / 0.62)" strokeWidth="3" />
+                <polyline points={improvePoints} fill="none" stroke="#b0894a" strokeWidth="3" />
                 {currentView.trendStudy.map((value, index) => {
                   const x = (420 / Math.max(currentView.trendStudy.length - 1, 1)) * index;
                   const y = 240 - (value / 100) * 216;
-                  return <circle key={`study-${index}`} cx={x} cy={y} r="4" fill="#3b82f6" />;
+                  return <circle key={`study-${index}`} cx={x} cy={y} r="4" fill="rgb(var(--ink) / 0.62)" />;
                 })}
                 {currentView.trendImprove.map((value, index) => {
                   const x = (420 / Math.max(currentView.trendImprove.length - 1, 1)) * index;
                   const y = 240 - (value / 100) * 216;
-                  return <circle key={`improve-${index}`} cx={x} cy={y} r="4" fill="#4ade80" />;
+                  return <circle key={`improve-${index}`} cx={x} cy={y} r="4" fill="#b0894a" />;
                 })}
               </svg>
             </div>
             <div className="mt-3 flex items-center justify-between text-sm text-ink/56">
-              {showcase.trendLabels.map((label) => (
-                <span key={label}>{label}</span>
+              {showcase.trendLabels.map((label, index) => (
+                <span key={`${label}-${index}`}>{label}</span>
               ))}
             </div>
             <div className="mt-6 border-t border-border/50 pt-4 text-sm text-ink/56">{showcase.footerNote}</div>
