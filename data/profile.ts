@@ -145,17 +145,17 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
       { label: "Contact", href: "#contact" }
     ],
     hero: {
-      systemRole: "Personal Product Engineering Portfolio",
-      headlineLeading: "Shipping",
-      headlineEmphasis: "AI Product Workflows",
-      headlineTrailing: "with reliable full-stack systems",
+      systemRole: "Product Engineering Portfolio",
+      headlineLeading: "Turning",
+      headlineEmphasis: "AI Features",
+      headlineTrailing: "into reliable products",
       typingTitles: [
         "AI Product Engineer",
         "Senior Product Engineer (AI/LLM)",
         "Full-Stack Software Engineer"
       ],
       positioningStatement:
-        "I build production features across TypeScript frontends, Java/Python backend services, REST APIs, AI model integrations, and data-heavy workflows.",
+        "Full-stack TypeScript/Next.js, Java/Python APIs, async jobs, RAG/LLM integration, and production debugging.",
       highlightsTitle: "Why This Site",
       quickPoints: [
         "AI-assisted retrieval, explanation, and report-generation workflows",
@@ -272,7 +272,7 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
         eyebrow: "Systems",
         title: "Featured Product Systems",
         description:
-          "Resume-backed snapshots of AI-assisted workflows, backend services, and developer-facing product infrastructure."
+          "A short list of product systems I have worked on."
       },
       labels: {
         oneLineValue: "System Value",
@@ -299,22 +299,22 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
       },
       items: [
         {
-          title: "AI APIs Are Product Workflows",
-          summary: "Why retries, fallbacks, caching, rate limits, and user-facing states matter as much as the model call.",
-          status: "Draft",
-          href: "#"
+          title: "RevOps Agent Demo: Approvals Before Automation",
+          summary: "Routing agents, CRM tools, memory, and human approval boundaries in a real public repo.",
+          status: "Published",
+          href: "/blog/revops-agent-demo"
         },
         {
-          title: "Typed Interfaces Reduce Product Friction",
-          summary: "How package APIs, integration guides, and reviews make shared frontend infrastructure easier to adopt.",
-          status: "Draft",
-          href: "#"
+          title: "DateCraft: Turning Small Inputs Into a Date Plan",
+          summary: "A shipped Next.js app that generates date ideas from mood, budget, time, and setting.",
+          status: "Published",
+          href: "/blog/datecraft-open-date"
         },
         {
-          title: "Debugging Across Service Boundaries",
-          summary: "A practical loop for reading logs, dependency chains, and user impact during production investigations.",
-          status: "Draft",
-          href: "#"
+          title: "WFP HungerMap: Notes From a Public Data Product",
+          summary: "Project notes around maps, charts, comparison views, downloads, and chatbot flows.",
+          status: "Published",
+          href: "/blog/wfp-hungermap"
         }
       ]
     },
@@ -372,16 +372,16 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
     ],
     hero: {
       systemRole: "个人产品工程作品集",
-      headlineLeading: "交付",
-      headlineEmphasis: "AI 产品工作流",
-      headlineTrailing: "并用全栈系统保障可靠运行",
+      headlineLeading: "把",
+      headlineEmphasis: "AI 功能",
+      headlineTrailing: "做成可靠产品",
       typingTitles: [
         "AI Product Engineer",
         "Senior Product Engineer (AI/LLM)",
         "Full-Stack Software Engineer"
       ],
       positioningStatement:
-        "我负责 TypeScript 前端、Java/Python 后端服务、REST API、AI 模型集成与数据密集型工作流的生产级功能交付。",
+        "全栈 TypeScript/Next.js、Java/Python API、异步任务、RAG/LLM 集成与生产调试。",
       highlightsTitle: "价值摘要",
       quickPoints: [
         "AI 辅助的检索、解释与报告生成产品流程",
@@ -494,7 +494,7 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
       header: {
         eyebrow: "系统",
         title: "精选产品系统",
-        description: "基于最新简历内容展示 AI 辅助流程、后端服务与开发者产品基础设施。"
+        description: "我做过的一些产品系统，保留最核心的信息。"
       },
       labels: {
         oneLineValue: "系统价值",
@@ -520,22 +520,22 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
       },
       items: [
         {
-          title: "AI API 也是产品工作流",
-          summary: "为什么重试、回退、缓存、限流和用户可见状态与模型调用同样重要。",
-          status: "草稿",
-          href: "#"
+          title: "RevOps Agent Demo：自动化之前先做审批边界",
+          summary: "真实公开仓库里的路由 agent、CRM 工具、记忆和人工审批边界。",
+          status: "已发布",
+          href: "/blog/revops-agent-demo"
         },
         {
-          title: "类型化接口降低产品摩擦",
-          summary: "组件包 API、集成指南与 review 如何提升共享前端基础设施的采用质量。",
-          status: "草稿",
-          href: "#"
+          title: "DateCraft：把轻量输入变成可执行约会计划",
+          summary: "一个已部署的 Next.js 应用，根据心情、预算、时间和场景生成约会灵感。",
+          status: "已发布",
+          href: "/blog/datecraft-open-date"
         },
         {
-          title: "跨服务边界调试",
-          summary: "生产排障中如何结合日志、依赖链与用户影响建立判断路径。",
-          status: "草稿",
-          href: "#"
+          title: "WFP HungerMap：公开数据产品笔记",
+          summary: "基于公开仓库的地图、图表、对比、下载和聊天功能区笔记。",
+          status: "已发布",
+          href: "/blog/wfp-hungermap"
         }
       ]
     },
@@ -589,17 +589,17 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
       { label: "Kontakt", href: "#contact" }
     ],
     hero: {
-      systemRole: "Persönliches Product-Engineering-Portfolio",
-      headlineLeading: "Shipping",
-      headlineEmphasis: "AI Product Workflows",
-      headlineTrailing: "with reliable full-stack systems",
+      systemRole: "Product-Engineering-Portfolio",
+      headlineLeading: "AI",
+      headlineEmphasis: "Features",
+      headlineTrailing: "als verlässliche Produkte",
       typingTitles: [
         "AI Product Engineer",
         "Senior Product Engineer (AI/LLM)",
         "Full-Stack Software Engineer"
       ],
       positioningStatement:
-        "Ich entwickle produktive Features über TypeScript-Frontends, Java/Python-Backend-Services, REST APIs, AI-Modellintegrationen und datenintensive Workflows.",
+        "Full-Stack TypeScript/Next.js, Java/Python APIs, Async-Jobs, RAG/LLM-Integration und Production Debugging.",
       highlightsTitle: "Kernnutzen",
       quickPoints: [
         "AI-gestützte Retrieval-, Erklärungs- und Report-Workflows",
@@ -716,7 +716,7 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
         eyebrow: "Systeme",
         title: "Ausgewählte Produktsysteme",
         description:
-          "Lebenslaufbasierte Einblicke in AI-gestützte Workflows, Backend-Services und Developer-Infrastruktur."
+          "Eine kurze Auswahl an Produktsystemen, an denen ich gearbeitet habe."
       },
       labels: {
         oneLineValue: "Systemwert",
@@ -743,22 +743,22 @@ export const profileDataByLocale: Record<Locale, ProfileData> = {
       },
       items: [
         {
-          title: "AI APIs sind Produktworkflows",
-          summary: "Warum Retries, Fallbacks, Caching, Rate Limits und sichtbare Zustände so wichtig sind wie der Modellaufruf.",
-          status: "Entwurf",
-          href: "#"
+          title: "RevOps Agent Demo: Approvals Before Automation",
+          summary: "Routing Agents, CRM Tools, Memory und Human Approval Boundaries in einem öffentlichen Repo.",
+          status: "Published",
+          href: "/blog/revops-agent-demo"
         },
         {
-          title: "Typisierte Interfaces reduzieren Reibung",
-          summary: "Wie Package APIs, Integration Guides und Reviews gemeinsame Frontend-Infrastruktur nutzbarer machen.",
-          status: "Entwurf",
-          href: "#"
+          title: "DateCraft: Turning Small Inputs Into a Date Plan",
+          summary: "Eine deployte Next.js App für Date-Pläne aus Mood, Budget, Zeit und Setting.",
+          status: "Published",
+          href: "/blog/datecraft-open-date"
         },
         {
-          title: "Debugging über Service-Grenzen",
-          summary: "Ein praktischer Ablauf für Logs, Dependency Chains und User Impact in Production Investigations.",
-          status: "Entwurf",
-          href: "#"
+          title: "WFP HungerMap: Notes From a Public Data Product",
+          summary: "Notizen zu Maps, Charts, Comparison Views, Downloads und Chatbot Flows.",
+          status: "Published",
+          href: "/blog/wfp-hungermap"
         }
       ]
     },

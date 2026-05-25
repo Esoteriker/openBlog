@@ -21,11 +21,11 @@ type NavbarProps = {
 
 const navTextByLocale: Record<
   Locale,
-  { home: string; about: string; skills: string; projects: string; blog: string; resume: string; contact: string }
+  { home: string; about: string; blog: string; contact: string }
 > = {
-  en: { home: "Home", about: "About", skills: "Skills", projects: "Projects", blog: "Blog", resume: "Resume", contact: "Contact" },
-  zh: { home: "首页", about: "关于我", skills: "技能", projects: "项目", blog: "博客", resume: "简历", contact: "联系我" },
-  de: { home: "Start", about: "Über", skills: "Skills", projects: "Projekte", blog: "Blog", resume: "Lebenslauf", contact: "Kontakt" }
+  en: { home: "Home", about: "About", blog: "Blog", contact: "Contact" },
+  zh: { home: "首页", about: "关于我", blog: "博客", contact: "联系我" },
+  de: { home: "Start", about: "Über", blog: "Blog", contact: "Kontakt" }
 };
 
 export function Navbar({
@@ -46,10 +46,7 @@ export function Navbar({
   const navItems = [
     { href: "/", label: text.home, icon: "⌂" },
     { href: "/about", label: text.about, icon: "◉" },
-    { href: "/skills", label: text.skills, icon: "✦" },
-    { href: "/projects", label: text.projects, icon: "▣" },
     { href: "/blog", label: text.blog, icon: "✎" },
-    { href: "/resume", label: text.resume, icon: "☰" },
     { href: "/#contact", label: text.contact, icon: "✉" }
   ];
 

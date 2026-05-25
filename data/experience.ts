@@ -32,7 +32,7 @@ export const workExperienceByLocale: Record<Locale, WorkExperienceSection> = {
     items: [
       {
         name: "Siemens Digital Industries Software",
-        role: "Software Engineer, Full-time | 08.2022 - Present | Goettingen, Germany",
+        role: "Software Engineer, Full-time | 08.2022 - Present | Göttingen, Germany",
         context:
           "Delivering production features for an industrial testing platform across TypeScript frontend modules, Java backend services, REST APIs, and data-heavy engineering workflows.",
         impact:
@@ -76,7 +76,7 @@ export const workExperienceByLocale: Record<Locale, WorkExperienceSection> = {
     items: [
       {
         name: "Siemens Digital Industries Software",
-        role: "Software Engineer，全职 | 08.2022 - 至今 | Goettingen, Germany",
+        role: "Software Engineer，全职 | 08.2022 - 至今 | Göttingen, Germany",
         context: "为工业测试平台交付生产功能，覆盖 TypeScript 前端模块、Java 后端服务、REST API 与数据密集型工程工作流。",
         impact: "通过明确 API 契约、加固长任务流程，并将 AI 辅助服务接入内部产品工作流，提升产品可靠性。",
         highlights: [
@@ -117,7 +117,7 @@ export const workExperienceByLocale: Record<Locale, WorkExperienceSection> = {
     items: [
       {
         name: "Siemens Digital Industries Software",
-        role: "Software Engineer, Vollzeit | 08.2022 - Heute | Goettingen, Deutschland",
+        role: "Software Engineer, Vollzeit | 08.2022 - Heute | Göttingen, Deutschland",
         context:
           "Liefere produktive Features für eine industrielle Testplattform über TypeScript-Frontendmodule, Java-Backendservices, REST APIs und datenintensive Engineering-Workflows.",
         impact:

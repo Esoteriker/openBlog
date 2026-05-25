@@ -127,7 +127,7 @@ type LocaleShowcase = {
 
 const zhShowcase: LocaleShowcase = {
   about: {
-    location: "维也纳，奥地利",
+    location: "德国哥廷根",
     subtitle: "AI 产品工程师 / 全栈软件工程师",
     bioLines: [
       "我专注把 AI/LLM 能力接入真实产品流程，让检索、解释与报告生成不仅能跑，还能可靠交付。",
@@ -193,7 +193,7 @@ const zhShowcase: LocaleShowcase = {
       { category: "backend", name: "Java / Spring Boot", value: 82, tone: "from-stone-700 to-amber-600" },
       { category: "backend", name: "Python / FastAPI", value: 78, tone: "from-neutral-700 to-stone-500" },
       { category: "backend", name: "Async Jobs", value: 82, tone: "from-slate-700 to-neutral-400" },
-      { category: "tools", name: "OpenAI API / RAG", value: 82, tone: "from-stone-700 to-amber-500" },
+      { category: "tools", name: "RAG / LLM Integration", value: 82, tone: "from-stone-700 to-amber-500" },
       { category: "tools", name: "Cypress / CI", value: 80, tone: "from-zinc-700 to-stone-500" },
       { category: "tools", name: "Docker / Linux", value: 74, tone: "from-neutral-700 to-zinc-500" },
       { category: "tools", name: "Observability", value: 76, tone: "from-slate-700 to-stone-500" }
@@ -224,7 +224,7 @@ const zhShowcase: LocaleShowcase = {
         title: "AI 与交付",
         icon: "✚",
         tone: "text-neutral-300",
-        tags: ["OpenAI API", "RAG", "Prompt Engineering", "Tool Calling", "Retry/Fallback", "Docker", "GitLab CI/CD", "Cypress"]
+        tags: ["RAG", "LLM 集成", "Retry/Fallback", "Docker", "GitLab CI/CD", "Cypress"]
       },
       {
         key: "foundation",
@@ -247,47 +247,30 @@ const zhShowcase: LocaleShowcase = {
     liveLabel: "预览",
     items: [
       {
-        title: "WFP Hunger-Map",
-        summary: "用 Next.js、TypeScript 与 AI API 构建数据密集型公共产品的解释与摘要体验。",
+        title: "WFP HungerMap",
+        summary: "公开数据产品，覆盖地图、图表、对比、下载与聊天功能区。",
         category: "fullstack",
-        tags: ["Next.js", "TypeScript", "AI API", "Data"],
-        variant: "signals",
-        liveUrl: "https://www.wfp.org/hunger-map"
+        tags: ["Next.js", "TypeScript", "Maps", "Charts"],
+        variant: "knowledge",
+        githubUrl: "https://github.com/Esoteriker/wfp-hunger-map",
+        liveUrl: "https://wfp-hunger-map.vercel.app/"
       },
       {
-        title: "EDA 任务编排平台",
-        summary: "连接 Web 前端与多个 EDA 工具服务，支持长耗时任务、状态追踪、日志反馈与权限控制。",
+        title: "RevOps Agent Demo",
+        summary: "OpenAI Agents SDK 与 LangGraph 的销售/运营自动化 demo。",
         category: "backend",
-        tags: ["Backend", "Docker", "Async Jobs", "Auth"],
-        variant: "workflow"
+        tags: ["Python", "OpenAI Agents", "LangGraph", "CRM"],
+        variant: "api",
+        githubUrl: "https://github.com/Esoteriker/revops-agent-demo"
       },
       {
-        title: "内部 NPM UI 组件包",
-        summary: "面向数据密集型产品团队的类型化 UI 组件库与 Canvas 可视化模块。",
+        title: "DateCraft",
+        summary: "根据心情、预算、时间和场景生成约会计划的 Next.js 应用。",
         category: "frontend",
-        tags: ["TypeScript", "NPM", "Canvas", "DX"],
-        variant: "product"
-      },
-      {
-        title: "AI 辅助报告生成流程",
-        summary: "将外部模型 API 接入内部服务，围绕检索、解释、报告生成、重试与降级组织产品流程。",
-        category: "backend",
-        tags: ["OpenAI API", "RAG", "Fallback", "Reports"],
-        variant: "knowledge"
-      },
-      {
-        title: "生产调试与可观测性流程",
-        summary: "结合日志、依赖链、服务交互与用户影响分析，缩短跨模块生产问题定位时间。",
-        category: "backend",
-        tags: ["Logs", "Debugging", "Observability", "Triage"],
-        variant: "observability"
-      },
-      {
-        title: "Cypress 与 CI 质量门",
-        summary: "用回归覆盖、API review、发布流程和线上排障机制支撑稳定迭代。",
-        category: "fullstack",
-        tags: ["Cypress", "CI/CD", "Release", "API Review"],
-        variant: "systems"
+        tags: ["Next.js", "TypeScript", "Tailwind", "AI UI"],
+        variant: "product",
+        githubUrl: "https://github.com/Esoteriker/openDate",
+        liveUrl: "https://opendate.vercel.app"
       }
     ]
   },
@@ -309,54 +292,34 @@ const zhShowcase: LocaleShowcase = {
     openLabel: "打开",
     posts: [
       {
-        title: "AI API 也是产品工作流",
-        summary: "为什么重试、回退、缓存、限流和用户可见状态与模型调用同样重要。",
-        category: "notes",
-        tags: ["AI", "Reliability"],
-        date: "2026-05-23",
-        readTime: "6 分钟阅读",
-        variant: "signals",
-        href: "#"
-      },
-      {
-        title: "类型化接口如何降低产品摩擦",
-        summary: "组件包 API、使用指南和集成约定如何减少重复实现并提升跨团队采用质量。",
-        category: "projects",
-        tags: ["TypeScript", "DX", "NPM"],
-        date: "2026-05-22",
-        readTime: "7 分钟阅读",
-        variant: "product",
-        href: "#"
-      },
-      {
-        title: "长耗时任务应该怎样对用户透明",
-        summary: "围绕状态追踪、日志反馈、重试和权限控制设计异步任务体验。",
+        title: "RevOps Agent Demo：自动化之前先做审批边界",
+        summary: "一篇真实项目笔记，记录路由 agent、CRM 工具、记忆和人工审批边界。",
         category: "learning",
-        tags: ["Async Jobs", "Backend", "UX"],
-        date: "2026-05-18",
-        readTime: "6 分钟阅读",
-        variant: "workflow",
-        href: "#"
+        tags: ["Agents", "LangGraph", "Python"],
+        date: "2026-04-07",
+        readTime: "4 分钟阅读",
+        variant: "api",
+        href: "/blog/revops-agent-demo"
       },
       {
-        title: "跨服务边界调试",
-        summary: "从日志、依赖链、服务交互和用户影响四个角度拆解生产排障路径。",
-        category: "notes",
-        tags: ["Debugging", "Observability", "Triage"],
-        date: "2026-03-10",
-        readTime: "8 分钟阅读",
-        variant: "observability",
-        href: "#"
-      },
-      {
-        title: "数据可视化性能优化笔记",
-        summary: "一次 Canvas 可视化与数据流重构如何带来关键视图 18% 的运行时性能提升。",
+        title: "DateCraft：把轻量输入变成可执行约会计划",
+        summary: "一个已部署的 Next.js 应用，根据心情、预算、时间和场景生成约会灵感。",
         category: "projects",
-        tags: ["Canvas", "Data Viz", "Performance"],
-        date: "2026-02-20",
-        readTime: "7 分钟阅读",
-        variant: "charts",
-        href: "#"
+        tags: ["Next.js", "TypeScript", "AI UI"],
+        date: "2026-02-07",
+        readTime: "3 分钟阅读",
+        variant: "product",
+        href: "/blog/datecraft-open-date"
+      },
+      {
+        title: "WFP HungerMap：公开数据产品笔记",
+        summary: "一篇基于公开仓库的项目笔记，涉及地图、图表、对比、下载和聊天功能区。",
+        category: "projects",
+        tags: ["Next.js", "Maps", "Charts"],
+        date: "2025-07-09",
+        readTime: "5 分钟阅读",
+        variant: "knowledge",
+        href: "/blog/wfp-hungermap"
       }
     ]
   },
@@ -381,7 +344,7 @@ const zhShowcase: LocaleShowcase = {
     educationTitle: "教育背景",
     education: [
       "10.2022 - 12.2025 M.Sc. Information Systems, Technical University of Munich",
-      "10.2019 - 08.2022 B.Sc. Business Informatics, University of Goettingen",
+      "10.2019 - 08.2022 B.Sc. Business Informatics, University of Göttingen",
       "12.2021 Google Data Analytics Professional Certificate"
     ],
     availabilityTitle: "合作方向",
@@ -396,7 +359,7 @@ const zhShowcase: LocaleShowcase = {
 
 const enShowcase: LocaleShowcase = {
   about: {
-    location: "Vienna, Austria",
+    location: "Göttingen, Germany",
     subtitle: "AI Product Engineer / Full-Stack Software Engineer",
     bioLines: [
       "I focus on bringing AI/LLM capabilities into real product workflows, where retrieval, explanation, and report generation need to be reliable.",
@@ -442,7 +405,7 @@ const enShowcase: LocaleShowcase = {
       { category: "backend", name: "Java / Spring Boot", value: 82, tone: "from-stone-700 to-amber-600" },
       { category: "backend", name: "Python / FastAPI", value: 78, tone: "from-neutral-700 to-stone-500" },
       { category: "backend", name: "Async Jobs", value: 82, tone: "from-slate-700 to-neutral-400" },
-      { category: "tools", name: "OpenAI API / RAG", value: 82, tone: "from-stone-700 to-amber-500" },
+      { category: "tools", name: "RAG / LLM Integration", value: 82, tone: "from-stone-700 to-amber-500" },
       { category: "tools", name: "Cypress / CI", value: 80, tone: "from-zinc-700 to-stone-500" },
       { category: "tools", name: "Docker / Linux", value: 74, tone: "from-neutral-700 to-zinc-500" },
       { category: "tools", name: "Observability", value: 76, tone: "from-slate-700 to-stone-500" }
@@ -473,7 +436,7 @@ const enShowcase: LocaleShowcase = {
         title: "AI and Delivery",
         icon: "✚",
         tone: "text-neutral-300",
-        tags: ["OpenAI API", "RAG", "Prompt Engineering", "Tool Calling", "Retry/Fallback", "Docker", "GitLab CI/CD", "Cypress"]
+        tags: ["RAG", "LLM Integration", "Retry/Fallback", "Docker", "GitLab CI/CD", "Cypress"]
       },
       {
         key: "foundation",
@@ -495,12 +458,9 @@ const enShowcase: LocaleShowcase = {
     githubLabel: "GitHub",
     liveLabel: "Open",
     items: [
-      { title: "WFP Hunger-Map", summary: "A data-rich public product using Next.js, TypeScript, and AI APIs for explanation and summary experiences.", category: "fullstack", tags: ["Next.js", "TypeScript", "AI API", "Data"], variant: "signals", liveUrl: "https://www.wfp.org/hunger-map" },
-      { title: "EDA Task Orchestration Platform", summary: "Connects a web frontend with multiple EDA tool services through async jobs, status tracking, logs, and authorization.", category: "backend", tags: ["Backend", "Docker", "Async Jobs", "Auth"], variant: "workflow" },
-      { title: "Internal NPM UI Package", summary: "Typed UI primitives and Canvas visualization modules for data-heavy product teams.", category: "frontend", tags: ["TypeScript", "NPM", "Canvas", "DX"], variant: "product" },
-      { title: "AI-assisted Report Workflow", summary: "Connects external model APIs with internal services for retrieval, explanation, reporting, retry, and graceful degradation.", category: "backend", tags: ["OpenAI API", "RAG", "Fallback", "Reports"], variant: "knowledge" },
-      { title: "Production Debugging Flow", summary: "Uses logs, dependency chains, service interactions, and user impact analysis to shorten cross-module investigations.", category: "backend", tags: ["Logs", "Debugging", "Observability", "Triage"], variant: "observability" },
-      { title: "Cypress and CI Quality Gates", summary: "Regression coverage, API reviews, release workflow, and production triage practices for stable iteration.", category: "fullstack", tags: ["Cypress", "CI/CD", "Release", "API Review"], variant: "systems" }
+      { title: "WFP HungerMap", summary: "Public data product with maps, charts, comparison views, downloads, and chatbot flows.", category: "fullstack", tags: ["Next.js", "TypeScript", "Maps", "Charts"], variant: "knowledge", githubUrl: "https://github.com/Esoteriker/wfp-hunger-map", liveUrl: "https://wfp-hunger-map.vercel.app/" },
+      { title: "RevOps Agent Demo", summary: "OpenAI Agents SDK and LangGraph demo for sales and operations automation.", category: "backend", tags: ["Python", "OpenAI Agents", "LangGraph", "CRM"], variant: "api", githubUrl: "https://github.com/Esoteriker/revops-agent-demo" },
+      { title: "DateCraft", summary: "Next.js app that generates date plans from mood, budget, time, and setting.", category: "frontend", tags: ["Next.js", "TypeScript", "Tailwind", "AI UI"], variant: "product", githubUrl: "https://github.com/Esoteriker/openDate", liveUrl: "https://opendate.vercel.app" }
     ]
   },
   blog: {
@@ -520,11 +480,9 @@ const enShowcase: LocaleShowcase = {
     subscribeButton: "Subscribe",
     openLabel: "Open",
     posts: [
-      { title: "AI APIs Are Product Workflows", summary: "Why retries, fallbacks, caching, rate limits, and visible user states matter as much as the model call.", category: "notes", tags: ["AI", "Reliability"], date: "2026-05-23", readTime: "6 min read", variant: "signals", href: "#" },
-      { title: "Typed Interfaces Reduce Product Friction", summary: "How package APIs, usage guidelines, and integration conventions reduce duplicate implementation work.", category: "projects", tags: ["TypeScript", "DX", "NPM"], date: "2026-05-22", readTime: "7 min read", variant: "product", href: "#" },
-      { title: "Making Long-running Jobs Transparent", summary: "Designing async job UX around status tracking, log feedback, retries, and authorization controls.", category: "learning", tags: ["Async Jobs", "Backend", "UX"], date: "2026-05-18", readTime: "6 min read", variant: "workflow", href: "#" },
-      { title: "Debugging Across Service Boundaries", summary: "A practical loop for reading logs, dependency chains, service interactions, and user impact.", category: "notes", tags: ["Debugging", "Observability", "Triage"], date: "2026-03-10", readTime: "8 min read", variant: "observability", href: "#" },
-      { title: "Data Visualization Performance Notes", summary: "How Canvas visualization and data-flow refactoring produced an 18% runtime improvement on key views.", category: "projects", tags: ["Canvas", "Data Viz", "Performance"], date: "2026-02-20", readTime: "7 min read", variant: "charts", href: "#" }
+      { title: "RevOps Agent Demo: Approvals Before Automation", summary: "A real project note on routing agents, CRM tools, memory, and human approval boundaries.", category: "learning", tags: ["Agents", "LangGraph", "Python"], date: "2026-04-07", readTime: "4 min read", variant: "api", href: "/blog/revops-agent-demo" },
+      { title: "DateCraft: Turning Small Inputs Into a Date Plan", summary: "A shipped Next.js app that generates date ideas from mood, budget, time, and setting.", category: "projects", tags: ["Next.js", "TypeScript", "AI UI"], date: "2026-02-07", readTime: "3 min read", variant: "product", href: "/blog/datecraft-open-date" },
+      { title: "WFP HungerMap: Notes From a Public Data Product", summary: "A public repository contribution around maps, charts, comparison views, downloads, and chatbot flows.", category: "projects", tags: ["Next.js", "Maps", "Charts"], date: "2025-07-09", readTime: "5 min read", variant: "knowledge", href: "/blog/wfp-hungermap" }
     ]
   },
   resume: {
